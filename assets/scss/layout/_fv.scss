@@ -1,0 +1,41 @@
+@use "../global/" as *;
+
+.fv {
+  margin-bottom: 120px;
+  padding-top: 200px;
+}
+
+.fv__bg {
+  aspect-ratio: 64 / 27;
+  align-items: center;
+  background-image: url(../img/bg/fv_bg-pc.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 9.375% / 22.222%;
+  margin-inline: 80px;
+  position: relative;
+  width: auto;
+}
+
+.fv__title {
+  align-items: center;
+  background-image: url(../img/bg/fv-title.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 16.4px;
+  display: flex;
+  height: 413px;
+  justify-content: center;
+  left: 37px;
+  position: absolute;
+  width: 516px;
+
+  & > h1 {
+    font-family: $font-yusei-magic;
+    font-size: 36px;
+    line-height: 2;
+    letter-spacing: 0.1em;
+  }
+}

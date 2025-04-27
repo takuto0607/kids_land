@@ -1,0 +1,26 @@
+@use "var" as *;
+
+$breakpoints: (
+  "xs": 374px,
+  "sm": 639px,
+  "md": 767px,
+  "lg": 1023px,
+  "xl": 1279px,
+) !default;
+
+@mixin mq($breakpoint: md, $type: max) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @if ($type == max) {
+      $width: map-get($breakpoints, $breakpoint);
+      @media screen and (max-width: #{$width}) {
+        @content;
+      }
+    } @else if($type == min) {
+      $width: map-get($breakpoints, $breakpoint);
+      $width: $width - 1;
+      @media screen and (min-width: #{map-get($breakpoints, $breakpoint)}) {
+        @content;
+      }
+    }
+  }
+}

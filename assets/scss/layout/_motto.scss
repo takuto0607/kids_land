@@ -1,0 +1,85 @@
+@use "../global/" as *;
+
+.motto {
+  margin-bottom: 120px;
+}
+
+.motto__title {
+  margin-bottom: 64px;
+  text-align: center;
+}
+
+.motto__container {
+  margin-inline: 60px;
+  width: auto;
+}
+
+.motto__block {
+  display: flex;
+  gap: 48px;
+  margin-bottom: 32px;
+}
+
+.motto__img {
+  & > .img-wrapper {
+    border-radius: 40px;
+    overflow: hidden;
+    position: relative;
+    width: 480px;
+
+    & > img {
+      aspect-ratio: 3 / 2;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.2);
+      z-index: 1;
+    }
+  }
+}
+
+.motto__text-title {
+  display: inline-block;
+  margin-bottom: 24px;
+  position: relative;
+
+  & > h3 {
+    align-items: center;
+    display: flex;
+    font-size: 20px;
+    gap: 10px;
+    letter-spacing: 0.2em;
+
+    & > span {
+      & > .img-wrapper {
+        width: 24px;
+
+        & > img {
+          aspect-ratio: 1 / 1;
+        }
+      }
+    }
+  }
+
+  &::after {
+    background-color: $text-color;
+    bottom: -12px;
+    content: "";
+    left: 0;
+    position: absolute;
+    height: 1px;
+    width: 136%;
+  }
+}
+
+.motto__text {
+  & > p {
+    line-height: 2;
+  }
+}

@@ -1,0 +1,23 @@
+@use "../global/" as *;
+
+.breadcrumb {
+  line-height: 1.5;
+}
+
+.breadcrumb__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.breadcrumb__item {
+  display: flex;
+
+  & > a:hover {
+    opacity: 0.5;
+  }
+}
+
+.breadcrumn__separator {
+  margin-right: 8px;
+}

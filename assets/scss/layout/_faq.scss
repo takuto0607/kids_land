@@ -1,0 +1,74 @@
+@use "../global/" as *;
+
+.faq {
+  margin-bottom: 96px;
+}
+
+.faq__title {
+  margin-bottom: 64px;
+  text-align: center;
+}
+
+.faq__container {
+  margin: 0 auto;
+  max-width: 1080px;
+}
+
+.faq__box {
+  background-color: $white-color;
+  border: 2px solid $main-color;
+  border-radius: 20px;
+  margin-bottom: 24px;
+  padding: 20px 32px;
+}
+
+.faq__question {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  padding: 12px 0;
+  position: relative;
+
+  &::after {
+    content: "";
+    border-style: solid;
+    border-width: 16px 9px 0px 9px;
+    border-color: $main-color transparent transparent transparent;
+    height: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.5s ease-in-out;
+    width: 0;
+  }
+
+  & > h3 {
+    font-size: 18px;
+    letter-spacing: 0.2em;
+    line-height: 1.5;
+    padding-right: 20px;
+  }
+}
+
+.faq__char-question {
+  font-size: 18px;
+  letter-spacing: 0.2em;
+  margin-right: 32px;
+}
+
+.faq__answer {
+  border-top: 1px dashed rgb(0, 0, 0);
+  display: flex;
+  padding: 44px 0 12px;
+
+  & > p {
+    line-height: 1.5;
+  }
+}
+
+.faq__char-answer {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-right: 32px;
+}

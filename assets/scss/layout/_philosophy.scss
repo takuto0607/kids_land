@@ -1,0 +1,16 @@
+@use "../global/" as *;
+
+.philosophy {
+  margin-bottom: 120px;
+  text-align: center;
+
+  & > .section-title {
+    margin-bottom: 48px;
+  }
+}
+
+.philosophy__content {
+  font-size: 18px;
+  line-height: 3;
+  letter-spacing: 0.2em;
+}

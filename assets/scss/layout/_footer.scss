@@ -1,0 +1,45 @@
+@use "../global/" as *;
+
+.footer {
+  background: linear-gradient(to bottom, $accent-color3, $accent-color2);
+
+  & > .container {
+    margin-inline: 180px;
+    padding-bottom: 12px;
+    text-align: center;
+    width: auto;
+  }
+}
+
+.footer__logo {
+  margin: 48px 0;
+}
+
+.footer__list {
+  display: flex;
+  gap: 42px;
+  justify-content: center;
+  line-height: 1.2;
+  letter-spacing: 0.1em;
+}
+
+.footer__list--pc {
+  gap: 0;
+  justify-content: space-around;
+  margin-bottom: 24px;
+}
+
+.footer__link-group {
+  margin-bottom: 48px;
+}
+
+.footer__item:hover {
+  opacity: 0.6;
+}
+
+.footer__copyright {
+  color: $text-color2;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.1em;
+}

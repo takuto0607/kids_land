@@ -1,0 +1,49 @@
+@use "../global/" as *;
+
+.pc-only {
+  display: block;
+}
+
+.break-xl {
+  display: none;
+}
+
+.break-lg {
+  display: none;
+}
+
+.break-md {
+  display: none;
+}
+
+.break-sm {
+  display: none;
+}
+
+@include mq(xl) {
+  .pc-only {
+    display: none;
+  }
+
+  .break-xl {
+    display: block;
+  }
+}
+
+@include mq(lg) {
+  .break-lg {
+    display: block;
+  }
+}
+
+@include mq(md) {
+  .break-md {
+    display: block;
+  }
+}
+
+@include mq(sm) {
+  .break-sm {
+    display: block;
+  }
+}

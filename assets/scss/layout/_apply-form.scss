@@ -1,0 +1,176 @@
+@use "../global/" as *;
+
+.apply-form {
+  margin-bottom: 120px;
+}
+
+.apply-form__content {
+  background-color: $white-color;
+  border-radius: 40px;
+  margin: 0 auto;
+  max-width: 1080px;
+  padding: 64px 140px;
+}
+
+.apply-form__item {
+  align-items: center;
+  display: flex;
+  gap: 32px;
+  margin-bottom: 16px;
+}
+
+.apply-form__item-name {
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+  gap: 12px;
+  line-height: 1.5;
+  width: 300px;
+
+  & > span {
+    align-items: center;
+    color: $white-color;
+    border-radius: 4px;
+    background-color: $text-color2;
+    display: flex;
+    font-size: 12px;
+    height: 20px;
+    justify-content: center;
+    width: 42px;
+
+    &.required {
+      background-color: $main-color;
+    }
+  }
+}
+
+.apply-form__input {
+  color: $text-color2;
+  width: 100%;
+}
+
+.wpcf7-list-item {
+  margin: 0;
+
+  & > label:hover {
+    cursor: pointer;
+
+    & > input {
+      cursor: pointer;
+    }
+  }
+}
+
+.apply-form__radio {
+  line-height: 1.5;
+
+  & > .wpcf7-list-item {
+    padding-right: 10px;
+  }
+}
+
+.apply-form__radio--column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.wpcf7-list-item-label {
+  padding-left: 12px;
+
+  &::before,
+  &::after {
+    content: "";
+  }
+}
+
+.apply-form__textarea {
+  border: 1px solid $text-color2;
+  border-radius: 4px;
+  height: 100px;
+  line-height: 1.5;
+  padding: 5px 10px;
+  resize: none;
+  width: 100%;
+}
+
+.apply-form__textarea--large {
+  height: 200px;
+}
+
+.apply-form__input-field {
+  border: 1px solid $text-color2;
+  border-radius: 4px;
+  height: 40px;
+  padding: 5px 10px;
+  width: 100%;
+}
+
+.apply-form__input-row {
+  align-items: center;
+  display: flex;
+  margin-bottom: 8px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.apply-form__input-row-name {
+  flex-shrink: 0;
+  width: 150px;
+}
+
+.apply-form__agree {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 48px;
+
+  & > .wpcf7-form-control-wrap {
+    padding-right: 12px;
+  }
+
+  & > .required {
+    align-items: center;
+    color: $white-color;
+    border-radius: 4px;
+    background-color: $main-color;
+    display: flex;
+    font-size: 12px;
+    height: 20px;
+    justify-content: center;
+    width: 42px;
+  }
+}
+
+.apply-form__btn-wrapper {
+  text-align: center;
+
+  & > p {
+    display: inline-block;
+    position: relative;
+
+    &::after {
+      font: var(--fa-font-solid);
+      content: "\f054";
+      position: absolute;
+      top: 50%;
+      right: 26px;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.apply-form__btn {
+  align-items: center;
+  text-align: center;
+}
+
+.wpcf7-spinner {
+  display: none;
+}
+
+.wpcf7-not-valid-tip {
+  margin-top: 3px;
+}

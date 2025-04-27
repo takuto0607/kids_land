@@ -1,0 +1,63 @@
+@use "../global/" as *;
+
+.yearly-program {
+  margin-bottom: 118px;
+}
+
+.yearly-program__title {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.yearly-program__content {
+  background-color: $white-color;
+  border-radius: 40px;
+  margin: 0 auto;
+  max-width: 1080px;
+  padding: 60px 40px;
+
+  & > p {
+    line-height: 1.5;
+  }
+}
+
+.yearly-program__card-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.yearly-program__card {
+  background-color: $accent-color1;
+  border-radius: 20px;
+  padding: 12px;
+  width: 320px;
+}
+
+.yearly-program__card-img {
+  margin-bottom: 8px;
+  width: 100%;
+
+  & > .img-wrapper {
+    border-radius: 20px;
+    overflow: hidden;
+    width: 296px;
+
+    & > img {
+      aspect-ratio: 74 / 45;
+    }
+  }
+}
+
+.yearly-program__card-content {
+  & > h3 {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+
+  & > p {
+    font-size: 14px;
+  }
+}

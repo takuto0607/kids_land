@@ -1,0 +1,48 @@
+@use "../global/" as *;
+
+.contact {
+  align-items: center;
+  aspect-ratio: 720 / 317;
+  background-color: rgba(255, 255, 255, 0.3);
+  background-image: url(../img/bg/contact_bg-pc.webp);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  padding: 80px 180px 70px;
+  position: relative;
+  width: 100%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    z-index: 1;
+  }
+}
+
+.contact__content {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 40px;
+  max-width: 1080px;
+  padding: 64px 0;
+  text-align: center;
+  width: 100%;
+  z-index: 2;
+
+  & > .section-title {
+    margin-bottom: 48px;
+  }
+
+  & > p {
+    font-size: 18px;
+    line-height: 2;
+    margin-bottom: 39px;
+  }
+}

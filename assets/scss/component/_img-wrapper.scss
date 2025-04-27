@@ -1,0 +1,10 @@
+@use "../global/" as *;
+
+.img-wrapper {
+  & > img,
+  & > source {
+    height: auto;
+    object-fit: cover;
+    width: 100%;
+  }
+}

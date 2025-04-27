@@ -1,0 +1,22 @@
+@use "../global/" as *;
+
+.logo {
+  display: inline-block;
+
+  & > a {
+    align-self: center;
+    display: flex;
+
+    & > .img-wrapper {
+      width: 280px;
+
+      & > img {
+        aspect-ratio: 280/89;
+      }
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

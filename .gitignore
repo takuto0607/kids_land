@@ -1,0 +1,16 @@
+/wordpress/wp-admin
+/wordpress/wp-includes
+/wordpress/wp-*.php
+
+**/wordpress/wp-content/languages
+**/wordpress/wp-content/uploads
+**/wordpress/wp-content/upgrade
+**/wordpress/wp-content/plugins
+**/wordpress/wp-content/themes
+
+**/wordpress/wp-content/cache
+**/wordpress/wp-content/siteguard
+**/wordpress/wp-content/ai1wm-backups/*.wpress
+
+!**/wordpress/wp-content/themes/**
+!**/wordpress/wp-content/themes/*/index.php

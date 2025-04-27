@@ -1,0 +1,41 @@
+@use "../global/" as *;
+
+.page-top {
+  margin-inline: 180px;
+  padding: 300px 0 120px;
+  width: auto;
+}
+
+.page-top-inner {
+  margin: 0 auto;
+  max-width: 1080px;
+}
+
+.page-heading {
+  align-items: center;
+  background-image: url(../img/bg/page-heading-pc.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 160px;
+  justify-content: center;
+  margin-bottom: 12px;
+  width: 1080px;
+}
+
+.page-title {
+  text-align: center;
+
+  & > h1 {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+
+  & > p {
+    font-family: $font-jost;
+    font-size: 10px;
+    font-weight: $font-boldest;
+  }
+}

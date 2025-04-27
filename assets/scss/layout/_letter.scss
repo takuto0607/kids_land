@@ -1,0 +1,94 @@
+@use "../global/" as *;
+
+.letter {
+  background-image: url(../img/bg/letter_bg-pc.webp);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 2px dashed $main-color;
+  border-top: 2px dashed $main-color;
+  padding: 160px 0 120px;
+  position: relative;
+  width: 100%;
+
+  & > .section-title {
+    position: absolute;
+    left: 50%;
+    margin-bottom: 42px;
+    top: -54px;
+    transform: translateX(-50%);
+  }
+}
+
+.letter__container {
+  margin-inline: 180px;
+  width: auto;
+}
+
+.letter__card-group-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.letter__card-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  max-width: 1080px;
+}
+
+.letter__card {
+  background-color: $white-color;
+  border-radius: 20px;
+  height: 280px;
+  margin-bottom: 48px;
+  overflow: hidden;
+  width: 320px;
+}
+
+.letter__card-link:hover {
+  opacity: 0.7;
+}
+
+.letter__card-img {
+  width: 100%;
+
+  & > .img-wrapper {
+    width: 320px;
+
+    & > img {
+      aspect-ratio: 64 / 27;
+    }
+  }
+}
+
+.letter__card-content {
+  color: $text-color2;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  padding: 12px;
+
+  & > h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  & > p {
+    margin-bottom: 13px;
+  }
+}
+
+.letter__card-date {
+  text-align: right;
+
+  & > time {
+    font-size: 14px;
+    text-align: right;
+  }
+}
+
+.letter__btn-wrapper {
+  text-align: center;
+}

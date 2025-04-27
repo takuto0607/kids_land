@@ -1,0 +1,129 @@
+@use "../global/" as *;
+
+.header {
+  aspect-ratio: 720 / 127;
+  background-image: url(../img/bg/header-pc.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
+
+.header__navi {
+  align-items: center;
+  display: flex;
+  height: 120px;
+  margin-inline: 80px;
+  margin-top: 96px;
+  width: auto;
+}
+
+.header__list {
+  align-items: center;
+  display: flex;
+  width: 100%;
+}
+
+.header__item {
+  flex: 1;
+  border-left: 1px dashed $text-color;
+  padding: 12.5px 6.5px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: $text-color;
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: $text-color;
+    border-radius: 50%;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.header__link-wrapper {
+  display: inline-block;
+  min-width: 150px;
+  width: 100%;
+}
+
+.header__link {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  & > .img-wrapper {
+    margin-bottom: 12px;
+    width: 48px;
+
+    & > img {
+      aspect-ratio: 1 / 1;
+    }
+  }
+}
+
+.header__nav-title {
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  margin-bottom: 4px;
+}
+
+.header__nav-note {
+  font-family: $font-jost;
+  font-size: 10px;
+  font-weight: $font-boldest;
+  line-height: 1.2;
+  letter-spacing: 0.1em;
+}
+
+.header__item-border {
+  border-right: 1px dashed $text-color;
+  height: 120px;
+  position: relative;
+  width: 1px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: $text-color;
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: $text-color;
+    border-radius: 50%;
+  }
+}
