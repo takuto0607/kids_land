@@ -1,0 +1,88 @@
+@use "../global/" as *;
+
+.about-nursery {
+  margin-bottom: 174px;
+}
+
+.about-nursery__title {
+  margin-bottom: 64px;
+  text-align: center;
+}
+
+.about-nursery__content {
+  margin: 0 auto;
+  max-width: 1080px;
+}
+
+.about-nursery__row {
+  border-bottom: 1px dashed $text-color;
+  display: flex;
+
+  & > h3 {
+    align-items: center;
+    background-color: $white-color;
+    display: flex;
+    flex-shrink: 0;
+    font-size: 18px;
+    justify-content: center;
+    letter-spacing: 0.2em;
+    width: 200px;
+  }
+}
+
+.about-nursery__data {
+  letter-spacing: 0.2em;
+  padding: 32px 87px 32px 25px;
+}
+
+.about-nursery__data--tel {
+  & > a {
+    display: inline;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.about-nursery__data--admission-date {
+  line-height: 1.5;
+}
+
+.about-nursery__data--care-hours {
+  &:first-child {
+    margin-bottom: 24px;
+  }
+
+  & > h4 {
+    margin-bottom: 4px;
+  }
+}
+
+.about-nursery__data--table {
+  background-color: $white-color;
+  border: 1px solid $text-color;
+  width: 600px;
+}
+
+.about-nursery__data--table-row {
+  display: flex;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $text-color;
+  }
+
+  & > h5 {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    padding: 16px 0;
+    width: 150px;
+  }
+
+  & > p {
+    border-left: 1px solid $text-color;
+    line-height: 1.2;
+    padding: 16px 20px;
+  }
+}

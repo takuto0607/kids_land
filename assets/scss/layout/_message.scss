@@ -1,0 +1,38 @@
+@use "../global/" as *;
+
+.message {
+  margin: 120px 0;
+}
+
+.message__title {
+  margin-bottom: 64px;
+  text-align: center;
+}
+
+.message__container {
+  margin-inline: 320px;
+  width: auto;
+}
+
+.message__inner {
+  display: flex;
+  gap: 32px;
+}
+
+.message__img {
+  & > .img-wrapper {
+    border-radius: 20px;
+    overflow: hidden;
+    width: 300px;
+
+    & > img {
+      aspect-ratio: 3 / 4;
+    }
+  }
+}
+
+.message__text {
+  & > p {
+    line-height: 2;
+  }
+}
