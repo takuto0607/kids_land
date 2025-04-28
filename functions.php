@@ -4,6 +4,7 @@ $function_files = [
     '/functions/consts.php',
     '/functions/init.php',
     '/functions/breadcrumb.php',
+    '/functions/contact-section.php',
 ];
 
 foreach ($function_files as $file) {

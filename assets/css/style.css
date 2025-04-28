@@ -1339,6 +1339,15 @@ source {
   font-weight: 900;
 }
 
+.page-title__flex-box {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+}
+.page-title__flex-box > p {
+  font-size: 14px;
+}
+
 .breadcrumb {
   line-height: 1.5;
 }
@@ -1356,6 +1365,6 @@ source {
   opacity: 0.5;
 }
 
-.breadcrumn__separator {
+.breadcrumb__separator {
   margin-right: 8px;
 }/*# sourceMappingURL=style.css.map */

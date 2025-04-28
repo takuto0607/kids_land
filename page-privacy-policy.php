@@ -19,7 +19,7 @@
             <a class="uppercase" href="<?php echo esc_url(home_url()); ?>">top</a>
           </li>
           <li class="breadcrumb__item">
-            <span class="breadcrumn__separator"><i class="fa-solid fa-chevron-right"></i></span>
+            <span class="breadcrumb__separator"><i class="fa-solid fa-chevron-right"></i></span>
             <span><?php echo esc_html(get_the_title()); ?></span>
           </li>
         </ul>
