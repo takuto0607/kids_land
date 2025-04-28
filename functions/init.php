@@ -23,6 +23,7 @@ add_action('wp_enqueue_scripts', 'add_reset_style');
 
 // CSS
 function my_theme_enqueue_styles() {
+    wp_enqueue_style('jquery-ui-css', 'https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css', array(), false);
     wp_enqueue_style('style', get_template_directory_uri() . '/assets/css/style.css', array(), '1.0.0', 'all');
 }
 add_action('wp_enqueue_scripts', 'my_theme_enqueue_styles');

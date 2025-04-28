@@ -59,4 +59,22 @@ jQuery(document).ready(function ($) {
       $(this).toggleClass("active").next().slideToggle();
     });
   });
+
+  // 生年月日選択処理
+  $(function () {
+    // 選択日付の入力
+    $(".entry-form__date-select").each(function () {
+      $(this).datepicker({
+        dateFormat: "yy/mm/dd",
+        showButtonPanel: true,
+        changeMonth: true,
+        changeYear: true,
+      });
+    });
+
+    // 入力欄クリックで datepicker を表示
+    $(".entry-form__date-select").on("click", function () {
+      $(this).datepicker("show");
+    });
+  });
 });

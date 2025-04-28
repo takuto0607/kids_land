@@ -948,6 +948,16 @@ source {
   width: 100%;
 }
 
+.entry-form__date-select {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(51, 51, 51);
+  border-radius: 4px;
+  cursor: pointer;
+  height: 40px;
+  padding: 5px 10px;
+  width: 100%;
+}
+
 .entry-form__input-row {
   align-items: center;
   display: flex;

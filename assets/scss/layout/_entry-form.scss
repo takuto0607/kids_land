@@ -85,6 +85,16 @@
   width: 100%;
 }
 
+.entry-form__date-select {
+  background-color: $white-color;
+  border: 1px solid $text-color2;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 40px;
+  padding: 5px 10px;
+  width: 100%;
+}
+
 .entry-form__input-row {
   align-items: center;
   display: flex;
