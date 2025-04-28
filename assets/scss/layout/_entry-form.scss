@@ -1,10 +1,10 @@
 @use "../global/" as *;
 
-.apply-form {
+.entry-form {
   margin-bottom: 120px;
 }
 
-.apply-form__content {
+.entry-form__content {
   background-color: $white-color;
   border-radius: 40px;
   margin: 0 auto;
@@ -12,14 +12,14 @@
   padding: 64px 140px;
 }
 
-.apply-form__item {
+.entry-form__item {
   align-items: center;
   display: flex;
   gap: 32px;
   margin-bottom: 16px;
 }
 
-.apply-form__item-name {
+.entry-form__item-name {
   align-items: center;
   display: flex;
   flex-shrink: 0;
@@ -44,24 +44,12 @@
   }
 }
 
-.apply-form__input {
+.entry-form__input {
   color: $text-color2;
   width: 100%;
 }
 
-.wpcf7-list-item {
-  margin: 0;
-
-  & > label:hover {
-    cursor: pointer;
-
-    & > input {
-      cursor: pointer;
-    }
-  }
-}
-
-.apply-form__radio {
+.entry-form__radio {
   line-height: 1.5;
 
   & > .wpcf7-list-item {
@@ -69,22 +57,13 @@
   }
 }
 
-.apply-form__radio--column {
+.entry-form__radio--column {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.wpcf7-list-item-label {
-  padding-left: 12px;
-
-  &::before,
-  &::after {
-    content: "";
-  }
-}
-
-.apply-form__textarea {
+.entry-form__textarea {
   border: 1px solid $text-color2;
   border-radius: 4px;
   height: 100px;
@@ -94,11 +73,11 @@
   width: 100%;
 }
 
-.apply-form__textarea--large {
+.entry-form__textarea--large {
   height: 200px;
 }
 
-.apply-form__input-field {
+.entry-form__input-field {
   border: 1px solid $text-color2;
   border-radius: 4px;
   height: 40px;
@@ -106,7 +85,7 @@
   width: 100%;
 }
 
-.apply-form__input-row {
+.entry-form__input-row {
   align-items: center;
   display: flex;
   margin-bottom: 8px;
@@ -116,12 +95,12 @@
   }
 }
 
-.apply-form__input-row-name {
+.entry-form__input-row-name {
   flex-shrink: 0;
   width: 150px;
 }
 
-.apply-form__agree {
+.entry-form__agree {
   align-items: center;
   display: flex;
   justify-content: center;
@@ -144,7 +123,7 @@
   }
 }
 
-.apply-form__btn-wrapper {
+.entry-form__btn-wrapper {
   text-align: center;
 
   & > p {
@@ -162,15 +141,7 @@
   }
 }
 
-.apply-form__btn {
+.entry-form__btn {
   align-items: center;
   text-align: center;
-}
-
-.wpcf7-spinner {
-  display: none;
-}
-
-.wpcf7-not-valid-tip {
-  margin-top: 3px;
 }

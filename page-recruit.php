@@ -219,9 +219,9 @@
     </div>
   </section>
 
-  <!-- Apply Form -->
-  <section class="apply-form">
-    <?php echo do_shortcode('[contact-form-7 id="94d72de" title="応募フォーム" html_class="apply-form__content"]'); ?>
+  <!-- Entry Form -->
+  <section class="entry-form">
+    <?php echo do_shortcode('[contact-form-7 id="94d72de" title="エントリーフォーム" html_class="entry-form__content"]'); ?>
   </section>
 </main>
 <?php get_footer(); ?>
