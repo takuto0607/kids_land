@@ -220,7 +220,7 @@
   </section>
 
   <!-- Entry Form -->
-  <section class="entry-form">
+  <section id="entry-form" class="entry-form">
     <?php echo do_shortcode('[contact-form-7 id="94d72de" title="エントリーフォーム" html_class="entry-form__content"]'); ?>
   </section>
 </main>

@@ -215,7 +215,7 @@
           </div>
           <div class="recruit__btn-wrapper">
             <div class="btn btn-yellow">
-              <a href="<?php echo esc_url(home_url()); ?>">エントリー</a>
+              <a href="<?php echo esc_url(home_url('/recruit#entry-form')); ?>">エントリー</a>
             </div>
           </div>
         </div>

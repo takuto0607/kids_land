@@ -660,6 +660,7 @@ source {
   margin-bottom: 16px;
 }
 .privacy-policy__text-wrapper > ol > li {
+  display: flex;
   margin-bottom: 8px;
 }
 

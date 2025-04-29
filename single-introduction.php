@@ -55,7 +55,7 @@
             $image_alt = get_the_title();
           }
         } else {
-          $image_url = echo_img("no-image.webp");
+          $image_url = echo_img("no-image.jpg");
           $image_alt = "アイキャッチ画像未登録";
         }
       ?>
@@ -169,7 +169,11 @@
       </div>
       <div class="about-nursery__row">
         <h3 class="uppercase">tel / fax</h3>
-        <address class="about-nursery__data about-nursery__data--tel"><a href=""><?php the_field('nursery_tel'); ?></a> / <?php the_field('nursery_fax'); ?></address>
+        <address class="about-nursery__data about-nursery__data--tel">
+          <?php $fax = get_field('nursery_fax');  ?>
+          <a href=""><?php the_field('nursery_tel'); ?></a>
+          <?php if ($fax) : ?> / <?php the_field('nursery_fax'); ?><?php endif; ?>
+        </address>
       </div>
       <div class="about-nursery__row">
         <h3>対象</h3>
@@ -223,11 +227,11 @@
             <div class="about-nursery__care-hours__table">
               <div class="about-nursery__care-hours__table-row">
                 <dt>保育標準時間</dt>
-                <dd><time datetime="07:30">7:30</time>～<time datetime="18:30">18:30</time></dd>
+                <dd><time datetime="T07:30">7:30</time>～<time datetime="T18:30">18:30</time></dd>
               </div>
               <div class="about-nursery__care-hours__table-row">
                 <dt>延長保育</dt>
-                <dd><time datetime="18:31">18:31</time>～<time datetime="19:30">19:30</time></dd>
+                <dd><time datetime="T18:31">18:31</time>～<time datetime="T19:30">19:30</time></dd>
               </div>
             </div>
           </div>
@@ -236,11 +240,11 @@
             <div class="about-nursery__care-hours__table">
               <div class="about-nursery__care-hours__table-row">
                 <dt>保育標準時間</dt>
-                <dd><time datetime="09:00">9:00</time>～<time datetime="17:00">17:00</time></dd>
+                <dd><time datetime="T09:00">9:00</time>～<time datetime="T17:00">17:00</time></dd>
               </div>
               <div class="about-nursery__care-hours__table-row">
                 <dt>延長保育</dt>
-                <dd><time datetime="07:30">7:30</time>～<time datetime="08:59">8:59</time><br><time datetime="17:01">17:01</time>～<time datetime="19:30">19:30</time></dd>
+                <dd><time datetime="T07:30">7:30</time>～<time datetime="T08:59">8:59</time><br><time datetime="T17:01">17:01</time>～<time datetime="T19:30">19:30</time></dd>
               </div>
             </div>
           </div>
