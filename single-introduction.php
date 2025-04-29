@@ -14,7 +14,7 @@
     $nursery_type = $nursery_types[0];
   }
   ?>
-  <div class="page-top">
+  <div class="page-top page-top-short">
     <div class="page-top-inner">
       <div class="page-heading">
         <div class="page-title">
@@ -41,6 +41,46 @@
       <?php // breadcrumb(); ?>
     </div>
   </div>
+
+  <!-- Single Introduction -->
+  <section class="single-introduction">
+    <div class="single-introduction__container">
+      <?php
+        if (has_post_thumbnail()) {
+          $thumbnail_id = get_post_thumbnail_id();
+          $image_url = get_the_post_thumbnail_url(get_the_ID(), 'full') ?: echo_img("no-image.webp");
+          $image_alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
+
+          if (empty($image_alt)) {
+            $image_alt = get_the_title();
+          }
+        } else {
+          $image_url = echo_img("no-image.webp");
+          $image_alt = "アイキャッチ画像未登録";
+        }
+      ?>
+      <div class="single-introduction__thumbnail">
+        <div class="img-wrapper">
+          <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>" width="800" height="450" loading="lazy">
+        </div>
+      </div>
+      <div class="single-introduction__content">
+        <?php
+        $introduction_sections = get_post_meta(get_the_ID(), 'introduction_sections', true);
+        if (!empty($introduction_sections)) :
+          foreach ($introduction_sections as $section) :
+        ?>
+        <div class="single-introduction__sub-section">
+          <h3><?php echo esc_html($section['introduction_heading']); ?></h3>
+          <p><?php echo nl2br(esc_html($section['introduction_text'])); ?></p>
+        </div>
+        <?php
+          endforeach;
+        endif;
+        ?>
+      </div>
+    </div>
+  </section>
 
   <!-- Inside -->
   <section class="inside">

@@ -1105,6 +1105,46 @@ source {
   text-align: center;
 }
 
+.single-introduction {
+  margin-bottom: 174px;
+}
+
+.single-introduction__container {
+  margin: 0 auto;
+  max-width: 1080px;
+}
+
+.single-introduction__thumbnail {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+.single-introduction__thumbnail > .img-wrapper {
+  border-radius: 40px;
+  overflow: hidden;
+  width: 800px;
+}
+.single-introduction__thumbnail > .img-wrapper > img {
+  aspect-ratio: 16/9;
+}
+
+.single-introduction__sub-section {
+  text-align: center;
+}
+.single-introduction__sub-section:not(:last-child) {
+  margin-bottom: 32px;
+}
+.single-introduction__sub-section > h3 {
+  font-size: 20px;
+  letter-spacing: 0.2em;
+  margin-bottom: 16px;
+}
+.single-introduction__sub-section > p {
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.2em;
+}
+
 .inside {
   background-image: url(../img/bg/letter_bg-pc.webp);
   background-position: center top;
@@ -1495,6 +1535,10 @@ source {
   margin-inline: 180px;
   padding: 300px 0 120px;
   width: auto;
+}
+
+.page-top-short {
+  padding-bottom: 80px;
 }
 
 .page-top-inner {

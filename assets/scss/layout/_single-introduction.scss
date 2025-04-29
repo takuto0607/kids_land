@@ -1,0 +1,46 @@
+@use "../global/" as *;
+
+.single-introduction {
+  margin-bottom: 174px;
+}
+
+.single-introduction__container {
+  margin: 0 auto;
+  max-width: 1080px;
+}
+
+.single-introduction__thumbnail {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+
+  & > .img-wrapper {
+    border-radius: 40px;
+    overflow: hidden;
+    width: 800px;
+
+    & > img {
+      aspect-ratio: 16 / 9;
+    }
+  }
+}
+
+.single-introduction__sub-section {
+  text-align: center;
+
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  & > h3 {
+    font-size: 20px;
+    letter-spacing: 0.2em;
+    margin-bottom: 16px;
+  }
+
+  & > p {
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.2em;
+  }
+}

@@ -6,6 +6,7 @@ $function_files = [
     '/functions/breadcrumb.php',
     '/functions/contact-section.php',
     '/functions/display-data.php',
+    '/functions/introduction-custom-field.php',
 ];
 
 foreach ($function_files as $file) {
