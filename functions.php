@@ -5,6 +5,7 @@ $function_files = [
     '/functions/init.php',
     '/functions/breadcrumb.php',
     '/functions/contact-section.php',
+    '/functions/display-data.php',
 ];
 
 foreach ($function_files as $file) {

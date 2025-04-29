@@ -113,34 +113,66 @@
       </div>
       <div class="about-nursery__row">
         <h3>開園日</h3>
-        <div class="about-nursery__data"></div>
+        <div class="about-nursery__data">
+          <div class="about-nursery__open-date">
+            <div class="about-nursery__week">
+              <p>月</p>
+              <p>〇</p>
+            </div>
+            <div class="about-nursery__week">
+              <p>火</p>
+              <p>〇</p>
+            </div>
+            <div class="about-nursery__week">
+              <p>水</p>
+              <p>〇</p>
+            </div>
+            <div class="about-nursery__week">
+              <p>木</p>
+              <p>〇</p>
+            </div>
+            <div class="about-nursery__week">
+              <p>金</p>
+              <p>〇</p>
+            </div>
+            <div class="about-nursery__week">
+              <p>土</p>
+              <p>〇</p>
+            </div>
+            <div class="about-nursery__week">
+              <p>日</p>
+              <p>ー</p>
+            </div>
+          </div>
+          <p class="about-nursery__open-date-note">月曜日～土曜日〔日曜日、祝日・休日、年末年始（12/29～1/3）はお休み〕</p>
+        </div>
       </div>
       <div class="about-nursery__row">
         <h3>保育時間</h3>
         <div class="about-nursery__data">
-          <div class="about-nursery__data--care-hours">
+          <div class="about-nursery__care-hours">
             <h4>保育標準時間認定の方</h4>
-            <div class="about-nursery__data--table">
-              <div class="about-nursery__data--table-row">
-                <h5>保育標準時間</h5>
-                <p>7:30～18:30</p>
+            <div class="about-nursery__care-hours__table">
+              <div class="about-nursery__care-hours__table-row">
+                <dt>保育標準時間</dt>
+                <dd><time datetime="07:30">7:30</time>～<time datetime="18:30">18:30</time></dd>
               </div>
-              <div class="about-nursery__data--table-row">
-                <h5>延長保育</h5>
-                <p>18:31～19:30</p>
+              <div class="about-nursery__care-hours__table-row">
+                <dt>延長保育</dt>
+                <dd><time datetime="18:31">18:31</time>～<time datetime="19:30">19:30</time></dd>
               </div>
             </div>
           </div>
-          <div class="about-nursery__data--care-hours">
+          <div class="about-nursery__care-hours">
             <h4>保育短時間認定の方</h4>
-            <div class="about-nursery__data--table">
-              <div class="about-nursery__data--table-row">
-                <h5>保育標準時間</h5>
-                <p>9:00～17:00</p>
+            <div class="about-nursery__care-hours__table">
+              <div class="about-nursery__care-hours__table-row">
+                <dt>保育標準時間</dt>
+                <dd><time datetime="09:00">9:00</time>～<time datetime="17:00">17:00</time></dd>
               </div>
-              <div class="about-nursery__data--table-row">
-                <h5>延長保育</h5>
-                <p>7:30～8:59<br>17:01～19:30</p>
+              <div class="about-nursery__care-hours__table-row">
+                <dt>延長保育</dt>
+                <dd><time datetime="07:30">7:30</time>～<time datetime="08:59">8:59</time><br><time datetime="17:01">17:01</time>～<time datetime="19:30">19:30</time></dd>
               </div>
             </div>
           </div>
@@ -148,11 +180,43 @@
       </div>
       <div class="about-nursery__row">
         <h3>定員</h3>
-        <div class="about-nursery__data"></div>
+        <div class="about-nursery__data">
+          <?php $capacity_data = get_capacity_display_data(); ?>
+          <div class="about-nursery__number-table">
+            <div class="about-nursery__number-table__head">
+              <p>定員<br><?php echo esc_html($capacity_data['total']) ?>名</p>
+            </div>
+            <?php foreach ($capacity_data['list'] as $capacity) : ?>
+              <div class="about-nursery__number-table__column">
+                <p><?php echo esc_html($capacity['label']); ?></p>
+                <p><?php echo esc_html($capacity['num']); ?>名</p>
+              </div>
+            <?php endforeach; ?>
+          </div>
+          <div class="about-nursery__capacity-note">
+            <p>※定員は、開園初年度から数年をかけて102名の定員に変更していきます。</p>
+          </div>
+        </div>
       </div>
       <div class="about-nursery__row">
         <h3>職員</h3>
-        <div class="about-nursery__data"></div>
+        <div class="about-nursery__data">
+          <?php $staff_data = get_staff_display_data(); ?>
+          <div class="about-nursery__number-table">
+            <div class="about-nursery__number-table__head">
+              <p>定員<br><?php echo esc_html($staff_data['total']) ?>名以上</p>
+            </div>
+            <?php foreach ($staff_data['list'] as $staff) : ?>
+              <div class="about-nursery__number-table__column">
+                <p><?php echo esc_html($staff['label']); ?></p>
+                <p><?php echo esc_html($staff['num']); ?>名</p>
+              </div>
+            <?php endforeach; ?>
+          </div>
+          <div class="about-nursery__staff-note">
+            <p>※嘱託医　<?php echo esc_html($staff_data['contract_doctor_num']) ?>名<br>※保育士は認可保育所の基準に準じます<br>※保育児童数・年齢に応じたシフトにより、職員を増減します</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>

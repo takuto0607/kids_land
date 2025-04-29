@@ -1182,36 +1182,88 @@ source {
   line-height: 1.5;
 }
 
-.about-nursery__data--care-hours:first-child {
+.about-nursery__open-date {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.about-nursery__week > p:first-child {
+  margin-bottom: 8px;
+}
+
+.about-nursery__open-date-note {
+  font-size: 14px;
+}
+
+.about-nursery__care-hours:first-child {
   margin-bottom: 24px;
 }
-.about-nursery__data--care-hours > h4 {
+.about-nursery__care-hours > h4 {
   margin-bottom: 4px;
 }
 
-.about-nursery__data--table {
+.about-nursery__care-hours__table {
   background-color: rgb(255, 255, 255);
   border: 1px solid rgb(85, 0, 12);
   width: 600px;
 }
 
-.about-nursery__data--table-row {
+.about-nursery__care-hours__table-row {
   display: flex;
 }
-.about-nursery__data--table-row:not(:last-child) {
+.about-nursery__care-hours__table-row:not(:last-child) {
   border-bottom: 1px solid rgb(85, 0, 12);
 }
-.about-nursery__data--table-row > h5 {
+.about-nursery__care-hours__table-row > dt {
   align-self: center;
   display: flex;
+  font-weight: 400;
   justify-content: center;
   padding: 16px 0;
   width: 150px;
 }
-.about-nursery__data--table-row > p {
+.about-nursery__care-hours__table-row > dd {
   border-left: 1px solid rgb(85, 0, 12);
   line-height: 1.2;
   padding: 16px 20px;
+}
+
+.about-nursery__number-table {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.about-nursery__number-table__head {
+  align-items: center;
+  background-color: rgb(255, 237, 240);
+  display: flex;
+  height: 62px;
+  justify-content: center;
+  line-height: 1.2;
+  letter-spacing: 0.2em;
+  margin-right: 4px;
+  width: 100px;
+}
+
+.about-nursery__number-table__column {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.about-nursery__number-table__column > p {
+  letter-spacing: 0;
+  line-height: 1;
+}
+.about-nursery__number-table__column > p:first-child {
+  margin-bottom: 16px;
+}
+
+.about-nursery__staff-note {
+  line-height: 1.2;
 }
 
 .img-wrapper > img, .img-wrapper > source {
