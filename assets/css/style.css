@@ -1105,6 +1105,35 @@ source {
   text-align: center;
 }
 
+.inside {
+  background-image: url(../img/bg/letter_bg-pc.webp);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 2px dashed rgb(239, 143, 156);
+  border-top: 2px dashed rgb(239, 143, 156);
+  padding: 184px 0 120px;
+  position: relative;
+  width: 100%;
+}
+.inside > .section-title {
+  position: absolute;
+  left: 50%;
+  margin-bottom: 42px;
+  top: -54px;
+  transform: translateX(-50%);
+}
+
+.inside__content .img-wrapper {
+  border-radius: 20px;
+  padding: 0 6px;
+  overflow: hidden;
+  width: 240px;
+}
+.inside__content .img-wrapper > img {
+  aspect-ratio: 3/2;
+}
+
 .message {
   margin: 120px 0;
 }

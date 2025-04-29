@@ -1,0 +1,34 @@
+@use "../global/" as *;
+
+.inside {
+  background-image: url(../img/bg/letter_bg-pc.webp);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 2px dashed $main-color;
+  border-top: 2px dashed $main-color;
+  padding: 184px 0 120px;
+  position: relative;
+  width: 100%;
+
+  & > .section-title {
+    position: absolute;
+    left: 50%;
+    margin-bottom: 42px;
+    top: -54px;
+    transform: translateX(-50%);
+  }
+}
+
+.inside__content {
+  & .img-wrapper {
+    border-radius: 20px;
+    padding: 0 6px;
+    overflow: hidden;
+    width: 240px;
+
+    & > img {
+      aspect-ratio: 3 / 2;
+    }
+  }
+}

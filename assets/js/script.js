@@ -77,4 +77,26 @@ jQuery(document).ready(function ($) {
       $(this).datepicker("show");
     });
   });
+
+  // 園の様子 Slick処理
+  $(function () {
+    let slider = $("#slider-images");
+
+    // Slick 初期表示
+    slider.slick({
+      arrows: false,
+      autoplay: true, //自動でスクロール
+      autoplaySpeed: 0, //自動再生のスライド切り替えまでの時間を設定
+      centerMode: false,
+      cssEase: "linear",
+      dots: false,
+      infinite: true,
+      pauseOnFocus: false,
+      pauseOnHover: false,
+      slidesToScroll: 1,
+      speed: 3500, //スライドが流れる速度を設定
+      swipe: false,
+      variableWidth: true,
+    });
+  });
 });

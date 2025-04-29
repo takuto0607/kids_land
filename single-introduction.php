@@ -42,6 +42,34 @@
     </div>
   </div>
 
+  <!-- Inside -->
+  <section class="inside">
+    <div class="section-title">
+      <div class="section-title__inner">
+        <div class="section-title__img">
+          <div class="img-wrapper">
+            <img src="<?php echo echo_img("icon/camera-icon.svg"); ?>" width="72" height="72" alt="カメラアイコン" loading="lazy">
+          </div>
+        </div>
+        <h2>園の様子</h2>
+        <p class="capitalize">inside</p>
+      </div>
+    </div>
+    <div class="inside__content">
+      <div id="slider-images">
+        <?php
+        for ($image_num = 1; $image_num <= 6; $image_num++) :
+          $nursery_image = get_field('nursery_image_' . $image_num);
+          if ($nursery_image):
+        ?>
+          <div class="img-wrapper">
+            <img src="<?php echo esc_url($nursery_image['url']); ?>" alt="<?php echo esc_attr($nursery_image['alt']); ?>" width="240" height="160" loading="lazy">
+          </div>
+        <?php endif; endfor; ?>
+      </div>
+    </div>
+  </section>
+
   <!-- Message -->
   <section class="message">
     <div class="message__title">
