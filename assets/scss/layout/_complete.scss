@@ -1,0 +1,12 @@
+@use "../global/" as *;
+
+.complete {
+  margin-bottom: 80px;
+  text-align: center;
+
+  & > p {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    margin-bottom: 120px;
+  }
+}
