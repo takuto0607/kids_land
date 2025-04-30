@@ -7,6 +7,8 @@ $function_files = [
     '/functions/contact-section.php',
     '/functions/display-data.php',
     '/functions/introduction-custom-field.php',
+    '/functions/info-custom-field.php',
+    '/functions/letter-custom-field.php',
 ];
 
 foreach ($function_files as $file) {

@@ -23,7 +23,7 @@
             <?php if (isset($nursery_type)) : ?>
               <p><?php echo esc_html($nursery_type->name); ?></p>
             <?php endif; ?>
-            <p><?php the_title(); ?></p>
+            <p><?php echo esc_html( get_the_title() ); ?></p>
           </div>
         </div>
       </div>
@@ -34,7 +34,7 @@
           </li>
           <li class="breadcrumb__item">
             <span class="breadcrumb__separator"><i class="fa-solid fa-chevron-right"></i></span>
-            <span><?php the_title(); ?></span>
+            <span><?php echo esc_html( get_the_title() ); ?></span>
           </li>
         </ul>
       </div>
