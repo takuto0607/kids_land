@@ -10,6 +10,8 @@ $function_files = [
     '/functions/introduction-custom-field.php',
     '/functions/info-custom-field.php',
     '/functions/letter-custom-field.php',
+    '/functions/get_modified_date_archives.php',
+    '/functions/display-sidebar.php',
 ];
 
 foreach ($function_files as $file) {

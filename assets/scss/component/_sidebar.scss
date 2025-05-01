@@ -1,0 +1,61 @@
+@use "../global/" as *;
+
+.sidebar {
+  border-left: 1px solid $text-color;
+  flex-shrink: 0;
+  height: 100%;
+  padding-left: 24px;
+  padding-top: 12px;
+  width: 328px;
+
+  & > h2 {
+    font-size: 24px;
+    line-height: 1.5;
+    letter-spacing: 0.2;
+    margin-bottom: 10px;
+  }
+}
+
+.sidebar__archive-year {
+  & > h3 {
+    line-height: 1.5;
+    margin-bottom: 10px;
+    padding-left: 18px;
+    position: relative;
+
+    &::before {
+      background-color: $main-color;
+      border-radius: 2px;
+      content: "";
+      height: 100%;
+      left: 4px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+    }
+  }
+}
+
+.sidebar__archive-month-group {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 8px;
+}
+
+.sidebar__archive-month {
+  align-items: center;
+  background-color: $white-color;
+  border-radius: 8px;
+  display: flex;
+  flex-shrink: 0;
+  font-size: 14px;
+  justify-content: center;
+  margin-bottom: 12px;
+  margin-right: 18px;
+  padding: 4px 12px;
+
+  &:hover {
+    background-color: rgb(228, 226, 226);
+  }
+}
