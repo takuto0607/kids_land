@@ -1174,6 +1174,7 @@ source {
 
 .archive-introduction__tag-group {
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
   margin-bottom: 32px;
 }
@@ -1185,6 +1186,7 @@ source {
   border-radius: 8px;
   color: rgb(239, 143, 156);
   display: flex;
+  flex-shrink: 0;
   justify-content: center;
   line-height: 1.2;
   padding: 8px 0;
@@ -1201,7 +1203,7 @@ source {
   background-color: rgb(216, 124, 136);
 }
 
-.archive-introduction__tag--nuresery-type {
+.archive-introduction__tag--nursery-type {
   width: 200px;
 }
 
@@ -1211,6 +1213,7 @@ source {
 
 .archive-introduction__card-group {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
   margin-bottom: 32px;
@@ -1219,6 +1222,7 @@ source {
 .archive-introduction__card {
   background-color: rgb(255, 237, 240);
   border-radius: 20px;
+  flex-shrink: 0;
   padding: 12px;
   width: 320px;
 }
@@ -2097,4 +2101,34 @@ source {
 }
 .sidebar__archive-month:hover {
   background-color: rgb(228, 226, 226);
+}
+
+.pagination {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.page-numbers {
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(239, 143, 156);
+  border-radius: 8px;
+  color: rgb(239, 143, 156);
+  display: flex;
+  justify-content: center;
+  line-height: 1.2;
+  height: 36px;
+  width: 36px;
+}
+.page-numbers.prev, .page-numbers.next {
+  font-size: 11px;
+}
+.page-numbers:hover {
+  background-color: rgb(228, 226, 226);
+}
+.page-numbers.current {
+  background-color: rgb(239, 143, 156);
+  color: rgb(255, 255, 255);
 }/*# sourceMappingURL=style.css.map */

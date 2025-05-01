@@ -99,4 +99,57 @@ jQuery(document).ready(function ($) {
       variableWidth: true,
     });
   });
+
+  // 各園のご紹介一覧ページ
+  $(function () {
+    $(document).ready(function () {
+      const params = new URLSearchParams(window.location.search);
+      const setTaxonomy = params.get("taxonomy");
+      const setSlug = params.get("slug");
+
+      if (setTaxonomy) {
+        $(`.archive-introduction__tab[data-tab="${setTaxonomy}"]`).addClass(
+          "active"
+        );
+      } else {
+        $(".archive-introduction__tab").first().addClass("active");
+      }
+
+      if (setSlug) {
+        $(`.archive-introduction__tag[data-tag="${setSlug}"]`).addClass(
+          "active"
+        );
+      } else {
+        $(".archive-introduction__tag").first().addClass("active");
+      }
+    });
+
+    // タブクリック時の処理
+    $(".archive-introduction__tab").on("click", function () {
+      $(".archive-introduction__tab").removeClass("active");
+      $(this).addClass("active");
+
+      const taxonomy = $(this).data("tab");
+
+      const params = new URLSearchParams();
+      params.set("taxonomy", taxonomy);
+
+      window.location.href = `${window.location.pathname}?${params.toString()}`;
+    });
+
+    // タグクリック時の処理
+    $(".archive-introduction__tag").on("click", function () {
+      $(".archive-introduction__tag").removeClass("active");
+      $(this).addClass("active");
+
+      const slug = $(this).data("tag");
+      const activeTab = $(".archive-introduction__tab.active").data("tab");
+
+      const params = new URLSearchParams();
+      params.set("taxonomy", activeTab);
+      params.set("slug", slug);
+
+      window.location.href = `${window.location.pathname}?${params.toString()}`;
+    });
+  });
 });

@@ -72,6 +72,7 @@
 
 .archive-introduction__tag-group {
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
   margin-bottom: 32px;
 }
@@ -83,6 +84,7 @@
   border-radius: 8px;
   color: $main-color;
   display: flex;
+  flex-shrink: 0;
   justify-content: center;
   line-height: 1.2;
   padding: 8px 0;
@@ -102,7 +104,7 @@
   }
 }
 
-.archive-introduction__tag--nuresery-type {
+.archive-introduction__tag--nursery-type {
   width: 200px;
 }
 
@@ -112,6 +114,7 @@
 
 .archive-introduction__card-group {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
   margin-bottom: 32px;
@@ -120,6 +123,7 @@
 .archive-introduction__card {
   background-color: $accent-color1;
   border-radius: 20px;
+  flex-shrink: 0;
   padding: 12px;
   width: 320px;
 

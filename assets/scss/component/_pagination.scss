@@ -1,0 +1,35 @@
+@use "../global/" as *;
+
+.pagination {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.page-numbers {
+  align-items: center;
+  background-color: $white-color;
+  border: 1px solid $main-color;
+  border-radius: 8px;
+  color: $main-color;
+  display: flex;
+  justify-content: center;
+  line-height: 1.2;
+  height: 36px;
+  width: 36px;
+
+  &.prev,
+  &.next {
+    font-size: 11px;
+  }
+
+  &:hover {
+    background-color: rgb(228, 226, 226);
+  }
+
+  &.current {
+    background-color: $main-color;
+    color: $white-color;
+  }
+}
