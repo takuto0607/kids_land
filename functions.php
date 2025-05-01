@@ -5,6 +5,7 @@ $function_files = [
     '/functions/init.php',
     '/functions/breadcrumb.php',
     '/functions/contact-section.php',
+    '/functions/sitemap-section.php',
     '/functions/display-data.php',
     '/functions/introduction-custom-field.php',
     '/functions/info-custom-field.php',

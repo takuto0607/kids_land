@@ -1,0 +1,19 @@
+
+.page-404 {
+  margin-bottom: 174px;
+}
+
+.page-404__container {
+  margin: 0 auto;
+  max-width: 1080px;
+
+  & > p {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    line-height: 1.5;
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+}

@@ -1496,6 +1496,23 @@ source {
   transform: translateY(-50%);
 }
 
+.page-404 {
+  margin-bottom: 174px;
+}
+
+.page-404__container {
+  margin: 0 auto;
+  max-width: 1080px;
+}
+.page-404__container > p {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  line-height: 1.5;
+}
+.page-404__container > p:not(:last-child) {
+  margin-bottom: 24px;
+}
+
 .img-wrapper > img, .img-wrapper > source {
   height: auto;
   object-fit: cover;
