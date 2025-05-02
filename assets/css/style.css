@@ -1702,6 +1702,150 @@ source {
   text-align: center;
 }
 
+.archive-letter {
+  margin-bottom: 120px;
+  padding: 0 60px;
+}
+
+.archive-letter__inner {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+}
+
+.archive-letter__content {
+  flex-shrink: 0;
+  width: 960px;
+}
+
+.archive-letter__search {
+  border-bottom: 2px solid rgb(85, 0, 12);
+  margin-bottom: 32px;
+  padding-bottom: 12px;
+}
+.archive-letter__search > h2 {
+  font-size: 24px;
+  line-height: 1.2;
+  margin-bottom: 8px;
+  padding-left: 32px;
+  position: relative;
+}
+.archive-letter__search > h2::before {
+  content: "\f002";
+  font: var(--fa-font-solid);
+  font-size: 20px;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.archive-letter__search-group {
+  display: flex;
+  gap: 8px;
+}
+
+.archive-letter__select {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(51, 51, 51);
+  border-radius: 8px;
+  height: 36px;
+  position: relative;
+}
+.archive-letter__select > input {
+  color: rgb(51, 51, 51);
+  cursor: pointer;
+  height: 100%;
+  line-height: 1.2;
+  padding: 0 16px;
+  width: 100%;
+}
+.archive-letter__select::after {
+  content: "\f078";
+  cursor: pointer;
+  font: var(--fa-font-solid);
+  font-size: 13px;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.archive-letter__select--prefecture {
+  width: 240px;
+}
+
+.archive-letter__select--nursery {
+  width: 200px;
+}
+
+.archive-letter__search-btn {
+  align-items: center;
+  background-color: rgb(85, 0, 12);
+  border-radius: 8px;
+  color: rgb(255, 255, 255);
+  display: flex;
+  font-size: 19px;
+  justify-content: center;
+  height: 36px;
+  width: 36px;
+}
+.archive-letter__search-btn:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.archive-letter__card-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 32px;
+}
+
+.archive-letter__card {
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  flex-shrink: 0;
+  height: 280px;
+  overflow: hidden;
+  width: 300px;
+}
+.archive-letter__card:hover {
+  opacity: 0.7;
+}
+
+.archive-letter__card-img {
+  width: 100%;
+}
+.archive-letter__card-img > .img-wrapper {
+  width: 300px;
+}
+.archive-letter__card-img > .img-wrapper > img {
+  aspect-ratio: 20/9;
+}
+
+.archive-letter__card-content {
+  color: rgb(51, 51, 51);
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  padding: 12px;
+}
+.archive-letter__card-content > h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+.archive-letter__card-content > p {
+  margin-bottom: 12px;
+}
+
+.archive-letter__card-date {
+  text-align: right;
+}
+.archive-letter__card-date > time {
+  font-size: 14px;
+  text-align: right;
+}
+
 .single-letter {
   margin-bottom: 120px;
   padding: 0 60px;

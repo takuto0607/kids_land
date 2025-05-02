@@ -106,7 +106,6 @@
       <div class="single-letter__sidebar">
         <?php display_sidebar(); ?>
       </div>
-
     </div>
   </section>
   <?php endwhile; endif; ?>
