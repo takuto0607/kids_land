@@ -181,4 +181,95 @@ jQuery(document).ready(function ($) {
       window.location.href = `${window.location.pathname}?${params.toString()}`;
     });
   });
+
+  // こもれびだより一覧ページ
+  $(function () {
+    const selectPrefectureField = $("#select-prefecture-field");
+    const selectPrefectureBox = $("#select-prefecture-box");
+    const selectNurseryField = $("#select-nursery-field");
+    const selectNurseryBox = $("#select-nursery-box");
+    const searchBtn = $(".archive-letter__search-btn");
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const presetPrefecture = urlParams.get("prefecture");
+    const presetNursery = urlParams.get("nursery");
+
+    let selectedPrefecture = "";
+    let selectedNursery = "";
+
+    // セレクトボックスの開閉
+    selectPrefectureField.on("click", function () {
+      selectPrefectureField.toggleClass("open");
+      selectPrefectureBox.slideToggle();
+    });
+
+    selectNurseryField.on("click", function () {
+      selectNurseryField.toggleClass("open");
+      selectNurseryBox.slideToggle();
+    });
+
+    // 都道府県の選択
+    $(".option-prefecture").on("click", function () {
+      selectedPrefecture = $(this).data("prefecture") || $(this).text();
+      selectPrefectureField.find("input").val($(this).text());
+      selectPrefectureField.toggleClass("open");
+      selectPrefectureBox.slideUp();
+
+      // 保育園のセレクトボックスを更新
+      $(".option-nursery").each(function () {
+        const prefecture = $(this).data("prefecture");
+        if (!selectedPrefecture || prefecture === selectedPrefecture) {
+          $(this).show();
+        } else {
+          $(this).hide();
+        }
+      });
+
+      // 保育園の選択状態をリセット
+      selectedNursery = "";
+      selectNurseryField.find("input").val("");
+    });
+
+    // 保育園の選択
+    $(".option-nursery").on("click", function () {
+      selectedNursery = $(this).data("nursery");
+      selectNurseryField.find("input").val($(this).text());
+      selectNurseryField.toggleClass("open");
+      selectNurseryBox.slideUp();
+    });
+
+    // ページ読み込み時にURLパラメータから値を取得して反映
+    if (presetPrefecture) {
+      const $prefOption = $(
+        `.option-prefecture[data-prefecture="${presetPrefecture}"]`
+      );
+      if ($prefOption.length) {
+        $prefOption.trigger("click");
+      }
+    }
+
+    if (presetNursery) {
+      const $nurseryOption = $(
+        `.option-nursery[data-nursery="${presetNursery}"]`
+      );
+      if ($nurseryOption.length) {
+        $nurseryOption.trigger("click");
+      }
+    }
+
+    // 検索処理
+    searchBtn.on("click", function () {
+      const url = new URLSearchParams();
+
+      if (selectedPrefecture) {
+        url.set("prefecture", selectedPrefecture);
+      }
+
+      if (selectedNursery) {
+        url.set("nursery", selectedNursery);
+      }
+
+      window.location.href = `${window.location.pathname}?${url.toString()}`;
+    });
+  });
 });

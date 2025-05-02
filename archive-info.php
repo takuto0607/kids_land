@@ -1,8 +1,3 @@
-<?php
-/*
-  template Name: お知らせ一覧
-*/
-?>
 <?php get_header(); ?>
 <main>
   <?php

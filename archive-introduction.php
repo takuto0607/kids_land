@@ -1,8 +1,3 @@
-<?php
-/*
-  template Name: 各園のご紹介一覧
-*/
-?>
 <?php get_header(); ?>
 <main>
   <?php

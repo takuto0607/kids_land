@@ -1768,15 +1768,44 @@ source {
   position: absolute;
   right: 16px;
   top: 50%;
-  transform: translateY(-50%);
+  translate: 0 -50%;
+  transition: transform 0.3s ease-in-out;
+}
+.archive-letter__select.open::after {
+  transform: rotate(-180deg);
 }
 
-.archive-letter__select--prefecture {
+.archive-letter__select--prefecture,
+.archive-letter__box--prefecture {
   width: 240px;
 }
 
-.archive-letter__select--nursery {
+.archive-letter__select--nursery,
+.archive-letter__box--nursery {
   width: 200px;
+}
+
+.archive-letter__box {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(51, 51, 51);
+  border-radius: 8px;
+  color: rgb(51, 51, 51);
+  cursor: pointer;
+  display: none;
+  overflow: hidden;
+  padding: 0 8px;
+  position: absolute;
+  z-index: 1;
+}
+.archive-letter__box > p {
+  align-items: center;
+  display: flex;
+  height: 36px;
+  line-height: 1.2;
+  padding: 0 8px;
+}
+.archive-letter__box > p:hover {
+  opacity: 0.5;
 }
 
 .archive-letter__search-btn {
@@ -1831,10 +1860,11 @@ source {
   padding: 12px;
 }
 .archive-letter__card-content > h3 {
-  font-size: 18px;
+  height: 48px;
   margin-bottom: 12px;
 }
-.archive-letter__card-content > p {
+.archive-letter__card-content > h4 {
+  font-size: 18px;
   margin-bottom: 12px;
 }
 
