@@ -1,1 +1,95 @@
 @use "../global/" as *;
+
+.contact-confirm {
+  margin-bottom: 120px;
+}
+
+.contact-confirm__content {
+  background-color: $white-color;
+  border-radius: 40px;
+  margin: 0 auto;
+  max-width: 1080px;
+  padding: 64px 140px;
+}
+
+.contact-confirm__item-box {
+  margin-bottom: 48px;
+}
+
+.contact-confirm__item {
+  align-items: center;
+  display: flex;
+  gap: 32px;
+  margin-bottom: 16px;
+}
+
+.contact-confirm__item-name {
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+  gap: 12px;
+  line-height: 1.5;
+  width: 300px;
+
+  & > span {
+    align-items: center;
+    color: $white-color;
+    border-radius: 4px;
+    background-color: $text-color2;
+    display: flex;
+    font-size: 12px;
+    height: 20px;
+    justify-content: center;
+    width: 42px;
+
+    &.required {
+      background-color: $main-color;
+    }
+  }
+}
+
+.contact-confirm__item-content {
+  color: $text-color2;
+  line-height: 1.5;
+}
+
+.contact-confirm__content-row {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.contact-confirm__row-name {
+  color: $text-color2;
+  flex-shrink: 0;
+  line-height: 1.5;
+  width: 150px;
+}
+
+.contact-confirm__btn-wrapper {
+  text-align: center;
+
+  & > p {
+    display: inline-block;
+    position: relative;
+
+    &::after {
+      font: var(--fa-font-solid);
+      content: "\f054";
+      position: absolute;
+      top: 50%;
+      right: 26px;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.entry-confirm__btn {
+  align-items: center;
+  text-align: center;
+}
