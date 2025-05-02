@@ -152,4 +152,33 @@ jQuery(document).ready(function ($) {
       window.location.href = `${window.location.pathname}?${params.toString()}`;
     });
   });
+
+  // お知らせ一覧ページ
+  $(function () {
+    $(document).ready(function () {
+      const params = new URLSearchParams(window.location.search);
+      const setCategory = params.get("category");
+
+      if (setCategory) {
+        $(`.archive-info__tag[data-category="${setCategory}"]`).addClass(
+          "active"
+        );
+      } else {
+        $(".archive-info__tag").first().addClass("active");
+      }
+    });
+
+    // タブクリック時の処理
+    $(".archive-info__tag").on("click", function () {
+      $(".archive-info__tag").removeClass("active");
+      $(this).addClass("active");
+
+      const category = $(this).data("category");
+
+      const params = new URLSearchParams();
+      params.set("category", category);
+
+      window.location.href = `${window.location.pathname}?${params.toString()}`;
+    });
+  });
 });

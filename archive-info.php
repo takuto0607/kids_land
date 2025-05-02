@@ -9,35 +9,25 @@
   $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
   // GET パラメータの取得
-  // $target_taxonomy = isset($_GET['taxonomy']) ? sanitize_text_field($_GET['taxonomy']) : '';
   $target_category = isset($_GET['category']) ? sanitize_text_field($_GET['category']) : 'all';
 
-  // デフォルト値を定義
-  // $default_terms = [
-  //   'nursery-type' => 'certified-nursery',
-  //   'prefecture' => 'hokkaido',
-  // ];
-
-  // タクソノミーとタームを決定
-  // $target_taxonomy = array_key_exists($taxonomy, $default_terms) ? $taxonomy : 'nursery-type';
-  // $target_terms = $slug ?: $default_terms[$target_taxonomy];
-
-  // タクソノミークエリを構築
-  $tax_query = [
-    [
-        'taxonomy' => 'letter-category',
-        'field' => 'slug',
-        'terms' => $target_category,
-    ]
-  ];
-
-  // クエリ構築
+  // WP_Queryの引数を定義
   $args = [
     'post_type' => 'info',
     'posts_per_page' => 10,
     'paged' => $paged,
-    'tax_query' => $tax_query,
   ];
+
+  // 「すべて」以外が選択されたときのみ、タクソノミークエリを追加
+  if ($target_category !== 'all') {
+    $args['tax_query'] = [
+      [
+        'taxonomy' => 'info-category',
+        'field' => 'slug',
+        'terms' => $target_category,
+      ]
+    ];
+  }
 
   $query = new WP_Query($args);
   ?>
@@ -68,58 +58,74 @@
    <section class="archive-info">
     <div class="archive-info__content">
       <ul class="archive-info__tag-group">
-        <li class="archive-info__tag active">すべて</li>
-        <li class="archive-info__tag">お知らせ</li>
-        <li class="archive-info__tag">お知らせ</li>
-        <li class="archive-info__tag">お知らせ</li>
+        <li class="archive-info__tag" data-category="all">すべて</li>
+        <?php
+        $display_categories = get_terms([
+          'taxonomy' => 'info-category',
+          'hide_empty' => true,
+          'orderby' => 'term_id',
+          'order' => 'ASC',
+          'parent' => 0,
+        ]);
+        if ($display_categories && !is_wp_error($display_categories)):
+          foreach ($display_categories as $display_category):
+        ?>
+          <li class="archive-info__tag" data-category="<?php echo esc_attr($display_category->slug); ?>">
+            <?php echo esc_html($display_category->name); ?>
+          </li>
+        <?php
+          endforeach;
+        endif;
+        ?>
       </ul>
       <div class="archive-info__main">
         <div class="archive-info__link-group">
-          <a class="archive-info__link" href="">
-            <div class="archive-info__link-icon">
-              <div class="archive-info__link-img">
-                <div class="img-wrapper">
-                  <img src="<?php echo echo_img("icon/slug-info-icon.svg"); ?>" width="48" height="48" alt="イントロダクションアイコン" loading="lazy">
+          <?php if ($query->have_posts()) : ?>
+            <?php while ($query->have_posts()) : $query->the_post(); ?>
+            <a class="archive-info__link" href="<?php echo esc_url(home_url()); ?>">
+              <?php
+              $info_cateory = get_the_terms(get_the_ID(), 'info-category');
+              $term = $info_cateory[0];
+              $category_slug = $term->slug;
+              $category_name = $term->name;
+
+              switch ($category_slug) {
+                case "activities":
+                  $icon_url = "icon/slug-activities-icon.svg";
+                  break;
+                case "media-coverage":
+                  $icon_url = "icon/slug-media-coverage-icon.svg";
+                  break;
+                default:
+                  $icon_url = "icon/slug-news-icon.svg";
+                  break;
+              }
+              ?>
+              <div class="archive-info__link-icon archive-info__link-icon--<?php echo esc_attr($category_slug); ?>">
+                <div class="archive-info__link-img">
+                  <div class="img-wrapper">
+                    <img src="<?php echo echo_img($icon_url); ?>" width="48" height="48" alt="<?php echo $category_name; ?>アイコン" loading="lazy">
+                  </div>
                 </div>
+                <p><?php echo $category_name; ?></p>
               </div>
-              <p>お知らせ</p>
-            </div>
-            <div class="archive-info__link-content">
-              <p class="archive-info__link-date"><time datetime="">2024.04.01</time></p>
-              <h2>タイトルが入ります。タイトルが入ります。</h2>
-              <p>本文の抜き出しが入ります。本文の抜き出しが入ります。本文の抜き出しが入ります。本文の抜き出しが...</p>
-            </div>
-          </a>
-          <a class="archive-info__link" href="">
-            <div class="archive-info__link-icon">
-              <div class="archive-info__link-img">
-                <div class="img-wrapper">
-                  <img src="<?php echo echo_img("icon/slug-info-icon.svg"); ?>" width="48" height="48" alt="イントロダクションアイコン" loading="lazy">
-                </div>
+              <div class="archive-info__link-content">
+                <p class="archive-info__link-date"><time datetime="<?php echo esc_attr(get_the_modified_time('c')); ?>"><?php echo esc_html( get_the_modified_date('Y.m.d') ); ?></time></p>
+                <h2><?php the_title(); ?></h2>
+                <?php
+                $excerpt = get_the_excerpt();
+                if (!empty($excerpt)):
+                ?>
+                  <p class="archive-info__link-excerpt"><?php echo get_the_excerpt(); ?></p>
+                <?php else: ?>
+                  <p>この記事に本文はありません。</p>
+                <?php endif; ?>
               </div>
-              <p>お知らせ</p>
-            </div>
-            <div class="archive-info__link-content">
-              <p><time datetime="">2024.04.01</time></p>
-              <h2>タイトルが入ります。タイトルが入ります。</h2>
-              <p>本文の抜き出しが入ります。本文の抜き出しが入ります。本文の抜き出しが入ります。本文の抜き出しが...</p>
-            </div>
-          </a>
-          <a class="archive-info__link" href="">
-            <div class="archive-info__link-icon">
-              <div class="archive-info__link-img">
-                <div class="img-wrapper">
-                  <img src="<?php echo echo_img("icon/slug-info-icon.svg"); ?>" width="48" height="48" alt="イントロダクションアイコン" loading="lazy">
-                </div>
-              </div>
-              <p>お知らせ</p>
-            </div>
-            <div class="archive-info__link-content">
-              <p><time datetime="">2024.04.01</time></p>
-              <h2>タイトルが入ります。タイトルが入ります。</h2>
-              <p>本文の抜き出しが入ります。本文の抜き出しが入ります。本文の抜き出しが入ります。本文の抜き出しが...</p>
-            </div>
-          </a>
+            </a>
+            <?php endwhile; ?>
+          <?php else: ?>
+            <p>該当するお知らせ記事はありません。</p>
+          <?php endif; ?>
         </div>
         <div class="pagination">
             <?php
@@ -128,8 +134,7 @@
                 'current' => $paged,
                 'format' => '?paged=%#%',
                 'add_args' => [
-                    'taxonomy' => $target_taxonomy,
-                    'slug' => $target_terms,
+                    'category' => $target_category,
                 ],
                 'prev_text' => '<i class="fa-solid fa-chevron-left"></i>',
                 'next_text' => '<i class="fa-solid fa-chevron-right"></i>',
