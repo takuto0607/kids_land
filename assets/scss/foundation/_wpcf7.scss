@@ -3,11 +3,16 @@
 .wpcf7-list-item {
   margin: 0;
 
-  & > label:hover {
-    cursor: pointer;
+  & > label {
+    align-items: center;
+    display: flex;
 
-    & > input {
+    &:hover {
       cursor: pointer;
+
+      & > input {
+        cursor: pointer;
+      }
     }
   }
 }

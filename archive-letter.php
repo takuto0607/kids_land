@@ -169,19 +169,19 @@
                 <div class="archive-letter__card-content">
                   <?php
                   $letter_info = get_the_terms(get_the_ID(), 'prefecture');
-                  $nurcery_name = '';
+                  $nursery_name = '';
 
                   // 子ターム（親IDが0でない）を探す
                   if (!is_wp_error($letter_info) && !empty($letter_info)) {
                     foreach ($letter_info as $term) {
                         if ($term->parent !== 0) {
-                            $nurcery_name = $term->name;
+                            $nursery_name = $term->name;
                             break;
                         }
                     }
                   }
                   ?>
-                  <h4><?php echo esc_html($nurcery_name); ?>からのおたより</h4>
+                  <h4><?php echo esc_html($nursery_name); ?>からのおたより</h4>
                   <h3><?php the_title(); ?></h3>
                   <div class="archive-letter__card-date">
                     <time datetime="<?php echo esc_attr(get_the_modified_time('c')); ?>"><?php echo esc_html( get_the_modified_date('Yねんnがつjにち') ); ?></time>

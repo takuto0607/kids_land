@@ -1,10 +1,30 @@
 @use "../global/" as *;
 
-.entry-form {
+.contact-form {
   margin-bottom: 120px;
 }
 
-.entry-form__content {
+.contact-form__announce {
+  color: $text-color2;
+  margin: 0 auto 48px;
+  max-width: 1080px;
+
+  & > p {
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+
+  & > a {
+    border-bottom: 1px solid $text-color2;
+    display: inline-block;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.contact-form__content {
   background-color: $white-color;
   border-radius: 40px;
   margin: 0 auto;
@@ -12,14 +32,14 @@
   padding: 64px 140px;
 }
 
-.entry-form__item {
+.contact-form__item {
   align-items: center;
   display: flex;
   gap: 32px;
   margin-bottom: 16px;
 }
 
-.entry-form__item-name {
+.contact-form__item-name {
   align-items: center;
   display: flex;
   flex-shrink: 0;
@@ -44,58 +64,30 @@
   }
 }
 
-.entry-form__input {
+.contact-form__input {
   color: $text-color2;
   width: 100%;
 }
 
-.entry-form__radio {
-  line-height: 1.5;
-
-  & > .wpcf7-list-item {
-    padding-right: 10px;
-  }
-}
-
-.entry-form__radio--column {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.entry-form__textarea {
+.contact-form__input-field {
   border: 1px solid $text-color2;
   border-radius: 4px;
-  height: 100px;
+  height: 40px;
+  padding: 5px 10px;
+  width: 100%;
+}
+
+.contact-form__textarea {
+  border: 1px solid $text-color2;
+  border-radius: 4px;
+  height: 200px;
   line-height: 1.5;
   padding: 5px 10px;
   resize: none;
   width: 100%;
 }
 
-.entry-form__textarea--large {
-  height: 200px;
-}
-
-.entry-form__input-field {
-  border: 1px solid $text-color2;
-  border-radius: 4px;
-  height: 40px;
-  padding: 5px 10px;
-  width: 100%;
-}
-
-.entry-form__date-select {
-  background-color: $white-color;
-  border: 1px solid $text-color2;
-  border-radius: 4px;
-  cursor: pointer;
-  height: 40px;
-  padding: 5px 10px;
-  width: 100%;
-}
-
-.entry-form__input-row {
+.contact-form__input-row {
   align-items: center;
   display: flex;
   gap: 10px;
@@ -106,12 +98,12 @@
   }
 }
 
-.entry-form__input-row-name {
+.contact-form__input-row-name {
   flex-shrink: 0;
   width: 150px;
 }
 
-.entry-form__agree {
+.contact-form__agree {
   align-items: center;
   display: flex;
   justify-content: center;
@@ -134,7 +126,7 @@
   }
 }
 
-.entry-form__btn-wrapper {
+.contact-form__btn-wrapper {
   text-align: center;
 
   & > p {
@@ -152,7 +144,7 @@
   }
 }
 
-.entry-form__btn {
+.contact-form__btn {
   align-items: center;
   text-align: center;
 }
