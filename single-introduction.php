@@ -10,7 +10,7 @@
   }
   ?>
   <div class="page-top page-top-short">
-    <div class="page-top-inner">
+    <div class="page-top-inner open-fade-up">
       <div class="page-heading">
         <div class="page-title">
           <h1>桜のこもれびキッズランド</h1>
@@ -43,7 +43,7 @@
           $image_alt = "アイキャッチ画像未登録";
         }
       ?>
-      <div class="single-introduction__thumbnail">
+      <div class="single-introduction__thumbnail fade-up">
         <div class="img-wrapper">
           <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>" width="800" height="450" loading="lazy">
         </div>
@@ -55,8 +55,8 @@
           foreach ($introduction_sections as $section) :
         ?>
         <div class="single-introduction__sub-section">
-          <h3><?php echo esc_html($section['introduction_heading']); ?></h3>
-          <p><?php echo nl2br(esc_html($section['introduction_text'])); ?></p>
+          <h3 class="fade-up"><?php echo esc_html($section['introduction_heading']); ?></h3>
+          <p class="fade-up"><?php echo nl2br(esc_html($section['introduction_text'])); ?></p>
         </div>
         <?php
           endforeach;
@@ -69,7 +69,7 @@
   <!-- Inside -->
   <section class="inside">
     <div class="section-title">
-      <div class="section-title__inner">
+      <div class="section-title__inner fade-up">
         <div class="section-title__img">
           <div class="img-wrapper">
             <img src="<?php echo echo_img("icon/camera-icon.svg"); ?>" width="72" height="72" alt="カメラアイコン" loading="lazy">
@@ -96,7 +96,7 @@
 
   <!-- Message -->
   <section class="message">
-    <div class="message__title">
+    <div class="message__title fade-up">
       <div class="section-title">
         <div class="section-title__inner">
           <div class="section-title__img">
@@ -111,7 +111,7 @@
     </div>
     <div class="message__container">
       <div class="message__inner">
-        <div class="message__img">
+        <div class="message__img fade-up">
           <?php $director_image = get_field('director_image'); ?>
           <?php if ($director_image) : ?>
             <div class="img-wrapper">
@@ -119,7 +119,7 @@
             </div>
           <?php endif; ?>
         </div>
-        <div class="message__text">
+        <div class="message__text fade-up">
           <?php
           $director_message = get_field('director_message');
           if ($director_message) :
@@ -133,7 +133,7 @@
 
   <!-- About Nursery -->
   <section class="about-nursery">
-    <div class="about-nursery__title">
+    <div class="about-nursery__title fade-up">
       <div class="section-title">
         <div class="section-title__inner">
           <div class="section-title__img">
@@ -147,11 +147,11 @@
       </div>
     </div>
     <div class="about-nursery__content">
-      <div class="about-nursery__row">
+      <div class="about-nursery__row fade-up">
         <h3>所在地</h3>
         <address class="about-nursery__data"><?php the_field('nursery_address'); ?></address>
       </div>
-      <div class="about-nursery__row">
+      <div class="about-nursery__row fade-up">
         <h3 class="uppercase">tel / fax</h3>
         <address class="about-nursery__data about-nursery__data--tel">
           <?php $fax = get_field('nursery_fax');  ?>
@@ -159,15 +159,15 @@
           <?php if ($fax) : ?> / <?php the_field('nursery_fax'); ?><?php endif; ?>
         </address>
       </div>
-      <div class="about-nursery__row">
+      <div class="about-nursery__row fade-up">
         <h3>対象</h3>
         <p class="about-nursery__data">1歳児から小学校就学前までの乳幼児（1歳児～5歳児）</p>
       </div>
-      <div class="about-nursery__row">
+      <div class="about-nursery__row fade-up">
         <h3>入園日</h3>
         <p class="about-nursery__data about-nursery__data--admission-date">原則として毎月1日<br>初回は見学になります。<br>他の保護者や園児及び職員との三密対応及び保育園の日程により、見学日時に制限がある場合がございます。ご理解のうえ、ご連絡願います。</p>
       </div>
-      <div class="about-nursery__row">
+      <div class="about-nursery__row fade-up">
         <h3>開園日</h3>
         <div class="about-nursery__data">
           <div class="about-nursery__open-date">
@@ -203,7 +203,7 @@
           <p class="about-nursery__open-date-note">月曜日～土曜日〔日曜日、祝日・休日、年末年始（12/29～1/3）はお休み〕</p>
         </div>
       </div>
-      <div class="about-nursery__row">
+      <div class="about-nursery__row fade-up">
         <h3>保育時間</h3>
         <div class="about-nursery__data">
           <div class="about-nursery__care-hours">
@@ -234,7 +234,7 @@
           </div>
         </div>
       </div>
-      <div class="about-nursery__row">
+      <div class="about-nursery__row fade-up">
         <h3>定員</h3>
         <div class="about-nursery__data">
           <?php $capacity_data = get_capacity_display_data(); ?>
@@ -254,7 +254,7 @@
           </div>
         </div>
       </div>
-      <div class="about-nursery__row">
+      <div class="about-nursery__row fade-up">
         <h3>職員</h3>
         <div class="about-nursery__data">
           <?php $staff_data = get_staff_display_data(); ?>

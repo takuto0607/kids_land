@@ -43,6 +43,23 @@ jQuery(document).ready(function ($) {
     return false;
   });
 
+  // タイトルやテキストのアニメーション表示
+  $(function () {
+    $(".open-fade-up").addClass("show");
+
+    $(window).scroll(function () {
+      $(".fade-up").each(function () {
+        var elementHeight = $(this).offset().top;
+        var scroll = $(window).scrollTop();
+        var windowHeight = $(window).height();
+
+        if (scroll + windowHeight > elementHeight) {
+          $(this).addClass("show");
+        }
+      });
+    });
+  });
+
   // FAQ アコーディオン
   $(function () {
     const faqQuestion = $(".faq__question");

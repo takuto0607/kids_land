@@ -5,7 +5,7 @@
 <section id="letter" class="letter">
   <div class="letter__inner letter__inner--<?php echo esc_attr($page_type); ?>">
     <div class="section-title">
-      <div class="section-title__inner">
+      <div class="section-title__inner fade-up">
         <div class="section-title__img">
           <div class="img-wrapper">
             <img src="<?php echo echo_img("icon/letter-icon.svg"); ?>" width="72" height="72" alt="レターアイコン" loading="lazy">
@@ -32,7 +32,7 @@
           if ($letter_query->have_posts()) :
             while ($letter_query->have_posts()) : $letter_query->the_post() ;
           ?>
-          <div class="letter__card">
+          <div class="letter__card fade-up">
             <a class="letter__card-link" href="<?php echo esc_url(get_permalink()); ?>">
               <?php
                 if (has_post_thumbnail()) {
@@ -84,7 +84,7 @@
         </div>
       </div>
       <div class="letter__btn-wrapper">
-        <div class="btn">
+        <div class="btn fade-up">
           <a href="<?php echo esc_url(home_url('/letter')); ?>">もっと見る</a>
         </div>
       </div>

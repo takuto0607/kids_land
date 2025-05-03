@@ -27,7 +27,7 @@
   $query = new WP_Query($args);
   ?>
   <div class="page-top">
-    <div class="page-top-inner">
+    <div class="page-top-inner open-fade-up">
       <div class="page-heading">
         <div class="page-title">
           <h1>お知らせ</h1>
@@ -41,7 +41,7 @@
   <!-- Archive Info -->
    <section class="archive-info">
     <div class="archive-info__content">
-      <ul class="archive-info__tag-group">
+      <ul class="archive-info__tag-group fade-up">
         <li class="archive-info__tag" data-category="all">すべて</li>
         <?php
         $display_categories = get_terms([
@@ -66,7 +66,7 @@
         <div class="archive-info__link-group">
           <?php if ($query->have_posts()) : ?>
             <?php while ($query->have_posts()) : $query->the_post(); ?>
-            <a class="archive-info__link" href="<?php echo esc_url(get_permalink()); ?>">
+            <a class="archive-info__link fade-up" href="<?php echo esc_url(get_permalink()); ?>">
               <?php
               $info_cateory = get_the_terms(get_the_ID(), 'info-category');
               $term = $info_cateory[0];
@@ -111,7 +111,7 @@
             <p>該当するお知らせ記事はありません。</p>
           <?php endif; ?>
         </div>
-        <div class="pagination">
+        <div class="pagination fade-up">
             <?php
             echo paginate_links([
                 'total' => $query->max_num_pages,

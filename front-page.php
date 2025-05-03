@@ -4,7 +4,7 @@
     <section id="fv" class="fv">
       <div class="fv__bg">
         <div class="fv__title">
-          <h1>一人ひとりの輝きが、<br>未来を彩る</h1>
+          <h1 class="open-fade-up">一人ひとりの輝きが、<br>未来を彩る</h1>
         </div>
       </div>
       <?php
@@ -39,7 +39,7 @@
 
     <!-- Welcome -->
     <section id="welcome" class="welcome">
-      <div class="section-title">
+      <div class="section-title fade-up">
         <div class="section-title__inner">
           <div class="section-title__img">
             <div class="img-wrapper">
@@ -50,7 +50,7 @@
           <p class="capitalize">welcome</p>
         </div>
       </div>
-      <div class="welcome__content">
+      <div class="welcome__content fade-up">
         <p>「こもれび」とは<br>風に揺れる木の葉によって生み出される光と影の揺らめきを表すことばです。<br>それはその瞬間に一度だけ存在します。</p>
         <p>桜のこもれびキッズランドは、<br>子どもたち一人ひとりが独自の輝きを放つように、<br>大切な個性を伸ばす場所です。<br>温かく包み込むような雰囲気の中で、安心して成長できる環境を提供し、<br>笑顔あふれる毎日をお約束します。</p>
       </div>
@@ -59,7 +59,7 @@
     <!-- Introduction -->
     <section id="introduction" class="introduction">
       <div class="introduction__container">
-        <div class="section-title">
+        <div class="section-title fade-up">
           <div class="section-title__inner">
             <div class="section-title__img">
               <div class="img-wrapper">
@@ -72,27 +72,27 @@
         </div>
         <div class="introduction__prefecture-group-wrapper">
           <div class="introduction__prefecture-group">
-            <div class="introduction__prefecture">
+            <div class="introduction__prefecture fade-up">
               <a href="<?php echo esc_url(home_url('/introduction?taxonomy=prefecture&slug=tokyo')); ?>">東京都</a>
             </div>
-            <div class="introduction__prefecture">
+            <div class="introduction__prefecture fade-up">
               <a href="<?php echo esc_url(home_url('/introduction?taxonomy=prefecture&slug=kanagawa')); ?>">神奈川県</a>
             </div>
-            <div class="introduction__prefecture">
+            <div class="introduction__prefecture fade-up">
               <a href="<?php echo esc_url(home_url('/introduction?taxonomy=prefecture&slug=saitama')); ?>">埼玉県</a>
             </div>
-            <div class="introduction__prefecture">
+            <div class="introduction__prefecture fade-up">
               <a href="<?php echo esc_url(home_url('/introduction?taxonomy=prefecture&slug=chiba')); ?>">千葉県</a>
             </div>
-            <div class="introduction__prefecture">
+            <div class="introduction__prefecture fade-up">
               <a href="<?php echo esc_url(home_url('/introduction?taxonomy=prefecture&slug=osaka')); ?>">大阪府</a>
             </div>
-            <div class="introduction__prefecture">
+            <div class="introduction__prefecture fade-up">
               <a href="<?php echo esc_url(home_url('/introduction?taxonomy=prefecture&slug=kyoto')); ?>">京都府</a>
             </div>
           </div>
         </div>
-        <div class="btn">
+        <div class="btn fade-up">
           <a href="<?php echo esc_url(home_url('/introduction')); ?>">一覧ページへ</a>
         </div>
       </div>

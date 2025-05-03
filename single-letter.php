@@ -7,7 +7,7 @@
 <main>
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
   <div class="page-top">
-    <div class="page-top-inner">
+    <div class="page-top-inner open-fade-up">
       <div class="page-heading">
         <div class="page-title">
           <h1>こもれびだより</h1>
@@ -22,7 +22,7 @@
   <section class="single-letter">
     <div class="single-letter__inner">
       <div class="single-letter__content">
-        <div class="single-letter__content-title">
+        <div class="single-letter__content-title fade-up">
           <div class="single-letter__title-note">
             <?php
             // 保育園名の取得
@@ -58,7 +58,7 @@
             $image_alt = "アイキャッチ画像未登録";
           }
         ?>
-        <div class="single-letter__thumbnail">
+        <div class="single-letter__thumbnail fade-up">
           <div class="img-wrapper">
             <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>" width="640" height="320" loading="lazy">
           </div>
@@ -68,7 +68,7 @@
           $content = trim( get_the_content() );
           if (!empty( $content )) :
           ?>
-          <div class="single-letter__main-text">
+          <div class="single-letter__main-text fade-up">
             <?php the_content(); ?>
           </div>
           <?php endif; ?>
@@ -78,8 +78,8 @@
             foreach ($letter_sections as $section) :
           ?>
           <div class="single-letter__sub-section">
-            <h3><?php echo esc_html($section['letter_heading']); ?></h3>
-            <p><?php echo nl2br(esc_html($section['letter_text'])); ?></p>
+            <h3 class="fade-up"><?php echo esc_html($section['letter_heading']); ?></h3>
+            <p class="fade-up"><?php echo nl2br(esc_html($section['letter_text'])); ?></p>
           </div>
           <?php
             endforeach;
@@ -87,7 +87,7 @@
           ?>
         </div>
         <div class="single-letter__btn">
-          <div class="btn btn-large">
+          <div class="btn btn-large fade-up">
             <a href="<?php echo esc_url(home_url('/letter')); ?>">お知らせ一覧へ</a>
           </div>
         </div>

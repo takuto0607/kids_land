@@ -4,7 +4,7 @@
 
 <section class="contact">
   <div class="contact__content">
-    <div class="section-title">
+    <div class="section-title fade-up">
       <div class="section-title__inner">
         <div class="section-title__img">
           <div class="img-wrapper">
@@ -15,8 +15,8 @@
         <p class="capitalize">contact</p>
       </div>
     </div>
-    <p>入園のお申込み、見学のご相談はこちらから！</p>
-    <div class="btn">
+    <p class="fade-up">入園のお申込み、見学のご相談はこちらから！</p>
+    <div class="btn fade-up">
       <a href="<?php echo esc_url(home_url('/contact')); ?>">お問い合わせ</a>
     </div>
   </div>

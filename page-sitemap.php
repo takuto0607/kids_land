@@ -6,7 +6,7 @@
 <?php get_header(); ?>
 <main>
   <div class="page-top page-top-long">
-    <div class="page-top-inner">
+    <div class="page-top-inner open-fade-up">
       <div class="page-heading">
         <div class="page-title">
           <h1>サイトマップ</h1>

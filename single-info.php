@@ -7,7 +7,7 @@
 <main>
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
   <div class="page-top">
-    <div class="page-top-inner">
+    <div class="page-top-inner open-fade-up">
       <div class="page-heading">
         <div class="page-title">
           <h1>お知らせ</h1>
@@ -21,7 +21,7 @@
   <!-- Single Info -->
   <section class="single-info">
     <div class="single-info__content">
-      <div class="single-info__content-title">
+      <div class="single-info__content-title fade-up">
         <p><time datetime="<?php echo esc_attr(get_the_modified_time('c')); ?>"><?php echo esc_html( get_the_modified_date('Y.m.d') ); ?></time></p>
         <h2><?php echo esc_html( get_the_title() ); ?></h2>
       </div>
@@ -39,7 +39,7 @@
           $image_alt = "アイキャッチ画像未登録";
         }
       ?>
-      <div class="single-info__thumbnail">
+      <div class="single-info__thumbnail fade-up">
         <div class="img-wrapper">
           <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>" width="640" height="320" loading="lazy">
         </div>
@@ -49,7 +49,7 @@
         $content = trim( get_the_content() );
         if (!empty( $content )) :
         ?>
-        <div class="single-info__main-text">
+        <div class="single-info__main-text fade-up">
           <?php the_content(); ?>
         </div>
         <?php endif; ?>
@@ -59,8 +59,8 @@
           foreach ($info_sections as $section) :
         ?>
         <div class="single-info__sub-section">
-          <h3><?php echo esc_html($section['info_heading']); ?></h3>
-          <p><?php echo nl2br(esc_html($section['info_text'])); ?></p>
+          <h3 class="fade-up"><?php echo esc_html($section['info_heading']); ?></h3>
+          <p class="fade-up"><?php echo nl2br(esc_html($section['info_text'])); ?></p>
         </div>
         <?php
           endforeach;
@@ -68,7 +68,7 @@
         ?>
       </div>
       <div class="single-info__btn">
-        <div class="btn btn-large">
+        <div class="btn btn-large fade-up">
           <a href="<?php echo esc_url(home_url('/info')); ?>">お知らせ一覧へ</a>
         </div>
       </div>

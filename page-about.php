@@ -6,7 +6,7 @@
 <?php get_header(); ?>
 <main>
   <div class="page-top">
-    <div class="page-top-inner">
+    <div class="page-top-inner open-fade-up">
       <div class="page-heading">
         <div class="page-title">
           <h1>わたしたちのこと</h1>
@@ -19,7 +19,7 @@
 
   <!-- Philosophy -->
   <section class="philosophy">
-    <div class="section-title">
+    <div class="section-title fade-up">
       <div class="section-title__inner">
         <div class="section-title__img">
           <div class="img-wrapper">
@@ -30,7 +30,7 @@
         <p class="capitalize">philosophy</p>
       </div>
     </div>
-    <div class="philosophy__content">
+    <div class="philosophy__content fade-up">
       <p>桜のこもれびキッズランドは、<br>子どもたち一人ひとりが独自の輝きを放つように、大切な個性を伸ばす場所です。<br>風に揺れる木々の葉が織りなす光と影の美しい揺らめきのように、<br>子どもたちのそれぞれの魅力を見つけ出し、大切に育てます。<br>自然とのふれあいを通じて、<br>子どもたちの好奇心や想像力を育み、<br>明るく豊かな未来への一歩を共に歩んでいきます。<br>温かく包み込むような雰囲気の中で、<br>安心して成長できる環境を提供し、<br>笑顔あふれる毎日をお約束します。</p>
     </div>
   </section>
@@ -38,7 +38,7 @@
   <!-- Yearly Program -->
   <section class="yearly-program">
     <div class="yearly-program__title">
-      <div class="section-title">
+      <div class="section-title fade-up">
         <div class="section-title__inner">
           <div class="section-title__img">
             <div class="img-wrapper">
@@ -52,7 +52,7 @@
     </div>
     <div class="yearly-program__content">
       <div class="yearly-program__card-group">
-        <div class="yearly-program__card">
+        <div class="yearly-program__card fade-up">
           <div class="yearly-program__card-img">
             <div class="img-wrapper">
               <img src="<?php echo echo_img("card-april.webp"); ?>" width="296" height="180" alt="進級・入園おめでとうの会" loading="lazy">
@@ -63,7 +63,7 @@
             <p>進級・入園おめでとうの会</p>
           </div>
         </div>
-        <div class="yearly-program__card">
+        <div class="yearly-program__card fade-up">
           <div class="yearly-program__card-img">
             <div class="img-wrapper">
               <img src="<?php echo echo_img("card-may.webp"); ?>" width="296" height="180" alt="親子遠足" loading="lazy">
@@ -74,7 +74,7 @@
             <p>親子遠足</p>
           </div>
         </div>
-        <div class="yearly-program__card">
+        <div class="yearly-program__card fade-up">
           <div class="yearly-program__card-img">
             <div class="img-wrapper">
               <img src="<?php echo echo_img("card-june.webp"); ?>" width="296" height="180" alt="運動会" loading="lazy">
@@ -85,7 +85,7 @@
             <p>運動会</p>
           </div>
         </div>
-        <div class="yearly-program__card">
+        <div class="yearly-program__card fade-up">
           <div class="yearly-program__card-img">
             <div class="img-wrapper">
               <img src="<?php echo echo_img("card-july.webp"); ?>" width="296" height="180" alt="たなばた会" loading="lazy">
@@ -96,7 +96,7 @@
             <p>たなばた会</p>
           </div>
         </div>
-        <div class="yearly-program__card">
+        <div class="yearly-program__card fade-up">
           <div class="yearly-program__card-img">
             <div class="img-wrapper">
               <img src="<?php echo echo_img("card-august.webp"); ?>" width="296" height="180" alt="夏のお楽しみ会" loading="lazy">
@@ -107,7 +107,7 @@
             <p>夏のお楽しみ会</p>
           </div>
         </div>
-        <div class="yearly-program__card">
+        <div class="yearly-program__card fade-up">
           <div class="yearly-program__card-img">
             <div class="img-wrapper">
               <img src="<?php echo echo_img("card-september.webp"); ?>" width="296" height="180" alt="親子レクリエーション" loading="lazy">
@@ -118,7 +118,7 @@
             <p>親子レクリエーション</p>
           </div>
         </div>
-        <div class="yearly-program__card">
+        <div class="yearly-program__card fade-up">
           <div class="yearly-program__card-img">
             <div class="img-wrapper">
               <img src="<?php echo echo_img("card-october.webp"); ?>" width="296" height="180" alt="ハロウィン" loading="lazy">
@@ -129,7 +129,7 @@
             <p>ハロウィン</p>
           </div>
         </div>
-        <div class="yearly-program__card">
+        <div class="yearly-program__card fade-up">
           <div class="yearly-program__card-img">
             <div class="img-wrapper">
               <img src="<?php echo echo_img("card-november.webp"); ?>" width="296" height="180" alt="秋の収穫体験遠足" loading="lazy">
@@ -140,7 +140,7 @@
             <p>秋の収穫体験遠足</p>
           </div>
         </div>
-        <div class="yearly-program__card">
+        <div class="yearly-program__card fade-up">
           <div class="yearly-program__card-img">
             <div class="img-wrapper">
               <img src="<?php echo echo_img("card-december.webp"); ?>" width="296" height="180" alt="クリスマス会" loading="lazy">
@@ -151,7 +151,7 @@
             <p>クリスマス会</p>
           </div>
         </div>
-        <div class="yearly-program__card">
+        <div class="yearly-program__card fade-up">
           <div class="yearly-program__card-img">
             <div class="img-wrapper">
               <img src="<?php echo echo_img("card-january.webp"); ?>" width="296" height="180" alt="新年お楽しみ会" loading="lazy">
@@ -162,7 +162,7 @@
             <p>新年お楽しみ会</p>
           </div>
         </div>
-        <div class="yearly-program__card">
+        <div class="yearly-program__card fade-up">
           <div class="yearly-program__card-img">
             <div class="img-wrapper">
               <img src="<?php echo echo_img("card-february.webp"); ?>" width="296" height="180" alt="おゆうぎ会" loading="lazy">
@@ -173,7 +173,7 @@
             <p>おゆうぎ会</p>
           </div>
         </div>
-        <div class="yearly-program__card">
+        <div class="yearly-program__card fade-up">
           <div class="yearly-program__card-img">
             <div class="img-wrapper">
               <img src="<?php echo echo_img("card-march.webp"); ?>" width="296" height="180" alt="ひな祭り会・巣立ちの会" loading="lazy">

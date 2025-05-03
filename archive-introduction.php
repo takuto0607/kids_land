@@ -38,7 +38,7 @@
   $query = new WP_Query($args);
   ?>
   <div class="page-top page-top-long">
-    <div class="page-top-inner">
+    <div class="page-top-inner open-fade-up">
       <div class="page-heading">
         <div class="page-title">
           <h1>各園のご紹介</h1>
@@ -52,7 +52,7 @@
   <!-- Archive Introduction -->
   <section class="archive-introduction">
     <div class="section-title">
-      <div class="section-title__inner">
+      <div class="section-title__inner fade-up">
         <div class="section-title__img">
           <div class="img-wrapper">
             <img src="<?php echo echo_img("icon/introduction-icon.svg"); ?>" width="72" height="72" alt="イントロダクションアイコン" loading="lazy">
@@ -80,7 +80,7 @@
             if ($display_terms && !is_wp_error($display_terms)):
               foreach ($display_terms as $display_term):
             ?>
-              <p class="archive-introduction__tag archive-introduction__tag--<?php echo esc_attr($target_taxonomy); ?>"
+              <p class="archive-introduction__tag archive-introduction__tag--<?php echo esc_attr($target_taxonomy); ?> fade-up"
                 data-tag="<?php echo esc_attr($display_term->slug); ?>">
                 <?php echo esc_html($display_term->name); ?>
               </p>
@@ -92,7 +92,7 @@
           <div class="archive-introduction__card-group">
           <?php if ($query->have_posts()) : ?>
             <?php while ($query->have_posts()) : $query->the_post(); ?>
-            <a class="archive-introduction__card" href="<?php echo esc_url(get_permalink()); ?>">
+            <a class="archive-introduction__card fade-up" href="<?php echo esc_url(get_permalink()); ?>">
               <?php
                 if (has_post_thumbnail()) {
                   $thumbnail_id = get_post_thumbnail_id();
@@ -137,7 +137,7 @@
           <?php endif; ?>
           </div>
 
-          <div class="pagination">
+          <div class="pagination fade-up">
             <?php
             echo paginate_links([
                 'total' => $query->max_num_pages,

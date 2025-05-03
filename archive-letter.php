@@ -56,7 +56,7 @@
   $query = new WP_Query($args);
   ?>
   <div class="page-top">
-    <div class="page-top-inner">
+    <div class="page-top-inner open-fade-up">
       <div class="page-heading">
         <div class="page-title">
           <h1>こもれびだより</h1>
@@ -71,7 +71,7 @@
   <section class="archive-letter">
     <div class="archive-letter__inner">
       <div class="archive-letter__content">
-        <div class="archive-letter__search">
+        <div class="archive-letter__search fade-up">
           <h2>園をさがす</h2>
           <div class="archive-letter__search-group">
             <?php
@@ -144,7 +144,7 @@
         <div class="archive-letter__card-group">
           <?php if ($query->have_posts()) : ?>
             <?php while ($query->have_posts()) : $query->the_post(); ?>
-            <div class="archive-letter__card">
+            <div class="archive-letter__card fade-up">
               <a class="archive-letter__card-link" href="<?php echo esc_url(get_permalink()); ?>">
                 <?php
                   if (has_post_thumbnail()) {
@@ -193,7 +193,7 @@
             <p>該当するこもれびだよりはありません。</p>
           <?php endif; ?>
         </div>
-        <div class="pagination">
+        <div class="pagination fade-up">
           <?php
           // echo paginate_links([
           //     'total' => $query->max_num_pages,
