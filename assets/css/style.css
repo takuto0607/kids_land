@@ -884,14 +884,13 @@ source {
   border: 2px solid rgb(239, 143, 156);
   border-radius: 20px;
   margin-bottom: 24px;
-  padding: 20px 32px;
 }
 
 .faq__question {
   align-items: center;
   cursor: pointer;
   display: flex;
-  padding: 12px 0;
+  padding: 20px 32px;
   position: relative;
 }
 .faq__question::after {
@@ -901,9 +900,9 @@ source {
   border-color: rgb(239, 143, 156) transparent transparent transparent;
   height: 0;
   position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  right: 32px;
+  top: 32px;
+  translate: 0 -50%;
   transition: transform 0.5s ease-in-out;
   width: 0;
 }
@@ -912,6 +911,12 @@ source {
   letter-spacing: 0.2em;
   line-height: 1.5;
   padding-right: 20px;
+}
+.faq__question.active {
+  padding-bottom: 12px;
+}
+.faq__question.active::after {
+  transform: rotate(-180deg);
 }
 
 .faq__char-question {
@@ -923,7 +928,8 @@ source {
 .faq__answer {
   border-top: 1px dashed rgb(0, 0, 0);
   display: flex;
-  padding: 44px 0 12px;
+  padding: 44px 0 32px;
+  margin: 0 32px;
 }
 .faq__answer > p {
   line-height: 1.5;

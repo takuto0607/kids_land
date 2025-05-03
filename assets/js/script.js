@@ -48,6 +48,7 @@ jQuery(document).ready(function ($) {
     const faqQuestion = $(".faq__question");
 
     // 初期表示
+    $(".faq__box:first").find(".faq__question").addClass("active");
     $(".faq__box").not(":first").find(".faq__answer").css("display", "none");
 
     // FAQの開閉
