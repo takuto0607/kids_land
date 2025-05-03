@@ -7,9 +7,12 @@
   background-size: cover;
   border-bottom: 2px dashed $main-color;
   border-top: 2px dashed $main-color;
-  padding: 160px 0 120px;
   position: relative;
   width: 100%;
+}
+
+.letter__inner {
+  padding-top: 160px;
 
   & > .section-title {
     position: absolute;
@@ -18,6 +21,14 @@
     top: -54px;
     transform: translateX(-50%);
   }
+}
+
+.letter__inner--front-page {
+  padding-bottom: 120px;
+}
+
+.letter__inner--introduction-page {
+  padding-bottom: 80px;
 }
 
 .letter__container {
@@ -37,6 +48,7 @@
   justify-content: space-between;
   margin-bottom: 14px;
   max-width: 1080px;
+  width: 100%;
 }
 
 .letter__card {

@@ -91,7 +91,7 @@
           <div class="archive-introduction__card-group">
           <?php if ($query->have_posts()) : ?>
             <?php while ($query->have_posts()) : $query->the_post(); ?>
-            <a class="archive-introduction__card" href="<?php echo esc_url(home_url()); ?>">
+            <a class="archive-introduction__card" href="<?php echo esc_url(get_permalink()); ?>">
               <?php
                 if (has_post_thumbnail()) {
                   $thumbnail_id = get_post_thumbnail_id();

@@ -4,6 +4,7 @@ $function_files = [
     '/functions/consts.php',
     '/functions/init.php',
     '/functions/breadcrumb.php',
+    '/functions/letter-section.php',
     '/functions/recruit-section.php',
     '/functions/contact-section.php',
     '/functions/sitemap-section.php',

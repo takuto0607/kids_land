@@ -278,6 +278,9 @@
   </section>
   <?php endwhile; endif; ?>
 
+  <!-- Letter -->
+  <?php letter_section(3, "introduction-page"); ?>
+
   <!-- Contact -->
   <?php contact_section(); ?>
 </main>

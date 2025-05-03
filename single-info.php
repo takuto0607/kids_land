@@ -69,7 +69,7 @@
       </div>
       <div class="single-info__btn">
         <div class="btn btn-large">
-          <a href="<?php echo esc_url(home_url()); ?>">お知らせ一覧へ</a>
+          <a href="<?php echo esc_url(home_url('/info')); ?>">お知らせ一覧へ</a>
         </div>
       </div>
     </div>

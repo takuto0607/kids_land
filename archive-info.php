@@ -26,7 +26,7 @@
 
   $query = new WP_Query($args);
   ?>
-  <div class="page-top page-top-long">
+  <div class="page-top">
     <div class="page-top-inner">
       <div class="page-heading">
         <div class="page-title">
@@ -66,7 +66,7 @@
         <div class="archive-info__link-group">
           <?php if ($query->have_posts()) : ?>
             <?php while ($query->have_posts()) : $query->the_post(); ?>
-            <a class="archive-info__link" href="<?php echo esc_url(home_url()); ?>">
+            <a class="archive-info__link" href="<?php echo esc_url(get_permalink()); ?>">
               <?php
               $info_cateory = get_the_terms(get_the_ID(), 'info-category');
               $term = $info_cateory[0];

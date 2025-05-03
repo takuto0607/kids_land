@@ -439,16 +439,27 @@ source {
   background-size: cover;
   border-bottom: 2px dashed rgb(239, 143, 156);
   border-top: 2px dashed rgb(239, 143, 156);
-  padding: 160px 0 120px;
   position: relative;
   width: 100%;
 }
-.letter > .section-title {
+
+.letter__inner {
+  padding-top: 160px;
+}
+.letter__inner > .section-title {
   position: absolute;
   left: 50%;
   margin-bottom: 42px;
   top: -54px;
   transform: translateX(-50%);
+}
+
+.letter__inner--front-page {
+  padding-bottom: 120px;
+}
+
+.letter__inner--introduction-page {
+  padding-bottom: 80px;
 }
 
 .letter__container {
@@ -468,6 +479,7 @@ source {
   justify-content: space-between;
   margin-bottom: 14px;
   max-width: 1080px;
+  width: 100%;
 }
 
 .letter__card {
@@ -1837,7 +1849,7 @@ source {
   padding-top: 24px;
 }
 .archive-info__link:hover {
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 .archive-info__link-icon {

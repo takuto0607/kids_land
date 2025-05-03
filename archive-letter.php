@@ -135,7 +135,7 @@
           <?php if ($query->have_posts()) : ?>
             <?php while ($query->have_posts()) : $query->the_post(); ?>
             <div class="archive-letter__card">
-              <a class="archive-letter__card-link" href="">
+              <a class="archive-letter__card-link" href="<?php echo esc_url(get_permalink()); ?>">
                 <?php
                   if (has_post_thumbnail()) {
                     $thumbnail_id = get_post_thumbnail_id();
