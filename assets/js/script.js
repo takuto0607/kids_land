@@ -292,4 +292,23 @@ jQuery(document).ready(function ($) {
       window.location.href = `${window.location.pathname}?${url.toString()}`;
     });
   });
+
+  // ハンバーガーメニュークリック時
+  const hamburger = $("#js-hamburger");
+  const menu = $("#js-menu");
+  const menuText = $("#js-hamburger p");
+
+  hamburger.on("click", function () {
+    hamburger.toggleClass("active");
+    menu.toggleClass("active");
+
+    // スクロール無効化
+    if (hamburger.hasClass("active")) {
+      $("body").css({ height: "100%", overflow: "hidden" });
+      menuText.text("closed");
+    } else {
+      $("body").css({ height: "", overflow: "" });
+      menuText.text("menu");
+    }
+  });
 });

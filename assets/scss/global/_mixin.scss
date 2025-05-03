@@ -6,6 +6,7 @@ $breakpoints: (
   "md": 767px,
   "lg": 1023px,
   "xl": 1279px,
+  "xxl": 1325px,
 ) !default;
 
 @mixin mq($breakpoint: md, $type: max) {
@@ -17,8 +18,7 @@ $breakpoints: (
       }
     } @else if($type == min) {
       $width: map-get($breakpoints, $breakpoint);
-      $width: $width - 1;
-      @media screen and (min-width: #{map-get($breakpoints, $breakpoint)}) {
+      @media screen and (min-width: #{$width}) {
         @content;
       }
     }

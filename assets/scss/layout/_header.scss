@@ -15,9 +15,12 @@
   align-items: center;
   display: flex;
   height: 120px;
-  margin-inline: 80px;
-  margin-top: 96px;
-  width: auto;
+  left: 50%;
+  translate: -50%;
+  top: 38.18%;
+  margin-inline: auto;
+  position: absolute;
+  width: 88.89%;
 }
 
 .header__list {
@@ -63,7 +66,6 @@
 
 .header__link-wrapper {
   display: inline-block;
-  min-width: 150px;
   width: 100%;
 }
 
@@ -125,5 +127,45 @@
     height: 8px;
     background-color: $text-color;
     border-radius: 50%;
+  }
+}
+
+.header__sp-content {
+  display: none;
+}
+
+.open-menu {
+  display: none;
+}
+
+.header__nave--sp {
+  display: none;
+}
+
+@include mq(xxl) {
+  .header__nav-title {
+    font-size: 14px;
+  }
+}
+
+@include mq(xl) {
+  .header__navi {
+    display: none;
+  }
+
+  .header__sp-content {
+    display: block;
+    height: 100%;
+    padding: 15px 0;
+    position: relative;
+    width: 100%;
+  }
+
+  .header__sp-content-inner {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
   }
 }

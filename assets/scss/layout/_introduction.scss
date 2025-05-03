@@ -6,8 +6,9 @@
 }
 
 .introduction__container {
-  margin-inline: 180px;
-  width: auto;
+  margin-inline: auto;
+  max-width: 1080px;
+  width: 88.89%;
 
   & > .section-title {
     margin-bottom: 72px;

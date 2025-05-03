@@ -1,0 +1,71 @@
+@use "../global/" as *;
+
+@include mq(xl) {
+  .hamburger {
+    align-items: center;
+    border: 1px solid $text-color;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    height: 48px;
+    justify-content: center;
+    position: absolute;
+    right: 36px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    z-index: 999;
+
+    & > p {
+      font-family: $font-jost;
+      font-size: 10px;
+      font-weight: $font-boldest;
+      line-height: 1.2;
+      letter-spacing: 0;
+      text-align: center;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &.active {
+      & > .hamburger-border {
+        & > span {
+          &:nth-child(1) {
+            top: 7px;
+            transform: rotate(30deg);
+            width: 32px;
+          }
+
+          &:nth-child(2) {
+            opacity: 0;
+          }
+
+          &:nth-child(3) {
+            top: -7px;
+            transform: rotate(-30deg);
+            width: 32px;
+          }
+        }
+      }
+    }
+  }
+
+  .hamburger-border {
+    margin-bottom: 2px;
+
+    & > span {
+      background-color: $text-color;
+      display: block;
+      height: 1px;
+      position: relative;
+      transition: transform 1s ease;
+      width: 25px;
+
+      &:nth-child(2) {
+        margin: 6px auto;
+      }
+    }
+  }
+}
