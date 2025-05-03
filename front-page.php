@@ -7,6 +7,34 @@
           <h1>一人ひとりの輝きが、<br>未来を彩る</h1>
         </div>
       </div>
+      <?php
+      // 最新の投稿1件を取得
+      $info_args = array (
+        'post_type' => 'info',
+        'posts_per_page' => 1,
+        'orderBy' => 'date',
+        'order' => 'DESC',
+      );
+
+      $info_query = new WP_Query($info_args);
+
+      if ($info_query->have_posts()) :
+        while ($info_query->have_posts()) : $info_query->the_post() ;
+      ?>
+      <article>
+        <a href="<?php echo esc_url(get_permalink()); ?>">
+          <h3>お知らせ</h3>
+          <h4><?php the_title(); ?></h4>
+          <p>
+            <time datetime="<?php echo esc_attr(get_the_modified_time('c')); ?>"><?php echo esc_html( get_the_modified_date('Yねんnがつjにち') ); ?></time>
+          </p>
+        </a>
+      </article>
+      <?
+        endwhile;
+        wp_reset_postdata();
+      endif;
+      ?>
     </section>
 
     <!-- Welcome -->
@@ -45,22 +73,22 @@
         <div class="introduction__prefecture-group-wrapper">
           <div class="introduction__prefecture-group">
             <div class="introduction__prefecture">
-              <a href="">東京都</a>
+              <a href="<?php echo esc_url(home_url('/introduction?taxonomy=prefecture&slug=tokyo')); ?>">東京都</a>
             </div>
             <div class="introduction__prefecture">
-              <a href="">神奈川県</a>
+              <a href="<?php echo esc_url(home_url('/introduction?taxonomy=prefecture&slug=kanagawa')); ?>">神奈川県</a>
             </div>
             <div class="introduction__prefecture">
-              <a href="">埼玉県</a>
+              <a href="<?php echo esc_url(home_url('/introduction?taxonomy=prefecture&slug=saitama')); ?>">埼玉県</a>
             </div>
             <div class="introduction__prefecture">
-              <a href="">千葉県</a>
+              <a href="<?php echo esc_url(home_url('/introduction?taxonomy=prefecture&slug=chiba')); ?>">千葉県</a>
             </div>
             <div class="introduction__prefecture">
-              <a href="">大阪府</a>
+              <a href="<?php echo esc_url(home_url('/introduction?taxonomy=prefecture&slug=osaka')); ?>">大阪府</a>
             </div>
             <div class="introduction__prefecture">
-              <a href="">京都府</a>
+              <a href="<?php echo esc_url(home_url('/introduction?taxonomy=prefecture&slug=kyoto')); ?>">京都府</a>
             </div>
           </div>
         </div>
@@ -86,102 +114,69 @@
       <div class="letter__container">
         <div class="letter__card-group-wrapper">
           <div class="letter__card-group">
+            <?php
+            // 最新の投稿6件を取得
+            $letter_args = array (
+              'post_type' => 'letter',
+              'posts_per_page' => 6,
+              'orderBy' => 'date',
+              'order' => 'DESC',
+            );
+
+            $letter_query = new WP_Query($letter_args);
+
+            if ($letter_query->have_posts()) :
+              while ($letter_query->have_posts()) : $letter_query->the_post() ;
+            ?>
             <div class="letter__card">
-              <a class="letter__card-link" href="">
+              <a class="letter__card-link" href="<?php echo esc_url(get_permalink()); ?>">
+                <?php
+                  if (has_post_thumbnail()) {
+                    $thumbnail_id = get_post_thumbnail_id();
+                    $image_url = get_the_post_thumbnail_url(get_the_ID(), 'full') ?: echo_img("no-image.webp");
+                    $image_alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
+
+                    if (empty($image_alt)) {
+                      $image_alt = get_the_title();
+                    }
+                  } else {
+                    $image_url = echo_img("no-image.jpg");
+                    $image_alt = "アイキャッチ画像未登録";
+                  }
+                ?>
                 <div class="letter__card-img">
                   <div class="img-wrapper">
-                    <img src="<?php echo echo_img("letter-card.png"); ?>" alt="">
+                    <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>" width="320" height="135" loading="lazy">
                   </div>
                 </div>
                 <div class="letter__card-content">
-                  <h3>なは園からのおたより</h3>
-                  <p>年長さんクラス、美ら海水族館に遠足に行きました！</p>
+                  <?php
+                  $letter_info = get_the_terms(get_the_ID(), 'prefecture');
+                  $nursery_name = '';
+
+                  // 子ターム（親IDが0でない）を探す
+                  if (!is_wp_error($letter_info) && !empty($letter_info)) {
+                    foreach ($letter_info as $term) {
+                        if ($term->parent !== 0) {
+                            $nursery_name = $term->name;
+                            break;
+                        }
+                    }
+                  }
+                  ?>
+                  <h3><?php echo esc_html($nursery_name); ?>からのおたより</h3>
+                  <p><?php the_title(); ?></p>
                   <div class="letter__card-date">
-                    <time datetime="2024ねん4がつ15にち">2024ねん4がつ15にち</time>
+                    <time datetime="<?php echo esc_attr(get_the_modified_time('c')); ?>"><?php echo esc_html( get_the_modified_date('Yねんnがつjにち') ); ?></time>
                   </div>
                 </div>
               </a>
             </div>
-            <div class="letter__card">
-              <a class="letter__card-link" href="">
-                <div class="letter__card-img">
-                  <div class="img-wrapper">
-                    <img src="<?php echo echo_img("letter-card.png"); ?>" alt="">
-                  </div>
-                </div>
-                <div class="letter__card-content">
-                  <h3>なは園からのおたより</h3>
-                  <p>年長さんクラス、美ら海水族館に遠足に行きました！</p>
-                  <div class="letter__card-date">
-                    <time datetime="2024ねん4がつ15にち">2024ねん4がつ15にち</time>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="letter__card">
-              <a class="letter__card-link" href="">
-                <div class="letter__card-img">
-                  <div class="img-wrapper">
-                    <img src="<?php echo echo_img("letter-card.png"); ?>" alt="">
-                  </div>
-                </div>
-                <div class="letter__card-content">
-                  <h3>なは園からのおたより</h3>
-                  <p>年長さんクラス、美ら海水族館に遠足に行きました！</p>
-                  <div class="letter__card-date">
-                    <time datetime="2024ねん4がつ15にち">2024ねん4がつ15にち</time>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="letter__card">
-              <a class="letter__card-link" href="">
-                <div class="letter__card-img">
-                  <div class="img-wrapper">
-                    <img src="<?php echo echo_img("letter-card.png"); ?>" alt="">
-                  </div>
-                </div>
-                <div class="letter__card-content">
-                  <h3>なは園からのおたより</h3>
-                  <p>年長さんクラス、美ら海水族館に遠足に行きました！</p>
-                  <div class="letter__card-date">
-                    <time datetime="2024ねん4がつ15にち">2024ねん4がつ15にち</time>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="letter__card">
-              <a class="letter__card-link" href="">
-                <div class="letter__card-img">
-                  <div class="img-wrapper">
-                    <img src="<?php echo echo_img("letter-card.png"); ?>" alt="">
-                  </div>
-                </div>
-                <div class="letter__card-content">
-                  <h3>なは園からのおたより</h3>
-                  <p>年長さんクラス、美ら海水族館に遠足に行きました！</p>
-                  <div class="letter__card-date">
-                    <time datetime="2024ねん4がつ15にち">2024ねん4がつ15にち</time>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="letter__card">
-              <a class="letter__card-link" href="">
-                <div class="letter__card-img">
-                  <div class="img-wrapper">
-                    <img src="<?php echo echo_img("letter-card.png"); ?>" alt="">
-                  </div>
-                </div>
-                <div class="letter__card-content">
-                  <h3>なは園からのおたより</h3>
-                  <p>年長さんクラス、美ら海水族館に遠足に行きました！</p>
-                  <div class="letter__card-date">
-                    <time datetime="2024ねん4がつ15にち">2024ねん4がつ15にち</time>
-                  </div>
-                </div>
-              </a>
-            </div>
+            <?
+              endwhile;
+              wp_reset_postdata();
+            endif;
+            ?>
           </div>
         </div>
         <div class="letter__btn-wrapper">

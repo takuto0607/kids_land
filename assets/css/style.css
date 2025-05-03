@@ -241,7 +241,46 @@ source {
 
 .fv {
   margin-bottom: 120px;
+  overflow: hidden;
   padding-top: 200px;
+  position: relative;
+}
+.fv > article {
+  background-color: rgb(255, 247, 184);
+  border-radius: 8px;
+  bottom: 32px;
+  height: 120px;
+  position: absolute;
+  right: 32px;
+  width: 240px;
+  z-index: 1;
+}
+.fv > article > a {
+  height: 100%;
+  padding: 16px;
+}
+.fv > article > a > h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.fv > article > a > h4 {
+  display: -webkit-box;
+  font-size: 14px;
+  line-clamp: 2;
+  line-height: 1.5;
+  margin-bottom: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.fv > article > a > p {
+  font-size: 12px;
+  text-align: right;
+}
+.fv > article:hover {
+  background-color: rgb(231, 223, 162);
 }
 
 .fv__bg {
@@ -325,17 +364,18 @@ source {
 }
 
 .introduction__prefecture {
-  align-items: center;
   background-color: rgb(255, 255, 255);
   border: 2px solid rgb(255, 237, 240);
   border-radius: 20px;
   flex-shrink: 1;
-  display: flex;
   height: 60px;
-  justify-content: center;
   width: 320px;
 }
 .introduction__prefecture > a {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100%;
   width: 100%;
 }
 .introduction__prefecture:hover {
@@ -439,6 +479,10 @@ source {
   width: 320px;
 }
 
+.letter__card-link {
+  height: 100%;
+  width: 100%;
+}
 .letter__card-link:hover {
   opacity: 0.7;
 }
@@ -464,7 +508,15 @@ source {
   margin-bottom: 12px;
 }
 .letter__card-content > p {
+  display: -webkit-box;
+  height: 48px;
+  line-clamp: 2;
   margin-bottom: 13px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .letter__card-date {
@@ -1851,6 +1903,7 @@ source {
   -webkit-line-clamp: 1;
   overflow: hidden;
   text-overflow: ellipsis;
+  line-clamp: 1;
   line-height: 1.5;
   white-space: normal;
 }

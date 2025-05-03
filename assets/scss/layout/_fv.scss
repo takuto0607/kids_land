@@ -2,7 +2,52 @@
 
 .fv {
   margin-bottom: 120px;
+  overflow: hidden;
   padding-top: 200px;
+  position: relative;
+
+  & > article {
+    background-color: $accent-color2;
+    border-radius: 8px;
+    bottom: 32px;
+    height: 120px;
+    position: absolute;
+    right: 32px;
+    width: 240px;
+    z-index: 1;
+
+    & > a {
+      height: 100%;
+      padding: 16px;
+
+      & > h3 {
+        font-size: 20px;
+        margin-bottom: 8px;
+      }
+
+      & > h4 {
+        display: -webkit-box;
+        font-size: 14px;
+        line-clamp: 2;
+        line-height: 1.5;
+        margin-bottom: 4px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+      }
+
+      & > p {
+        font-size: 12px;
+        text-align: right;
+      }
+    }
+
+    &:hover {
+      background-color: rgb(231, 223, 162);
+    }
+  }
 }
 
 .fv__bg {
