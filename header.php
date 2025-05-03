@@ -43,7 +43,7 @@
         </li>
         <li class="header__item">
           <div class="header__link-wrapper">
-            <a class="header__link" href="<?php echo esc_url(home_url('/')); ?>">
+            <a class="header__link" href="<?php echo esc_url(home_url('/introduction')); ?>">
               <div class="img-wrapper">
                 <img src="<?php echo echo_img("icon/introduction-icon.svg"); ?>" width="48" height="48" alt="イントロダクションアイコン" loading="lazy">
               </div>
@@ -54,7 +54,7 @@
         </li>
         <li class="header__item">
           <div class="header__link-wrapper">
-            <a class="header__link" href="<?php echo esc_url(home_url()); ?>">
+            <a class="header__link" href="<?php echo esc_url(home_url('/letter')); ?>">
               <div class="img-wrapper">
                 <img src="<?php echo echo_img("icon/letter-icon.svg"); ?>" width="48" height="48" alt="レターアイコン" loading="lazy">
               </div>
@@ -74,7 +74,7 @@
         </li>
         <li class="header__item">
           <div class="header__link-wrapper">
-            <a class="header__link" href="<?php echo esc_url(home_url()); ?>">
+            <a class="header__link" href="<?php echo esc_url(home_url('/info')); ?>">
               <div class="img-wrapper">
                 <img src="<?php echo echo_img("icon/info-icon.svg"); ?>" width="48" height="48" alt="お知らせアイコン" loading="lazy">
               </div>
@@ -96,7 +96,7 @@
         </li>
         <li class="header__item">
           <div class="header__link-wrapper">
-            <a class="header__link" href="<?php echo esc_url(home_url()); ?>">
+            <a class="header__link" href="<?php echo esc_url(home_url('/contact')); ?>">
               <div class="img-wrapper">
                 <img src="<?php echo echo_img("icon/contact-icon.svg"); ?>" width="48" height="48" alt="お問い合わせアイコン" loading="lazy">
               </div>

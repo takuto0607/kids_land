@@ -15,17 +15,17 @@
   <div class="sitemap__content">
     <div class="sitemap__inner">
       <div class="sitemap__column">
-        <a href="">TOP</a>
-        <a href="">わたしたちのこと</a>
-        <a href="">各園のご紹介</a>
-        <a href="">こもれびだより</a>
-        <a href="">お知らせ</a>
+        <a href="<?php echo esc_url(home_url()); ?>">TOP</a>
+        <a href="<?php echo esc_url(home_url('/about')); ?>">わたしたちのこと</a>
+        <a href="<?php echo esc_url(home_url('/introduction')); ?>">各園のご紹介</a>
+        <a href="<?php echo esc_url(home_url('/letter')); ?>">こもれびだより</a>
+        <a href="<?php echo esc_url(home_url('/info')); ?>">お知らせ</a>
       </div>
       <div class="sitemap__column">
-        <a href="">採用情報</a>
-        <a href="">お問い合わせ</a>
-        <a href="">サイトマップ</a>
-        <a href="">プライバシーポリシー</a>
+        <a href="<?php echo esc_url(home_url('/recruit')); ?>">採用情報</a>
+        <a href="<?php echo esc_url(home_url('/contact')); ?>">お問い合わせ</a>
+        <a href="<?php echo esc_url(home_url('/sitemap')); ?>">サイトマップ</a>
+        <a href="<?php echo esc_url(home_url('/privacy-policy')); ?>">プライバシーポリシー</a>
       </div>
     </div>
   </div>

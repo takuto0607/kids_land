@@ -8,10 +8,61 @@ function get_current_link()
 // メタタグの設定
 function add_custom_meta_tags ()
 {
-    echo '<title>' . TITLE_FRONT_PAGE . '</title>';
-    echo '<meta name="description" content="' . esc_attr(DESCRIPTION_FRONT_PAGE) . '">';
-    echo '<meta property="og:title" content="' . TITLE_FRONT_PAGE . '">';
-    echo '<meta property="og:description" content="' . esc_attr(DESCRIPTION_FRONT_PAGE) . '">';
+    // わたしたちのことページ
+    if (is_page('about')) {
+        echo '<title>' . TITLE_ABOUT . '</title>';
+        echo '<meta name="description" content="' . esc_attr(DESCRIPTION_ABOUT) . '">';
+        echo '<meta property="og:title" content="' . TITLE_ABOUT . '">';
+        echo '<meta property="og:description" content="' . esc_attr(DESCRIPTION_ABOUT) . '">';
+    }
+    
+    // 採用情報ページ
+    elseif (is_page('recruit') || is_page('recruit-confirm')) {
+        echo '<title>' . TITLE_RECRUIT . '</title>';
+        echo '<meta name="description" content="' . esc_attr(DESCRIPTION_RECRUIT) . '">';
+        echo '<meta property="og:title" content="' . TITLE_RECRUIT . '">';
+        echo '<meta property="og:description" content="' . esc_attr(DESCRIPTION_RECRUIT) . '">';
+    }
+    
+    // お問い合わせページ
+    elseif (is_page('contact') || is_page('contact-confirm')) {
+        echo '<title>' . TITLE_CONTACT . '</title>';
+        echo '<meta name="description" content="' . esc_attr(DESCRIPTION_CONTACT) . '">';
+        echo '<meta property="og:title" content="' . TITLE_CONTACT . '">';
+        echo '<meta property="og:description" content="' . esc_attr(DESCRIPTION_CONTACT) . '">';
+    }
+    
+    // 各園のご紹介ページ
+    elseif ((is_archive('introduction') && is_post_type_archive('introduction')) || is_singular('introduction')) {
+        echo '<title>' . TITLE_INTRODUCTION . '</title>';
+        echo '<meta name="description" content="' . esc_attr(DESCRIPTION_INTRODUCTION) . '">';
+        echo '<meta property="og:title" content="' . TITLE_INTRODUCTION . '">';
+        echo '<meta property="og:description" content="' . esc_attr(DESCRIPTION_INTRODUCTION) . '">';
+    }
+
+    // こもれびだよりページ
+    elseif ((is_archive('letter') && is_post_type_archive('letter')) || is_singular('letter')) {
+        echo '<title>' . TITLE_LETTER . '</title>';
+        echo '<meta name="description" content="' . esc_attr(DESCRIPTION_LETTER) . '">';
+        echo '<meta property="og:title" content="' . TITLE_LETTER . '">';
+        echo '<meta property="og:description" content="' . esc_attr(DESCRIPTION_LETTER) . '">';
+    }
+    
+    // お知らせページ
+    elseif ((is_archive('info') && is_post_type_archive('info')) || is_singular('info')) {
+        echo '<title>' . TITLE_INFO . '</title>';
+        echo '<meta name="description" content="' . esc_attr(DESCRIPTION_INFO) . '">';
+        echo '<meta property="og:title" content="' . TITLE_INFO . '">';
+        echo '<meta property="og:description" content="' . esc_attr(DESCRIPTION_INFO) . '">';
+    }
+    
+    // その他
+    else {
+        echo '<title>' . TITLE_FRONT_PAGE . '</title>';
+        echo '<meta name="description" content="' . esc_attr(DESCRIPTION_FRONT_PAGE) . '">';
+        echo '<meta property="og:title" content="' . TITLE_FRONT_PAGE . '">';
+        echo '<meta property="og:description" content="' . esc_attr(DESCRIPTION_FRONT_PAGE) . '">';
+    }
 }
 add_action('wp_head', 'add_custom_meta_tags');
 

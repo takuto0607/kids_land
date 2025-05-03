@@ -7,17 +7,24 @@
 .breadcrumb__list {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
 }
 
 .breadcrumb__item {
   display: flex;
 
-  & > a:hover {
-    opacity: 0.5;
+  & > a {
+    padding-right: 8px;
+
+    &:hover {
+      opacity: 0.5;
+    }
   }
 }
 
-.breadcrumb__separator {
-  margin-right: 8px;
+.breadcrumb__padding {
+  padding-left: 8px;
+}
+
+.breadcrumb__padding--right {
+  padding-right: 8px;
 }

@@ -34,18 +34,7 @@
           <p class="capitalize">info</p>
         </div>
       </div>
-      <div class="breadcrumb">
-        <ul class="breadcrumb__list">
-          <li class="breadcrumb__item">
-            <a class="uppercase" href="<?php echo esc_url(home_url()); ?>">top</a>
-          </li>
-          <li class="breadcrumb__item">
-            <span class="breadcrumb__separator"><i class="fa-solid fa-chevron-right"></i></span>
-            <span><?php echo esc_html( get_the_title() ); ?></span>
-          </li>
-        </ul>
-      </div>
-      <?php // breadcrumb(); ?>
+      <?php breadcrumb(); ?>
     </div>
   </div>
 

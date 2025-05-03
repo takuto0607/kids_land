@@ -65,7 +65,7 @@
           </div>
         </div>
         <div class="btn">
-          <a href="<?php echo esc_url(home_url()); ?>">一覧ページへ</a>
+          <a href="<?php echo esc_url(home_url('/introduction')); ?>">一覧ページへ</a>
         </div>
       </div>
     </section>
@@ -186,7 +186,7 @@
         </div>
         <div class="letter__btn-wrapper">
           <div class="btn">
-            <a href="<?php echo esc_url(home_url()); ?>">もっと見る</a>
+            <a href="<?php echo esc_url(home_url('/letter')); ?>">もっと見る</a>
           </div>
         </div>
       </div>

@@ -2492,6 +2492,7 @@ source {
   transition: opacity 0.5s, visibility 0.5s;
   visibility: hidden;
   width: 72px;
+  z-index: 1;
 }
 .page-top-btn > p {
   align-items: center;
@@ -2570,18 +2571,24 @@ source {
 .breadcrumb__list {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
 }
 
 .breadcrumb__item {
   display: flex;
 }
+.breadcrumb__item > a {
+  padding-right: 8px;
+}
 .breadcrumb__item > a:hover {
   opacity: 0.5;
 }
 
-.breadcrumb__separator {
-  margin-right: 8px;
+.breadcrumb__padding {
+  padding-left: 8px;
+}
+
+.breadcrumb__padding--right {
+  padding-right: 8px;
 }
 
 .sidebar {

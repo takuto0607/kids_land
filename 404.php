@@ -13,6 +13,7 @@
           <p class="capitalize">page not found</p>
         </div>
       </div>
+      <?php breadcrumb(); ?>
     </div>
   </div>
 

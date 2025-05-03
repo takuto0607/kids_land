@@ -17,7 +17,7 @@
     </div>
     <p>入園のお申込み、見学のご相談はこちらから！</p>
     <div class="btn">
-      <a href="<?php echo esc_url(home_url()); ?>">お問い合わせ</a>
+      <a href="<?php echo esc_url(home_url('/contact')); ?>">お問い合わせ</a>
     </div>
   </div>
 </section>
