@@ -19,6 +19,7 @@
 
   // タクソノミークエリを構築
   $tax_query = [
+    'relation' => 'AND',
     [
         'taxonomy' => $target_taxonomy,
         'field' => 'slug',

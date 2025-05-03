@@ -246,6 +246,7 @@ jQuery(document).ready(function ($) {
       );
       if ($prefOption.length) {
         $prefOption.trigger("click");
+        selectPrefectureField.removeClass("open");
       }
     }
 
@@ -255,6 +256,7 @@ jQuery(document).ready(function ($) {
       );
       if ($nurseryOption.length) {
         $nurseryOption.trigger("click");
+        selectNurseryField.removeClass("open");
       }
     }
 

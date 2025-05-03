@@ -141,6 +141,11 @@
   flex-wrap: wrap;
   gap: 30px;
   margin-bottom: 32px;
+
+  & > p {
+    text-align: center;
+    width: 100%;
+  }
 }
 
 .archive-letter__card {

@@ -2134,6 +2134,10 @@ source {
   gap: 30px;
   margin-bottom: 32px;
 }
+.archive-letter__card-group > p {
+  text-align: center;
+  width: 100%;
+}
 
 .archive-letter__card {
   background-color: rgb(255, 255, 255);

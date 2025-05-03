@@ -4,8 +4,10 @@
   $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
   // GET パラメータの取得
-  $target_prefecture = isset($_GET['prefecture']) ? sanitize_text_field($_GET['prefecture']) : 'all';
-  $target_nursery = isset($_GET['nursery']) ? sanitize_text_field($_GET['nursery']) : 'all';
+  $target_prefecture = isset($_GET['prefecture']) ? sanitize_text_field($_GET['prefecture']) : '';
+  $target_nursery = isset($_GET['nursery']) ? sanitize_text_field($_GET['nursery']) : '';
+  $year = (isset($_GET['archive-year']) && is_numeric($_GET['archive-year'])) ? (int) $_GET['archive-year'] : '';
+  $month =  (isset($_GET['archive-month']) && is_numeric($_GET['archive-month'])) ? (int) $_GET['archive-month'] : '';
 
   // クエリ構築
   $args = [
@@ -14,10 +16,18 @@
     'paged' => $paged,
   ];
 
+  // 年月の絞り込み
+  if ($year && $month) {
+    $args = array_merge($args, [
+      'year' => $year,
+      'monthnum' => $month,
+    ]);
+  }
+
   // タクソノミークエリを構築
   $tax_query = [];
 
-  if ($target_prefecture !== 'all') {
+  if ($target_prefecture !== '') {
     $tax_query[] = [
         'taxonomy' => 'prefecture',
         'field'    => 'slug',
@@ -25,7 +35,7 @@
     ];
   }
 
-  if ($target_nursery !== 'all') {
+  if ($target_nursery !== '') {
     $tax_query[] = [
         'taxonomy' => 'prefecture',
         'field'    => 'slug',
@@ -35,7 +45,7 @@
   }
 
   if (count($tax_query) > 1) {
-    $tax_query['relation'] = 'AND';
+    $tax_query = array_merge(['relation' => 'AND'], $tax_query);
   }
 
   // タクソノミーがある場合のみ tax_query を追加
@@ -192,6 +202,8 @@
           //     'add_args' => [
           //         'prefecture' => $target_prefecture,
           //         'nursery' => $target_nursery,
+          //         'archive-year' => $year,
+          //         'archive-month' => $month,
           //     ],
           //     'prev_text' => '<i class="fa-solid fa-chevron-left"></i>',
           //     'next_text' => '<i class="fa-solid fa-chevron-right"></i>',

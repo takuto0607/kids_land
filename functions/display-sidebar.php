@@ -13,7 +13,7 @@ function display_sidebar () {
         <div class="sidebar__archive-month-group">
           <?php foreach ($months as $month): ?>
             <?php
-              $url = home_url("/"); // カスタムURL（後述）
+              $url = home_url("/letter?archive-year={$year}&archive-month={$month}");
               $label = "{$month}がつ";
             ?>
             <a class="sidebar__archive-month" href="<?php echo esc_url($url); ?>"><?php echo esc_html($label); ?></a>
