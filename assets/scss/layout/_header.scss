@@ -169,3 +169,10 @@
     width: 100%;
   }
 }
+
+@include mq(sm) {
+  .header {
+    aspect-ratio: 375 / 154;
+    background-image: url(../img/bg/header-sp.webp);
+  }
+}

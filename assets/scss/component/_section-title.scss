@@ -27,10 +27,10 @@
 
 .section-title__img {
   align-items: center;
+  aspect-ratio: 1 / 1;
   display: flex;
   background-color: $accent-color2;
   border-radius: 50%;
-  height: 108px;
   justify-content: center;
   margin-bottom: 8px;
   width: 108px;
@@ -41,5 +41,47 @@
     & > img {
       aspect-ratio: 1 / 1;
     }
+  }
+}
+
+@include mq(xl) {
+  .section-title__inner {
+    & > h2 {
+      font-size: 22px;
+    }
+
+    & > p {
+      font-size: 10px;
+    }
+  }
+
+  .section-title__img {
+    width: 96px;
+
+    & > .img-wrapper {
+      width: 64px;
+    }
+  }
+}
+
+@include mq(sm) {
+  .section-title__inner {
+    & > h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .section-title__img {
+    width: 80px;
+
+    & > .img-wrapper {
+      width: 53.3px;
+    }
+  }
+
+  .section-title__title-small {
+    font-size: 18px !important;
+    margin-bottom: 8px !important;
   }
 }

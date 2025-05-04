@@ -117,3 +117,74 @@
 .letter__btn-wrapper {
   text-align: center;
 }
+
+@include mq(lg) {
+  .letter__container {
+    margin-inline: auto;
+    width: 88.89%;
+  }
+
+  .letter__card-group {
+    justify-content: space-around;
+  }
+}
+
+@include mq(md) {
+  .letter {
+    background-image: url(../img/bg/letter_bg-sp.webp);
+  }
+
+  .letter__container {
+    margin-inline: 15px;
+    width: auto;
+  }
+
+  .letter__card-group {
+    gap: 25px;
+    justify-content: center;
+  }
+}
+
+@include mq(sm) {
+  .letter {
+    background-image: url(../img/bg/letter_bg-sp.webp);
+  }
+
+  .letter__inner {
+    & > .section-title {
+      margin-bottom: 62px;
+      top: -40px;
+    }
+  }
+
+  .letter__inner--front-page {
+    padding-bottom: 80px;
+  }
+
+  .letter__card-group {
+    justify-content: center;
+    margin: 0 15px 18px;
+  }
+
+  .letter__card {
+    margin-bottom: 24px;
+    width: 300px;
+  }
+
+  .letter__card-img {
+    & > .img-wrapper {
+      width: 300px;
+
+      & > img {
+        aspect-ratio: 20 / 9;
+      }
+    }
+  }
+
+  .letter__card-content {
+    & > p {
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+  }
+}

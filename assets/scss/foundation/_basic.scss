@@ -47,3 +47,10 @@ picture,
 source {
   display: block;
 }
+
+@include mq(sm) {
+  body {
+    background-image: url(../img/bg/background-sp.webp);
+    font-size: 14px;
+  }
+}

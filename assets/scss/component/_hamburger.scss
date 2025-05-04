@@ -1,5 +1,9 @@
 @use "../global/" as *;
 
+.hamburger {
+  display: none;
+}
+
 @include mq(xl) {
   .hamburger {
     align-items: center;
@@ -67,5 +71,13 @@
         margin: 6px auto;
       }
     }
+  }
+}
+
+@include mq(sm) {
+  .hamburger {
+    right: 12px;
+    top: 12px;
+    transform: translateY(0);
   }
 }

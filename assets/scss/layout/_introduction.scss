@@ -35,6 +35,7 @@
   background-color: $white-color;
   border: 2px solid rgba(255, 237, 240, 1);
   border-radius: 20px;
+  color: $text-color2;
   flex-shrink: 1;
   height: 60px;
   width: 320px;
@@ -49,5 +50,37 @@
 
   &:hover {
     background-color: rgb(228, 226, 226);
+  }
+}
+
+@include mq(lg) {
+  .introduction__prefecture-group {
+    padding: 0;
+  }
+}
+
+@include mq(sm) {
+  .introduction {
+    margin-bottom: 120px;
+  }
+
+  .introduction__container {
+    width: 100%;
+
+    & > .section-title {
+      margin-bottom: 48px;
+    }
+  }
+
+  .introduction__prefecture-group {
+    gap: 18px;
+    margin-bottom: 40px;
+    margin-inline: 37px;
+  }
+
+  .introduction__prefecture {
+    border-radius: 12px;
+    height: 40px;
+    width: 240px;
   }
 }

@@ -52,3 +52,62 @@
   gap: 36px;
   justify-content: center;
 }
+
+@include mq(xl) {
+  .recruit {
+    padding: 0 90px 0;
+  }
+
+  .recruit__content {
+    max-width: 768px;
+    padding: 64px 0;
+    z-index: 2;
+
+    & > .section-title {
+      margin-bottom: 32px;
+    }
+
+    & > p {
+      margin-bottom: 32px;
+    }
+  }
+}
+
+@include mq(lg) {
+  .recruit {
+    aspect-ratio: 768 / 800;
+    background-image: url(../img/bg/recruit_bg-sp.webp);
+    padding: 0 90px;
+    position: relative;
+    width: 100%;
+  }
+
+  .recruit__btn-group {
+    display: block;
+  }
+
+  .recruit__btn-wrapper:first-child {
+    margin-bottom: 24px;
+  }
+}
+
+@include mq(sm) {
+  .recruit {
+    aspect-ratio: 125 / 232;
+    padding: 75px 15px;
+  }
+
+  .recruit__content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .recruit__btn-wrapper {
+    & > .btn {
+      height: 60px;
+      width: 240px;
+    }
+  }
+}

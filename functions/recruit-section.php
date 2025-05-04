@@ -15,7 +15,7 @@
         <p class="capitalize">introduction</p>
       </div>
     </div>
-    <p class="fade-up">桜のこもれびキッズランドで働いてみませんか？</p>
+    <p class="fade-up">桜のこもれびキッズランドで<br class="break-lg">働いてみませんか？</p>
     <div class="recruit__btn-group">
       <div class="recruit__btn-wrapper fade-up">
         <div class="btn btn-pink">

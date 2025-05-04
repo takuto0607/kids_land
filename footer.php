@@ -1,6 +1,6 @@
     <!-- Footer -->
     <footer class="footer">
-      <div class="container">
+      <div class="footer__container">
         <div class="footer__link-group">
           <div class="footer__logo logo">
             <a href="<?php echo esc_url(home_url()); ?>">
@@ -9,7 +9,7 @@
               </div>
             </a>
           </div>
-          <nav class="footer__navi">
+          <nav class="footer__navi footer__navi--first">
             <ul class="footer__list footer__list--pc">
               <li class="nav-item footer__item"><a href="<?php echo esc_url(home_url('/about')); ?>">私たちのこと</a></li>
               <li class="nav-item footer__item"><a href="<?php echo esc_url(home_url('/introduction')); ?>">各園のご紹介</a></li>
@@ -18,11 +18,21 @@
               <li class="nav-item footer__item"><a href="<?php echo esc_url(home_url('/info')); ?>">お知らせ</a></li>
               <li class="nav-item footer__item"><a href="<?php echo esc_url(home_url('/contact')); ?>">お問い合わせ</a></li>
             </ul>
+            <ul class="footer__list footer__list--sp">
+              <li class="nav-item footer__item"><a href="<?php echo esc_url(home_url('/about')); ?>">私たちのこと</a></li>
+              <li class="nav-item footer__item"><a href="<?php echo esc_url(home_url('/letter')); ?>">こもれびだより</a></li>
+              <li class="nav-item footer__item"><a href="<?php echo esc_url(home_url('/info')); ?>">お知らせ</a></li>
+            </ul>
+            <ul class="footer__list footer__list--sp">
+              <li class="nav-item footer__item"><a href="<?php echo esc_url(home_url('/introduction')); ?>">各園のご紹介</a></li>
+              <li class="nav-item footer__item"><a href="<?php echo esc_url(home_url('/recruit')); ?>">採用情報</a></li>
+              <li class="nav-item footer__item"><a href="<?php echo esc_url(home_url('/contact')); ?>">お問い合わせ</a></li>
+            </ul>
           </nav>
           <nav class="footer__navi">
             <ul class="footer__list">
-              <li class="nav-item footer__item"><a href="<?php echo esc_url(home_url('/sitemap')); ?>">サイトマップ</a></li>
-              <li class="nav-item footer__item"><a href="<?php echo esc_url(home_url('/privacy-policy')); ?>">プライバシーポリシー</a></li>
+              <li class="nav-item footer__item footer__item--small"><a href="<?php echo esc_url(home_url('/sitemap')); ?>">サイトマップ</a></li>
+              <li class="nav-item footer__item footer__item--small"><a href="<?php echo esc_url(home_url('/privacy-policy')); ?>">プライバシーポリシー</a></li>
             </ul>
           </nav>
         </div>

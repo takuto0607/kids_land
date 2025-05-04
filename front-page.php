@@ -21,7 +21,7 @@
       if ($info_query->have_posts()) :
         while ($info_query->have_posts()) : $info_query->the_post() ;
       ?>
-      <article>
+      <article class="open-fade-up">
         <a href="<?php echo esc_url(get_permalink()); ?>">
           <h3>お知らせ</h3>
           <h4><?php the_title(); ?></h4>
@@ -46,13 +46,13 @@
               <img src="<?php echo echo_img("icon/welcome-icon.svg"); ?>" width="72" height="72" alt="ウェルカムアイコン" loading="lazy">
             </div>
           </div>
-          <h2>桜のこもれびキッズランドへ<br>ようこそ</h2>
+          <h2 class="section-title__title-small">桜のこもれびキッズランドへ<br>ようこそ</h2>
           <p class="capitalize">welcome</p>
         </div>
       </div>
       <div class="welcome__content fade-up">
-        <p>「こもれび」とは<br>風に揺れる木の葉によって生み出される光と影の揺らめきを表すことばです。<br>それはその瞬間に一度だけ存在します。</p>
-        <p>桜のこもれびキッズランドは、<br>子どもたち一人ひとりが独自の輝きを放つように、<br>大切な個性を伸ばす場所です。<br>温かく包み込むような雰囲気の中で、安心して成長できる環境を提供し、<br>笑顔あふれる毎日をお約束します。</p>
+        <p>「こもれび」とは<br>風に揺れる木の葉によって生み出される<br class="break-lg">光と影の揺らめきを表すことばです。<br>それはその瞬間に一度だけ存在します。</p>
+        <p>桜のこもれびキッズランドは、<br>子どもたち一人ひとりが<br class="break-sm">独自の輝きを放つように、<br>大切な個性を伸ばす場所です。<br>温かく包み込むような雰囲気の中で、<br class="break-lg">安心して成長できる環境を提供し、<br>笑顔あふれる毎日をお約束します。</p>
       </div>
     </section>
 

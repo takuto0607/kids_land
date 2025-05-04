@@ -18,3 +18,30 @@
     margin-bottom: 16px;
   }
 }
+
+@include mq(lg) {
+  .welcome {
+    margin-inline: auto;
+    width: 88.89%;
+  }
+}
+
+@include mq(sm) {
+  .welcome {
+    margin-bottom: 80px;
+    padding: 8px 0;
+    width: 310px;
+
+    & > .section-title {
+      margin-bottom: 48px;
+    }
+  }
+
+  .welcome__content {
+    font-size: 14px;
+
+    & > p:first-child {
+      margin-bottom: 31px;
+    }
+  }
+}

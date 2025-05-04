@@ -33,3 +33,13 @@
     visibility: visible;
   }
 }
+
+@include mq(sm) {
+  .page-top-btn {
+    bottom: 15px;
+    font-size: 16px;
+    height: 48px;
+    right: 15px;
+    width: 48px;
+  }
+}

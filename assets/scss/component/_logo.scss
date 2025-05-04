@@ -20,3 +20,13 @@
     }
   }
 }
+
+@include mq(xs) {
+  .logo {
+    & > a {
+      & > .img-wrapper {
+        width: 200px;
+      }
+    }
+  }
+}
