@@ -93,3 +93,37 @@
     letter-spacing: 0.1em;
   }
 }
+
+@include mq(md) {
+  .open-menu__content {
+    padding: 0 15px;
+  }
+
+  .open-menu__list {
+    gap: 24px;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@include mq(sm) {
+  .open-menu__content {
+    margin-inline: 15px;
+  }
+
+  .open-menu__list {
+    gap: 15px;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@include mq(sm) {
+  .open-menu__content {
+    margin-inline: 12px;
+  }
+
+  .open-menu__item {
+    width: 140px;
+  }
+}
