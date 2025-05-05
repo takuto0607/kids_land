@@ -9,7 +9,7 @@
     $nursery_type = $nursery_types[0];
   }
   ?>
-  <div class="page-top page-top-short">
+  <div class="page-top page-top-short single-introduction__page-top">
     <div class="page-top-inner open-fade-up">
       <div class="page-heading">
         <div class="page-title">
@@ -149,19 +149,19 @@
     <div class="about-nursery__content">
       <div class="about-nursery__row fade-up">
         <h3>所在地</h3>
-        <address class="about-nursery__data"><?php the_field('nursery_address'); ?></address>
+        <address class="about-nursery__data about-nursery__data--address"><?php the_field('nursery_address'); ?></address>
       </div>
       <div class="about-nursery__row fade-up">
         <h3 class="uppercase">tel / fax</h3>
         <address class="about-nursery__data about-nursery__data--tel">
           <?php $fax = get_field('nursery_fax');  ?>
-          <a href=""><?php the_field('nursery_tel'); ?></a>
+          <a href="tel:<?php the_field('nursery_tel'); ?>"><?php the_field('nursery_tel'); ?></a>
           <?php if ($fax) : ?> / <?php the_field('nursery_fax'); ?><?php endif; ?>
         </address>
       </div>
       <div class="about-nursery__row fade-up">
         <h3>対象</h3>
-        <p class="about-nursery__data">1歳児から小学校就学前までの乳幼児（1歳児～5歳児）</p>
+        <p class="about-nursery__data about-nursery__data--target">1歳児から小学校就学前までの乳幼児<br class="break-lg">（1歳児～5歳児）</p>
       </div>
       <div class="about-nursery__row fade-up">
         <h3>入園日</h3>
@@ -169,7 +169,7 @@
       </div>
       <div class="about-nursery__row fade-up">
         <h3>開園日</h3>
-        <div class="about-nursery__data">
+        <div class="about-nursery__data about-nursery__data--open-date">
           <div class="about-nursery__open-date">
             <div class="about-nursery__week">
               <p>月</p>
@@ -205,7 +205,7 @@
       </div>
       <div class="about-nursery__row fade-up">
         <h3>保育時間</h3>
-        <div class="about-nursery__data">
+        <div class="about-nursery__data about-nursery__data--care-hours">
           <div class="about-nursery__care-hours">
             <h4>保育標準時間認定の方</h4>
             <div class="about-nursery__care-hours__table">
@@ -236,7 +236,7 @@
       </div>
       <div class="about-nursery__row fade-up">
         <h3>定員</h3>
-        <div class="about-nursery__data">
+        <div class="about-nursery__data about-nursery__data--capacity">
           <?php $capacity_data = get_capacity_display_data(); ?>
           <div class="about-nursery__number-table">
             <div class="about-nursery__number-table__head">
@@ -256,7 +256,7 @@
       </div>
       <div class="about-nursery__row fade-up">
         <h3>職員</h3>
-        <div class="about-nursery__data">
+        <div class="about-nursery__data about-nursery__data--staff">
           <?php $staff_data = get_staff_display_data(); ?>
           <div class="about-nursery__number-table">
             <div class="about-nursery__number-table__head">

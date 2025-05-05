@@ -768,6 +768,7 @@ source {
 .letter__card-group {
   display: flex;
   flex-wrap: wrap;
+  gap: 15px;
   justify-content: space-between;
   margin-bottom: 14px;
   max-width: 1080px;
@@ -2229,6 +2230,44 @@ source {
   letter-spacing: 0.2em;
 }
 
+@media screen and (max-width: 1279px) {
+  .single-introduction__container {
+    margin: 0 30px;
+    max-width: auto;
+  }
+}
+@media screen and (max-width: 639px) {
+  .single-introduction__page-top {
+    padding-bottom: 60px !important;
+  }
+  .single-introduction__sub-section:not(:last-child) {
+    margin-bottom: 24px;
+  }
+  .single-introduction__sub-section > h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  .single-introduction__sub-section > p {
+    font-size: 16px;
+    text-align: start;
+  }
+}
+@media screen and (max-width: 524px) {
+  .single-introduction {
+    margin-bottom: 120px;
+  }
+  .single-introduction__container {
+    margin: 0 auto;
+    max-width: 345px;
+  }
+  .single-introduction__thumbnail {
+    margin-bottom: 24px;
+  }
+  .single-introduction__thumbnail > .img-wrapper {
+    border-radius: 20px;
+    width: 100%;
+  }
+}
 .inside {
   background-image: url(../img/bg/letter_bg-pc.webp);
   background-position: center top;
@@ -2258,6 +2297,20 @@ source {
   aspect-ratio: 3/2;
 }
 
+@media screen and (max-width: 639px) {
+  .inside {
+    padding: 120px 0 80px;
+  }
+  .inside > .section-title {
+    top: -40px;
+  }
+}
+@media screen and (max-width: 524px) {
+  .inside__content .img-wrapper {
+    border-radius: 12px;
+    width: 120px;
+  }
+}
 .message {
   margin: 120px 0;
 }
@@ -2290,6 +2343,46 @@ source {
   line-height: 2;
 }
 
+@media screen and (max-width: 1325px) {
+  .message__container {
+    margin-inline: 280px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .message__container {
+    margin-inline: 120px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .message {
+    margin: 80px 0;
+  }
+  .message__inner {
+    flex-direction: column;
+  }
+  .message__img {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 767px) {
+  .message__container {
+    margin-inline: 60px;
+  }
+}
+@media screen and (max-width: 524px) {
+  .message__title {
+    margin-bottom: 48px;
+  }
+  .message__container {
+    margin-inline: auto;
+    width: 345px;
+  }
+  .message__img > .img-wrapper {
+    width: 200px;
+  }
+}
 .about-nursery {
   margin-bottom: 174px;
 }
@@ -2419,6 +2512,92 @@ source {
   line-height: 1.2;
 }
 
+@media screen and (max-width: 1279px) {
+  .about-nursery__content {
+    max-width: 960px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .about-nursery__content {
+    max-width: 700px;
+  }
+  .about-nursery__care-hours__table {
+    width: 450px;
+  }
+  .about-nursery__data {
+    padding: 24px 60px 24px 15px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .about-nursery__content {
+    max-width: 580px;
+  }
+  .about-nursery__row {
+    border-bottom: none;
+    flex-direction: column;
+  }
+  .about-nursery__row > h3 {
+    height: 50px;
+    width: 100%;
+  }
+  .about-nursery__data--address,
+  .about-nursery {
+    padding: 18px 12px;
+  }
+  .about-nursery__data--target,
+  .about-nursery__data--admission-date,
+  .about-nursery__data--open-date,
+  .about-nursery__data--care-hours {
+    padding: 24px 12px;
+  }
+  .about-nursery__data--capacity,
+  .about-nursery__data--staff {
+    padding: 24px 0;
+  }
+  .about-nursery__open-date {
+    gap: 35px;
+    margin-bottom: 12px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .about-nursery__capacity-note,
+  .about-nursery__staff-note {
+    line-height: 1.5;
+  }
+}
+@media screen and (max-width: 524px) {
+  .about-nursery {
+    margin-bottom: 154px;
+  }
+  .about-nursery__content {
+    max-width: 345px;
+  }
+  .about-nursery__care-hours__table {
+    width: 100%;
+  }
+  .about-nursery__row > h3 {
+    font-size: 16px;
+  }
+  .about-nursery__open-date {
+    gap: 0;
+    justify-content: space-between;
+  }
+  .about-nursery__care-hours__table-row > dt {
+    padding: 18px 0;
+    width: 140px;
+  }
+  .about-nursery__care-hours__table-row > dd {
+    padding: 18px 20px;
+  }
+  .about-nursery__number-table {
+    gap: 8px;
+  }
+  .about-nursery__number-table__head {
+    height: 58px;
+    margin-right: 0;
+    width: 75px;
+  }
+}
 .archive-info {
   margin-bottom: 123px;
 }
@@ -3375,14 +3554,14 @@ source {
   .page-top {
     padding: 230px 0 80px;
   }
+  .page-title > h1 {
+    font-size: 20px;
+  }
 }
 @media screen and (max-width: 374px) {
   .page-top {
     margin-inline: 15px;
     padding: 186px 0 80px;
-  }
-  .page-title > h1 {
-    font-size: 20px;
   }
 }
 .breadcrumb {

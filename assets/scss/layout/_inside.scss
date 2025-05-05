@@ -32,3 +32,22 @@
     }
   }
 }
+
+@include mq(sm) {
+  .inside {
+    padding: 120px 0 80px;
+
+    & > .section-title {
+      top: -40px;
+    }
+  }
+}
+
+@include mq(tablet) {
+  .inside__content {
+    & .img-wrapper {
+      border-radius: 12px;
+      width: 120px;
+    }
+  }
+}

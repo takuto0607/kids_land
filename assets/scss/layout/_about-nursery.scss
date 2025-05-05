@@ -142,3 +142,114 @@
 .about-nursery__staff-note {
   line-height: 1.2;
 }
+
+@include mq(xl) {
+  .about-nursery__content {
+    max-width: 960px;
+  }
+}
+
+@include mq(lg) {
+  .about-nursery__content {
+    max-width: 700px;
+  }
+
+  .about-nursery__care-hours__table {
+    width: 450px;
+  }
+
+  .about-nursery__data {
+    padding: 24px 60px 24px 15px;
+  }
+}
+
+@include mq(md) {
+  .about-nursery__content {
+    max-width: 580px;
+  }
+
+  .about-nursery__row {
+    border-bottom: none;
+    flex-direction: column;
+
+    & > h3 {
+      height: 50px;
+      width: 100%;
+    }
+  }
+
+  .about-nursery__data--address,
+  .about-nursery {
+    padding: 18px 12px;
+  }
+
+  .about-nursery__data--target,
+  .about-nursery__data--admission-date,
+  .about-nursery__data--open-date,
+  .about-nursery__data--care-hours {
+    padding: 24px 12px;
+  }
+
+  .about-nursery__data--capacity,
+  .about-nursery__data--staff {
+    padding: 24px 0;
+  }
+
+  .about-nursery__open-date {
+    gap: 35px;
+    margin-bottom: 12px;
+  }
+}
+
+@include mq(sm) {
+  .about-nursery__capacity-note,
+  .about-nursery__staff-note {
+    line-height: 1.5;
+  }
+}
+
+@include mq(tablet) {
+  .about-nursery {
+    margin-bottom: 154px;
+  }
+
+  .about-nursery__content {
+    max-width: 345px;
+  }
+
+  .about-nursery__care-hours__table {
+    width: 100%;
+  }
+
+  .about-nursery__row {
+    & > h3 {
+      font-size: 16px;
+    }
+  }
+
+  .about-nursery__open-date {
+    gap: 0;
+    justify-content: space-between;
+  }
+
+  .about-nursery__care-hours__table-row {
+    & > dt {
+      padding: 18px 0;
+      width: 140px;
+    }
+
+    & > dd {
+      padding: 18px 20px;
+    }
+  }
+
+  .about-nursery__number-table {
+    gap: 8px;
+  }
+
+  .about-nursery__number-table__head {
+    height: 58px;
+    margin-right: 0;
+    width: 75px;
+  }
+}

@@ -44,3 +44,52 @@
     letter-spacing: 0.2em;
   }
 }
+
+@include mq(xl) {
+  .single-introduction__container {
+    margin: 0 30px;
+    max-width: auto;
+  }
+}
+
+@include mq(sm) {
+  .single-introduction__page-top {
+    padding-bottom: 60px !important;
+  }
+
+  .single-introduction__sub-section {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+
+    & > h3 {
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+
+    & > p {
+      font-size: 16px;
+      text-align: start;
+    }
+  }
+}
+
+@include mq(tablet) {
+  .single-introduction {
+    margin-bottom: 120px;
+  }
+
+  .single-introduction__container {
+    margin: 0 auto;
+    max-width: 345px;
+  }
+
+  .single-introduction__thumbnail {
+    margin-bottom: 24px;
+
+    & > .img-wrapper {
+      border-radius: 20px;
+      width: 100%;
+    }
+  }
+}

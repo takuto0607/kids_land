@@ -109,17 +109,17 @@
   .page-top {
     padding: 230px 0 80px;
   }
+
+  .page-title {
+    & > h1 {
+      font-size: 20px;
+    }
+  }
 }
 
 @include mq(xs) {
   .page-top {
     margin-inline: 15px;
     padding: 186px 0 80px;
-  }
-
-  .page-title {
-    & > h1 {
-      font-size: 20px;
-    }
   }
 }
