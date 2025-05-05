@@ -46,3 +46,59 @@
     margin-bottom: 39px;
   }
 }
+
+@include mq(xl) {
+  .contact__content {
+    max-width: 1080px;
+    padding: 36px 0;
+    text-align: center;
+    width: 100%;
+
+    & > .section-title {
+      margin-bottom: 48px;
+    }
+
+    & > p {
+      margin-bottom: 39px;
+    }
+  }
+}
+
+@include mq(lg) {
+  .contact {
+    aspect-ratio: 768 / 800;
+    background-image: url(../img/bg/contact_bg-sp.webp);
+    padding: 0 90px;
+  }
+
+  .contact__content {
+    padding: 64px 0;
+
+    & > p {
+      margin-bottom: 44px;
+    }
+  }
+}
+
+@include mq(sm) {
+  .contact {
+    aspect-ratio: 375 / 634;
+    padding: 0 15px;
+  }
+
+  .contact__content {
+    & > .section-title {
+      margin-bottom: 44px;
+    }
+
+    & > p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    & > .btn {
+      height: 60px;
+      width: 240px;
+    }
+  }
+}

@@ -20,6 +20,10 @@
   display: none;
 }
 
+.break-md-only {
+  display: none;
+}
+
 @include mq(xl) {
   .pc-only {
     display: none;
@@ -40,10 +44,18 @@
   .break-md {
     display: block;
   }
+
+  .break-md-only {
+    display: block;
+  }
 }
 
 @include mq(sm) {
   .break-sm {
     display: block;
+  }
+
+  .break-md-only {
+    display: none;
   }
 }

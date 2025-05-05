@@ -61,3 +61,51 @@
     font-size: 14px;
   }
 }
+
+@include mq(xl) {
+  .yearly-program__content {
+    max-width: 768px;
+  }
+
+  .yearly-program__card-group {
+    justify-content: center;
+  }
+}
+
+@include mq(lg) {
+  .yearly-program__content-wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .yearly-program__content {
+    border-radius: 40px;
+    margin: 0 30px;
+    width: auto;
+    padding: 60px 20px;
+  }
+
+  .yearly-program__card-group {
+    gap: 28px;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@include mq(sm) {
+  .yearly-program {
+    margin-bottom: 80px;
+  }
+
+  .yearly-program__content {
+    border-radius: 30px;
+    margin: 0 15px;
+    padding: 60px 15px;
+  }
+
+  .yearly-program__card-group {
+    gap: 20px;
+    margin-bottom: 24px;
+  }
+}

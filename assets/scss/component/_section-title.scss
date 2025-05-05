@@ -80,6 +80,20 @@
     }
   }
 
+  .section-title__inner--large {
+    & > .section-title__img {
+      width: 108px;
+
+      & > .img-wrapper {
+        width: 72px;
+      }
+    }
+
+    & > h2 {
+      font-size: 24px;
+    }
+  }
+
   .section-title__title-small {
     font-size: 18px !important;
     margin-bottom: 8px !important;

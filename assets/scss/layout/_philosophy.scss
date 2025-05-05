@@ -14,3 +14,32 @@
   line-height: 3;
   letter-spacing: 0.2em;
 }
+
+@include mq(lg) {
+  .philosophy__content {
+    font-size: 16px;
+  }
+}
+
+@include mq(md) {
+  .philosophy__content {
+    margin-inline: 30px;
+  }
+}
+
+@include mq(sm) {
+  .philosophy {
+    margin-bottom: 164px;
+  }
+
+  .philosophy__content {
+    display: flex;
+    justify-content: center;
+    margin-inline: 15px;
+    text-align: start;
+
+    & > p {
+      max-width: 345px;
+    }
+  }
+}

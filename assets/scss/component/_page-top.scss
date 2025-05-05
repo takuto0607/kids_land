@@ -21,16 +21,16 @@
 
 .page-heading {
   align-items: center;
+  aspect-ratio: 27 / 4;
   background-image: url(../img/bg/page-heading-pc.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
-  height: 160px;
   justify-content: center;
   margin-bottom: 12px;
-  width: 1080px;
+  width: 100%;
 }
 
 .page-title {
@@ -55,5 +55,74 @@
 
   & > p {
     font-size: 14px;
+  }
+}
+
+@include mq(xl) {
+  .page-top {
+    margin-inline: 128px;
+    padding: 250px 0 100px;
+  }
+}
+
+@include mq(lg) {
+  .page-top {
+    margin-inline: 96px;
+    padding: 220px 0 100px;
+  }
+
+  .page-heading {
+    aspect-ratio: 23 / 8;
+    background-image: url(../img/bg/page-heading-sp.webp);
+  }
+
+  .page-title {
+    & > h1 {
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+  }
+}
+
+@include mq(md) {
+  .page-top {
+    margin-inline: 60px;
+    padding: 186px 0 80px;
+  }
+}
+
+@include mq(sm) {
+  .page-top {
+    padding: 240px 0 80px;
+  }
+
+  .page-top {
+    margin-inline: 30px;
+  }
+
+  .page-title {
+    & > h1 {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+  }
+}
+
+@include mq(tablet) {
+  .page-top {
+    padding: 230px 0 80px;
+  }
+}
+
+@include mq(xs) {
+  .page-top {
+    margin-inline: 15px;
+    padding: 186px 0 80px;
+  }
+
+  .page-title {
+    & > h1 {
+      font-size: 20px;
+    }
   }
 }

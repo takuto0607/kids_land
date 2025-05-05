@@ -15,7 +15,7 @@
         <p class="capitalize">contact</p>
       </div>
     </div>
-    <p class="fade-up">入園のお申込み、見学のご相談はこちらから！</p>
+    <p class="fade-up">入園のお申込み、<br class="break-md">見学のご相談はこちらから！</p>
     <div class="btn fade-up">
       <a href="<?php echo esc_url(home_url('/contact')); ?>">お問い合わせ</a>
     </div>

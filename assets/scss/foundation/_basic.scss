@@ -48,9 +48,14 @@ source {
   display: block;
 }
 
-@include mq(sm) {
+@include mq(md) {
   body {
     background-image: url(../img/bg/background-sp.webp);
+  }
+}
+
+@include mq(sm) {
+  body {
     font-size: 14px;
   }
 }
