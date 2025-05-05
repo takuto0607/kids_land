@@ -169,3 +169,83 @@
     padding: 4px 8px;
   }
 }
+
+@include mq(xl) {
+  .archive-introduction__main {
+    margin-inline: 30px;
+    width: auto;
+  }
+}
+
+@include mq(lg) {
+  .archive-introduction__main-inner {
+    padding: 60px 20px;
+  }
+}
+
+@include mq(md) {
+  .archive-introduction {
+    background-image: url(../img/bg/letter_bg-sp.webp);
+  }
+}
+
+@include mq(sm) {
+  .archive-introduction {
+    & > .section-title {
+      top: -40px;
+    }
+  }
+}
+
+@include mq(tablet) {
+  .archive-introduction {
+    padding: 114px 15px 80px;
+  }
+
+  .archive-introduction__page-top {
+    padding-bottom: 77px !important;
+  }
+
+  .archive-introduction__tag-group {
+    margin-bottom: 24px;
+  }
+
+  .archive-introduction__tab {
+    height: 40px;
+    width: 120px;
+  }
+
+  .archive-introduction__main {
+    border-radius: 30px;
+    margin-inline: 0;
+  }
+
+  .archive-introduction__main-inner {
+    padding: 24px 12px;
+  }
+
+  .archive-introduction__tag--nursery-type {
+    width: 150px;
+  }
+
+  .archive-introduction__card-group {
+    margin-bottom: 24px;
+  }
+
+  .archive-introduction__card-content {
+    & > h3 {
+      font-size: 18px;
+    }
+  }
+}
+
+@include mq(sm) {
+  .archive-introduction__page-top {
+    padding-bottom: 77px !important;
+  }
+
+  .archive-introduction__tab {
+    height: 40px;
+    width: 120px;
+  }
+}

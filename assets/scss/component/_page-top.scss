@@ -93,11 +93,8 @@
 
 @include mq(sm) {
   .page-top {
-    padding: 240px 0 80px;
-  }
-
-  .page-top {
     margin-inline: 30px;
+    padding: 240px 0 80px;
   }
 
   .page-title {

@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  font-size: 16px;
   height: 100%;
 }
 
@@ -2127,6 +2128,67 @@ source {
   padding: 4px 8px;
 }
 
+@media screen and (max-width: 1279px) {
+  .archive-introduction__main {
+    margin-inline: 30px;
+    width: auto;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .archive-introduction__main-inner {
+    padding: 60px 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .archive-introduction {
+    background-image: url(../img/bg/letter_bg-sp.webp);
+  }
+}
+@media screen and (max-width: 639px) {
+  .archive-introduction > .section-title {
+    top: -40px;
+  }
+}
+@media screen and (max-width: 524px) {
+  .archive-introduction {
+    padding: 114px 15px 80px;
+  }
+  .archive-introduction__page-top {
+    padding-bottom: 77px !important;
+  }
+  .archive-introduction__tag-group {
+    margin-bottom: 24px;
+  }
+  .archive-introduction__tab {
+    height: 40px;
+    width: 120px;
+  }
+  .archive-introduction__main {
+    border-radius: 30px;
+    margin-inline: 0;
+  }
+  .archive-introduction__main-inner {
+    padding: 24px 12px;
+  }
+  .archive-introduction__tag--nursery-type {
+    width: 150px;
+  }
+  .archive-introduction__card-group {
+    margin-bottom: 24px;
+  }
+  .archive-introduction__card-content > h3 {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .archive-introduction__page-top {
+    padding-bottom: 77px !important;
+  }
+  .archive-introduction__tab {
+    height: 40px;
+    width: 120px;
+  }
+}
 .single-introduction {
   margin-bottom: 174px;
 }
@@ -3301,10 +3363,8 @@ source {
 }
 @media screen and (max-width: 639px) {
   .page-top {
-    padding: 240px 0 80px;
-  }
-  .page-top {
     margin-inline: 30px;
+    padding: 240px 0 80px;
   }
   .page-title > h1 {
     font-size: 24px;

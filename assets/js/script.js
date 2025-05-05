@@ -45,9 +45,7 @@ jQuery(document).ready(function ($) {
 
   // タイトルやテキストのアニメーション表示
   $(function () {
-    $(".open-fade-up").addClass("show");
-
-    $(window).scroll(function () {
+    function showElementsInView() {
       $(".fade-up").each(function () {
         var elementHeight = $(this).offset().top;
         var scroll = $(window).scrollTop();
@@ -57,7 +55,13 @@ jQuery(document).ready(function ($) {
           $(this).addClass("show");
         }
       });
-    });
+    }
+
+    $(".open-fade-up").addClass("show");
+
+    showElementsInView();
+
+    $(window).on("scroll", showElementsInView);
   });
 
   // FAQ アコーディオン

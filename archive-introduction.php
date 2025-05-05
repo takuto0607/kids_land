@@ -37,7 +37,7 @@
 
   $query = new WP_Query($args);
   ?>
-  <div class="page-top page-top-long">
+  <div class="page-top page-top-long archive-introduction__page-top">
     <div class="page-top-inner open-fade-up">
       <div class="page-heading">
         <div class="page-title">
