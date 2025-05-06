@@ -21,7 +21,7 @@
   }
 }
 
-@include mq(xs) {
+@include mq(tablet) {
   .logo {
     & > a {
       & > .img-wrapper {

@@ -6,6 +6,19 @@
 <?php get_header(); ?>
 <main>
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+  <?php
+  // 保育園名の取得
+  $terms = get_the_terms(get_the_ID(), 'prefecture');
+  $nursery = '';
+  if ($terms && !is_wp_error($terms)) {
+    foreach ( $terms as $term ) {
+      if ($term->parent !== 0) {
+          $nursery = $term->name;
+          break;
+      }
+    }
+  }
+  ?>
   <div class="page-top">
     <div class="page-top-inner open-fade-up">
       <div class="page-heading">
@@ -14,7 +27,7 @@
           <p class="capitalize">letter</p>
         </div>
       </div>
-      <?php breadcrumb(); ?>
+      <?php breadcrumb($nursery); ?>
     </div>
   </div>
 
@@ -24,19 +37,6 @@
       <div class="single-letter__content">
         <div class="single-letter__content-title fade-up">
           <div class="single-letter__title-note">
-            <?php
-            // 保育園名の取得
-            $terms = get_the_terms(get_the_ID(), 'prefecture');
-            $nursery = '';
-            if ($terms && !is_wp_error($terms)) {
-              foreach ( $terms as $term ) {
-                if ($term->parent !== 0) {
-                    $nursery = $term->name;
-                    break;
-                }
-              }
-            }
-            ?>
             <?php if ($nursery) : ?>
               <p class="single-letter__title-nursery"><span></span><?php echo esc_html($nursery); ?>からのおたより</p>
             <?php endif; ?>
@@ -88,7 +88,7 @@
         </div>
         <div class="single-letter__btn">
           <div class="btn btn-large fade-up">
-            <a href="<?php echo esc_url(home_url('/letter')); ?>">お知らせ一覧へ</a>
+            <a href="<?php echo esc_url(home_url('/letter')); ?>">こもれびだより一覧へ</a>
           </div>
         </div>
       </div>

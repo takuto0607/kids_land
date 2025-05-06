@@ -173,7 +173,7 @@
   }
 }
 
-@include mq(xs) {
+@include mq(tablet) {
   .fv__bg {
     padding-top: 28px;
   }

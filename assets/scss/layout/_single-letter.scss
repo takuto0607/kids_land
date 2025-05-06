@@ -1,6 +1,8 @@
 @use "../global/" as *;
 
 .single-letter {
+  display: flex;
+  justify-content: center;
   margin-bottom: 120px;
   padding: 0 60px;
 }
@@ -35,6 +37,7 @@
   align-items: center;
   display: flex;
   font-size: 14px;
+  gap: 20px;
   justify-content: space-between;
   letter-spacing: 1.2;
   margin-bottom: 12px;
@@ -113,4 +116,101 @@
 .single-letter__btn {
   color: $text-color;
   text-align: center;
+}
+
+.single-letter__sidebar {
+  min-width: 220px;
+}
+
+@include mq(xxl) {
+  .single-letter {
+    padding: 0 30px;
+  }
+}
+
+@include mq(xl) {
+  .single-letter__inner {
+    align-items: center;
+    flex-direction: column;
+    max-width: 960px;
+    width: 100%;
+  }
+
+  .single-letter__sidebar {
+    width: 100%;
+  }
+}
+
+@include mq(lg) {
+  .single-letter__content {
+    max-width: 708px;
+  }
+}
+
+@include mq(sm) {
+  .single-letter {
+    margin-bottom: 80px;
+    padding: 0 15px;
+  }
+
+  .single-letter__content {
+    border-radius: 30px;
+    width: 100%;
+    padding: 32px 15px 64px;
+  }
+
+  .single-letter__content-title {
+    margin-bottom: 24px;
+
+    & > h2 {
+      font-size: 20px;
+    }
+  }
+
+  .single-letter__title-note {
+    align-items: start;
+    flex-direction: column;
+    font-size: 12px;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .single-letter__title-nursery {
+    font-size: 16px;
+
+    &::before {
+      font-size: 14px;
+    }
+  }
+
+  .single-letter__thumbnail {
+    margin-bottom: 24px;
+
+    & > .img-wrapper {
+      border-radius: 30px;
+      width: 100%;
+
+      & > img {
+        aspect-ratio: 21 / 16;
+      }
+    }
+  }
+
+  .single-letter__main-text {
+    padding-bottom: 24px;
+  }
+
+  .single-letter__sub-section {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+
+    & h3 {
+      font-size: 16px;
+    }
+
+    & > p {
+      font-size: 16px;
+    }
+  }
 }

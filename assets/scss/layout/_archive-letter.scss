@@ -1,6 +1,8 @@
 @use "../global/" as *;
 
 .archive-letter {
+  display: flex;
+  justify-content: center;
   margin-bottom: 120px;
   padding: 0 60px;
 }
@@ -113,10 +115,6 @@
     &:hover {
       opacity: 0.5;
     }
-
-    // &:not(:last-child) {
-    //   // border-bottom: 1px dashed $text-color2;
-    // }
   }
 }
 
@@ -207,8 +205,6 @@
 
 @include mq(xxl) {
   .archive-letter {
-    display: flex;
-    justify-content: center;
     padding: 0 30px;
   }
 }

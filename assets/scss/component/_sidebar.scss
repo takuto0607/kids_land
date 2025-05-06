@@ -67,6 +67,12 @@
   }
 }
 
+@include mq(lg) {
+  .single-letter__content {
+    width: 100%;
+  }
+}
+
 @include mq(sm) {
   .sidebar {
     padding: 12px;

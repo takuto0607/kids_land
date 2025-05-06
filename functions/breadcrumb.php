@@ -1,5 +1,5 @@
 <?php
-function breadcrumb () {
+function breadcrumb ($nursery = '') {
 ?>
 
 <div class="breadcrumb">
@@ -44,9 +44,21 @@ function breadcrumb () {
         <span class="breadcrumb__padding"><?php post_type_archive_title(); ?></span>
       </li>
 
+    <!-- こもれびだよりの記事ページ -->
+    <?php elseif (is_singular('letter')) : ?>
+      <li class="breadcrumb__item">
+        <span><i class="fa-solid fa-chevron-right"></i></span>
+        <a class="breadcrumb__padding" href="<?php echo get_post_type_archive_link(get_post_type()); ?>">
+          <?php echo esc_html(get_post_type_object(get_post_type())->label); ?>
+        </a>
+      </li>
+      <li class="breadcrumb__item">
+        <span><i class="fa-solid fa-chevron-right"></i></span>
+        <span class="breadcrumb__padding"><?php echo esc_html($nursery); ?>からのおたより『<?php echo esc_html(the_title()); ?>』</span>
+      </li>
+  
     <!-- 記事ページ -->
     <?php elseif (is_single()) : ?>
-      <li class="breadcrumb__item">
         <span><i class="fa-solid fa-chevron-right"></i></span>
         <a class="breadcrumb__padding" href="<?php echo get_post_type_archive_link(get_post_type()); ?>">
           <?php echo esc_html(get_post_type_object(get_post_type())->label); ?>
