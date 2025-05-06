@@ -26,7 +26,7 @@
 
   $query = new WP_Query($args);
   ?>
-  <div class="page-top">
+  <div class="page-top archive-info__page-top">
     <div class="page-top-inner open-fade-up">
       <div class="page-heading">
         <div class="page-title">
@@ -85,7 +85,7 @@
                   break;
               }
               ?>
-              <div class="archive-info__link-icon archive-info__link-icon--<?php echo esc_attr($category_slug); ?>">
+              <div class="archive-info__link-icon archive-info__link-icon--pc archive-info__link-icon--<?php echo esc_attr($category_slug); ?>">
                 <div class="archive-info__link-img">
                   <div class="img-wrapper">
                     <img src="<?php echo echo_img($icon_url); ?>" width="48" height="48" alt="<?php echo $category_name; ?>アイコン" loading="lazy">
@@ -94,7 +94,18 @@
                 <p><?php echo $category_name; ?></p>
               </div>
               <div class="archive-info__link-content">
-                <p class="archive-info__link-date"><time datetime="<?php echo esc_attr(get_the_modified_time('c')); ?>"><?php echo esc_html( get_the_modified_date('Y.m.d') ); ?></time></p>
+                <div class="archive-info__link-icon--sp">
+                  <div class="archive-info__link-icon archive-info__link-icon--<?php echo esc_attr($category_slug); ?>">
+                    <div class="archive-info__link-img">
+                      <div class="img-wrapper">
+                        <img src="<?php echo echo_img($icon_url); ?>" width="48" height="48" alt="<?php echo $category_name; ?>アイコン" loading="lazy">
+                      </div>
+                    </div>
+                    <p><?php echo $category_name; ?></p>
+                  </div>
+                  <p class="archive-info__link-date"><time datetime="<?php echo esc_attr(get_the_modified_time('c')); ?>"><?php echo esc_html( get_the_modified_date('Y.m.d') ); ?></time></p>
+                </div>
+                <p class="archive-info__link-date archive-info__link-date--pc"><time datetime="<?php echo esc_attr(get_the_modified_time('c')); ?>"><?php echo esc_html( get_the_modified_date('Y.m.d') ); ?></time></p>
                 <h2><?php the_title(); ?></h2>
                 <?php
                 $excerpt = get_the_excerpt();

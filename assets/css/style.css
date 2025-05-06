@@ -270,8 +270,8 @@ source {
   display: flex;
   gap: 42px;
   justify-content: center;
-  line-height: 1.2;
   letter-spacing: 0.1em;
+  line-height: 1.2;
 }
 
 .footer__list--pc {
@@ -2671,7 +2671,8 @@ source {
 }
 .archive-info__link-icon > p {
   font-size: 18px;
-  letter-spacing: 1.5;
+  line-height: 1.5;
+  letter-spacing: 0;
 }
 
 .archive-info__link-icon--news {
@@ -2726,6 +2727,94 @@ source {
   white-space: normal;
 }
 
+.archive-info__link-icon--sp {
+  display: none;
+}
+
+@media screen and (max-width: 1279px) {
+  .archive-info__content {
+    max-width: 934px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .archive-info__content {
+    max-width: 708px;
+  }
+  .archive-info__link-icon--pc {
+    display: none;
+  }
+  .archive-info__link-date--pc {
+    display: none;
+  }
+  .archive-info__link-icon--sp {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  .archive-info__link-icon--sp > .archive-info__link-icon {
+    border-radius: 7.2px;
+    height: 72px;
+    width: 72px;
+  }
+  .archive-info__link-icon--sp > .archive-info__link-icon > p {
+    font-size: 10.8px;
+  }
+  .archive-info__link-icon--sp > .archive-info__link-date {
+    align-items: end;
+    color: rgb(51, 51, 51);
+    display: flex;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    margin-bottom: 0;
+  }
+  .archive-info__link-img {
+    margin-bottom: 8px;
+  }
+  .archive-info__link-img > .img-wrapper {
+    width: 28.8px;
+  }
+  .archive-info__link-content {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .archive-info__content {
+    max-width: 580px;
+  }
+  .archive-info__link {
+    padding-bottom: 16px;
+  }
+  .archive-info__link:not(:first-child) {
+    padding-top: 44px;
+  }
+  .archive-info__link-excerpt {
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
+}
+@media screen and (max-width: 639px) {
+  .archive-info__page-top {
+    padding-bottom: 88px !important;
+  }
+  .archive-info {
+    margin-bottom: 80px;
+  }
+  .archive-info__tag-group {
+    flex-wrap: wrap;
+    justify-content: start;
+    margin-bottom: 32px;
+  }
+  .archive-info__content {
+    margin: 0 15px;
+  }
+  .archive-info__link-content > h2 {
+    font-size: 18px;
+  }
+  .archive-info__link-excerpt {
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+  }
+}
 .single-info {
   margin-bottom: 120px;
 }
