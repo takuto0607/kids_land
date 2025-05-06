@@ -71,7 +71,7 @@
   <section class="archive-letter">
     <div class="archive-letter__inner">
       <div class="archive-letter__content">
-        <div class="archive-letter__search fade-up">
+        <div class="archive-letter__search">
           <h2>園をさがす</h2>
           <div class="archive-letter__search-group">
             <?php

@@ -190,10 +190,19 @@
 }
 
 @include mq(sm) {
+  .archive-introduction__page-top {
+    padding-bottom: 77px !important;
+  }
+
   .archive-introduction {
     & > .section-title {
       top: -40px;
     }
+  }
+
+  .archive-introduction__tab {
+    height: 40px;
+    width: 120px;
   }
 }
 
@@ -240,12 +249,5 @@
 }
 
 @include mq(sm) {
-  .archive-introduction__page-top {
-    padding-bottom: 77px !important;
-  }
 
-  .archive-introduction__tab {
-    height: 40px;
-    width: 120px;
-  }
 }

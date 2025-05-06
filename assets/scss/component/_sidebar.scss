@@ -6,7 +6,7 @@
   height: 100%;
   padding-left: 24px;
   padding-top: 12px;
-  width: 328px;
+  width: 100%;
 
   & > h2 {
     font-size: 24px;
@@ -57,5 +57,26 @@
 
   &:hover {
     background-color: rgb(228, 226, 226);
+  }
+}
+
+@include mq(xl) {
+  .sidebar {
+    border-left: none;
+    border-top: 1px solid $text-color;
+  }
+}
+
+@include mq(sm) {
+  .sidebar {
+    padding: 12px;
+
+    & > h2 {
+      font-size: 20px;
+    }
+  }
+
+  .sidebar__archive-month {
+    font-size: 12px;
   }
 }

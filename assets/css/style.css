@@ -2146,8 +2146,15 @@ source {
   }
 }
 @media screen and (max-width: 639px) {
+  .archive-introduction__page-top {
+    padding-bottom: 77px !important;
+  }
   .archive-introduction > .section-title {
     top: -40px;
+  }
+  .archive-introduction__tab {
+    height: 40px;
+    width: 120px;
   }
 }
 @media screen and (max-width: 524px) {
@@ -2179,15 +2186,6 @@ source {
   }
   .archive-introduction__card-content > h3 {
     font-size: 18px;
-  }
-}
-@media screen and (max-width: 639px) {
-  .archive-introduction__page-top {
-    padding-bottom: 77px !important;
-  }
-  .archive-introduction__tab {
-    height: 40px;
-    width: 120px;
   }
 }
 .single-introduction {
@@ -2817,11 +2815,12 @@ source {
   display: flex;
   gap: 32px;
   justify-content: center;
+  width: 100%;
 }
 
 .archive-letter__content {
   flex-shrink: 0;
-  width: 960px;
+  max-width: 960px;
 }
 
 .archive-letter__search {
@@ -2921,6 +2920,7 @@ source {
   color: rgb(255, 255, 255);
   display: flex;
   font-size: 19px;
+  flex-shrink: 0;
   justify-content: center;
   height: 36px;
   width: 36px;
@@ -2986,6 +2986,58 @@ source {
   text-align: right;
 }
 
+.archive-letter__sidebar {
+  min-width: 220px;
+}
+
+@media screen and (max-width: 1325px) {
+  .archive-letter {
+    display: flex;
+    justify-content: center;
+    padding: 0 30px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .archive-letter__inner {
+    flex-direction: column;
+    max-width: 960px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .archive-letter__card-group {
+    gap: 20px;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 639px) {
+  .archive-letter__search > h2 {
+    font-size: 20px;
+    padding-left: 26px;
+  }
+  .archive-letter__search > h2::before {
+    font-size: 18px;
+  }
+  .archive-letter__search-group {
+    flex-wrap: wrap;
+    width: 250px;
+  }
+  .archive-letter__card-content > h3 {
+    height: 42px;
+  }
+  .archive-letter__card-content > h4 {
+    font-size: 16px;
+  }
+  .archive-letter__card-date > time {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 524px) {
+  .archive-letter {
+    margin-bottom: 80px;
+    padding: 0 15px;
+  }
+}
 .single-letter {
   margin-bottom: 120px;
   padding: 0 60px;
@@ -3552,16 +3604,11 @@ source {
 }
 @media screen and (max-width: 524px) {
   .page-top {
-    padding: 230px 0 80px;
+    margin-inline: 15px;
+    padding: 186px 0 80px;
   }
   .page-title > h1 {
     font-size: 20px;
-  }
-}
-@media screen and (max-width: 374px) {
-  .page-top {
-    margin-inline: 15px;
-    padding: 186px 0 80px;
   }
 }
 .breadcrumb {
@@ -3597,7 +3644,7 @@ source {
   height: 100%;
   padding-left: 24px;
   padding-top: 12px;
-  width: 328px;
+  width: 100%;
 }
 .sidebar > h2 {
   font-size: 24px;
@@ -3646,6 +3693,23 @@ source {
   background-color: rgb(228, 226, 226);
 }
 
+@media screen and (max-width: 1279px) {
+  .sidebar {
+    border-left: none;
+    border-top: 1px solid rgb(85, 0, 12);
+  }
+}
+@media screen and (max-width: 639px) {
+  .sidebar {
+    padding: 12px;
+  }
+  .sidebar > h2 {
+    font-size: 20px;
+  }
+  .sidebar__archive-month {
+    font-size: 12px;
+  }
+}
 .pagination {
   align-items: center;
   display: flex;
