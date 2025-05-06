@@ -6,7 +6,7 @@
 <?php get_header(); ?>
 <main>
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-  <div class="page-top">
+  <div class="page-top single-info__page-top">
     <div class="page-top-inner open-fade-up">
       <div class="page-heading">
         <div class="page-title">

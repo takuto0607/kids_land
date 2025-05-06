@@ -28,3 +28,17 @@
 .breadcrumb__padding--right {
   padding-right: 8px;
 }
+
+@include mq(sm) {
+  .breadcrumb__list {
+    & > a {
+      margin-bottom: 8px;
+    }
+  }
+
+  .breadcrumb__item {
+    & > a {
+      margin-bottom: 8px;
+    }
+  }
+}
