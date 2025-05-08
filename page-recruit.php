@@ -54,6 +54,11 @@
         </div>
       </div>
       <div class="motto__block">
+        <div class="motto__img motto__img--sp">
+          <div class="img-wrapper">
+            <img src="<?php echo echo_img("motto-img-2.webp"); ?>" width="480" height="320" alt="園内の様子" loading="lazy">
+          </div>
+        </div>  
         <div class="motto__text">
           <div class="motto__text-title">
             <h3>
@@ -65,9 +70,9 @@
               自由な風土
             </h3>
           </div>
-          <p>保育者が思い思いの先進的な保育を実践できる、自由度の高さが桜のこもれびの特長。古い慣習にとらわれることなく誰もが意見を発信できる、風通しの良い園づくりを行っています。<br>園を創るのは保育者一人ひとりの個性。<br>楽しく仲間と助け合いながらアイデアを実現できる風土を大事にしています。<br>一方で、本部部門には専門家との共創や優れた保育の実践例を体系化する仕組みがあり、本部と連携することでさらに豊かな保育を実践することができます。</p>
+          <p class="motto__text--letter-spacing">保育者が思い思いの先進的な保育を実践できる、自由度の高さが桜のこもれびの特長。古い慣習にとらわれることなく誰もが意見を発信できる、風通しの良い園づくりを行っています。<br>園を創るのは保育者一人ひとりの個性。<br>楽しく仲間と助け合いながらアイデアを実現できる風土を大事にしています。<br>一方で、本部部門には専門家との共創や優れた保育の実践例を体系化する仕組みがあり、本部と連携することでさらに豊かな保育を実践することができます。</p>
         </div>
-        <div class="motto__img">
+        <div class="motto__img motto__img--pc">
           <div class="img-wrapper">
             <img src="<?php echo echo_img("motto-img-2.webp"); ?>" width="480" height="320" alt="園内の様子" loading="lazy">
           </div>
@@ -118,7 +123,7 @@
       </div>
       <div class="requirements__row">
         <h3>勤務時間</h3>
-        <p>7:00～18:30のシフト制（延長時間あり）<br>9h拘束、実働8時間<br>出勤する時間と曜日で基本給が変わります</p>
+        <p class="requirements__text--time">7:00～18:30のシフト制（延長時間あり）<br>9h拘束、実働8時間<br>出勤する時間と曜日で基本給が変わります</p>
       </div>
       <div class="requirements__row">
         <h3>応募資格</h3>
@@ -130,19 +135,19 @@
       </div>
       <div class="requirements__row">
         <h3>賞与</h3>
-        <p><span>年2回※月給制の方に限ります。<br>期末賞与：対象年度の業績に応じて支給</span></p>
+        <p><span class="requirements__text-span">年2回※月給制の方に限ります。<br>期末賞与：対象年度の業績に応じて支給</span></p>
       </div>
       <div class="requirements__row">
         <h3>休日</h3>
-        <p><span>土日祝日<br>または<br>月間10日を選べます。</span></p>
+        <p class="requirements__text--holiday"><span class="requirements__text-span">土日祝日<br>または<br>月間10日を選べます。</span></p>
       </div>
       <div class="requirements__row">
         <h3>保険</h3>
-        <p>厚生年金・健康保険・雇用保険・労災保険　完備</p>
+        <p class="requirements__text--large">厚生年金・健康保険・雇用保険・労災保険　完備</p>
       </div>
       <div class="requirements__row">
         <h3>手当</h3>
-        <p>延長保育手当・皆勤手当・担当手当など</p>
+        <p class="requirements__text--large">延長保育手当・皆勤手当・担当手当など</p>
       </div>
       <div class="requirements__row">
         <h3>昇給</h3>
@@ -150,11 +155,11 @@
       </div>
       <div class="requirements__row">
         <h3>休暇</h3>
-        <p>年末年始・産前産後休暇・育児休暇・看護休暇制度あり</p>
+        <p class="requirements__text--vacations requirements__text--large">年末年始・産前産後休暇・<br class="break-sm">育児休暇・看護休暇制度あり</p>
       </div>
       <div class="requirements__row">
         <h3>その他</h3>
-        <p>交通費全額支給。予防接種補助など福利厚生充実。</p>
+        <p class="requirements__text--large">交通費全額支給。<br class="break-sm">予防接種補助など福利厚生充実。</p>
       </div>
     </div>
   </section>

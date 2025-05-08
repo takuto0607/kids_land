@@ -36,7 +36,7 @@
     height: 0;
     position: absolute;
     right: 32px;
-    top: 32px;
+    top: 50%;
     translate: 0 -50%;
     transition: transform 0.5s ease-in-out;
     width: 0;
@@ -55,6 +55,10 @@
     &::after {
       transform: rotate(-180deg);
     }
+  }
+
+  &:hover {
+    opacity: 0.5;
   }
 }
 
@@ -79,4 +83,51 @@
   font-size: 18px;
   line-height: 1.5;
   margin-right: 32px;
+}
+
+@include mq(xl) {
+  .faq__container {
+    margin: 0 60px;
+  }
+}
+
+@include mq(lg) {
+  .faq {
+    margin-bottom: 80px;
+  }
+
+  .faq__container {
+    margin: 0 30px;
+  }
+}
+
+@include mq(md) {
+  .faq__container {
+    margin: 0 15px;
+  }
+}
+
+@include mq(sm) {
+  .faq__container {
+    margin: 0 15px;
+  }
+
+  .faq__question {
+    align-items: start;
+    padding: 32px 24px;
+
+    &::after {
+      right: 24px;
+    }
+
+    & > h3 {
+      font-size: 16px;
+      padding-right: 24px;
+    }
+  }
+
+  .faq__answer {
+    padding: 32px 0 28px;
+    margin: 0 24px;
+  }
 }

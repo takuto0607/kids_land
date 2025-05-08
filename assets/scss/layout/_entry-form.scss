@@ -156,3 +156,54 @@
   align-items: center;
   text-align: center;
 }
+
+@include mq(xl) {
+  .entry-form__content {
+    margin: 0 60px;
+    padding: 32px 60px;
+  }
+}
+
+@include mq(lg) {
+  .entry-form__content {
+    margin: 0 30px;
+    padding: 32px 15px;
+  }
+}
+
+@include mq(md) {
+  .entry-form__content {
+    border-radius: 30px;
+    margin: 0 15px;
+    padding: 32px 15px;
+  }
+
+  .entry-form__item {
+    align-items: start;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+@include mq(sm) {
+  .entry-form__radio--employment-type {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .entry-form__agree {
+    display: block;
+    line-height: 1.5;
+
+    & > .required {
+      margin-left: 32px;
+      margin-top: 12px;
+    }
+  }
+
+  input[type="checkbox"] {
+    height: 20px;
+    width: 20px;
+  }
+}

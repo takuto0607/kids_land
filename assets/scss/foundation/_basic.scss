@@ -49,7 +49,7 @@ source {
   display: block;
 }
 
-@include mq(md) {
+@include mq(lg) {
   body {
     background-image: url(../img/bg/background-sp.webp);
   }
