@@ -44,6 +44,14 @@
   }
 }
 
+.motto__img--pc {
+  display: block;
+}
+
+.motto__img--sp {
+  display: none;
+}
+
 .motto__text-title {
   display: inline-block;
   margin-bottom: 24px;
@@ -81,5 +89,71 @@
 .motto__text {
   & > p {
     line-height: 2;
+  }
+}
+
+.motto__text--letter-spacing {
+  letter-spacing: 0.2em;
+}
+
+@include mq(lg) {
+  .motto {
+    margin-bottom: 80px;
+  }
+
+  .motto__title {
+    margin-bottom: 48px;
+  }
+
+  .motto__block {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .motto__img {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .motto__img--pc {
+    display: none;
+  }
+
+  .motto__img--sp {
+    display: flex;
+  }
+}
+
+@include mq(md) {
+  .motto__container {
+    margin-inline: 15px;
+  }
+}
+
+@include mq(sm) {
+  .motto__img {
+    & > .img-wrapper {
+      border-radius: 20px;
+      width: 240px;
+    }
+  }
+
+  .motto__text-title {
+    margin-bottom: 27px;
+
+    & > h3 {
+      font-size: 18px;
+    }
+
+    &::after {
+      bottom: -8px;
+      width: 126%;
+    }
+  }
+
+  .motto__text {
+    padding: 0 15px;
   }
 }

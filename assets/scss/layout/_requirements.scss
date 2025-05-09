@@ -52,3 +52,81 @@
     border-bottom: 1px dashed $text-color;
   }
 }
+
+@include mq(xl) {
+  .requirements__content {
+    margin: 0 60px;
+  }
+}
+
+@include mq(lg) {
+  .requirements {
+    margin-bottom: 80px;
+  }
+
+  .requirements__content {
+    margin: 0 30px;
+  }
+
+  .requirements__row {
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+
+    & > p {
+      padding: 24px 15px;
+    }
+
+    &:not(:last-child) {
+      border-bottom: none;
+    }
+  }
+}
+
+@include mq(md) {
+  .requirements__content {
+    border-radius: 30px;
+    margin: 0 15px;
+  }
+}
+
+@include mq(sm) {
+  .requirements__title {
+    margin-bottom: 48px;
+  }
+
+  .requirements__row {
+    & > h3 {
+      width: 100%;
+    }
+
+    & > p {
+      & > span {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .requirements__text-span {
+    font-size: 14px !important;
+  }
+
+  .requirements__text--large {
+    font-size: 16px !important;
+  }
+
+  .requirements__text--time {
+    font-size: 16px;
+    padding: 24px 12px !important;
+  }
+
+  .requirements__text--holiday {
+    padding: 32px 15px !important;
+  }
+
+  .requirements__text--vacations {
+    padding: 23px 15px !important;
+  }
+}
