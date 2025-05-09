@@ -1839,6 +1839,9 @@ source {
   }
 }
 @media screen and (max-width: 639px) {
+  .entry-form__item {
+    font-size: 16px;
+  }
   .entry-form__radio--employment-type {
     display: flex;
     flex-direction: column;
@@ -1984,6 +1987,7 @@ source {
     padding-bottom: 60px !important;
   }
   .entry-confirm__item {
+    font-size: 16px;
     gap: 8px;
   }
   .entry-confirm__content-row {
@@ -2170,6 +2174,9 @@ source {
   .contact-form {
     margin-bottom: 80px;
   }
+  .contact-form__item {
+    font-size: 16px;
+  }
   .contact-form__input-row {
     align-items: start;
     flex-direction: column;
@@ -2312,6 +2319,9 @@ source {
   }
   .contact-confirm__content {
     padding: 48px 15px;
+  }
+  .contact-confirm__item {
+    font-size: 16px;
   }
   .contact-confirm__content-row {
     align-items: start;

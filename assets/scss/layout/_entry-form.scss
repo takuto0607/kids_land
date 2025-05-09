@@ -186,6 +186,10 @@
 }
 
 @include mq(sm) {
+  .entry-form__item {
+    font-size: 16px;
+  }
+
   .entry-form__radio--employment-type {
     display: flex;
     flex-direction: column;
