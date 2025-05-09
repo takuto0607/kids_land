@@ -96,3 +96,45 @@
 .privacy-policy__list-bottom {
   margin-bottom: 8px !important;
 }
+
+@include mq(xl) {
+  .privacy-policy__content {
+    margin: 0 60px;
+  }
+}
+
+@include mq(lg) {
+  .privacy-policy__content {
+    margin: 0 30px;
+  }
+}
+
+@include mq(md) {
+  .privacy-policy__content {
+    border-radius: 30px;
+    margin: 0 15px;
+    padding: 32px 15px 8px;
+  }
+}
+
+@include mq(sm) {
+  .privacy-policy__page-top {
+    padding-bottom: 60px !important;
+  }
+
+  .privacy-policy {
+    margin-bottom: 60px;
+  }
+
+  .privacy-policy__block {
+    margin-bottom: 24px;
+
+    & > h2 {
+      font-size: 16px;
+    }
+  }
+
+  .privacy-policy__text-address {
+    font-size: 16px;
+  }
+}
