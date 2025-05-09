@@ -5,7 +5,7 @@
 ?>
 <?php get_header(); ?>
 <main>
-  <div class="page-top">
+  <div class="page-top entry-confirm__page-top">
     <div class="page-top-inner">
       <div class="page-heading">
         <div class="page-title">
