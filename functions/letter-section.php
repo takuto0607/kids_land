@@ -23,7 +23,7 @@
           $letter_args = array (
             'post_type' => 'letter',
             'posts_per_page' => $display_num,
-            'orderBy' => 'date',
+            'orderby' => 'date',
             'order' => 'DESC',
           );
   
@@ -76,7 +76,7 @@
               </div>
             </a>
           </div>
-          <?
+          <?php
             endwhile;
             wp_reset_postdata();
           endif;

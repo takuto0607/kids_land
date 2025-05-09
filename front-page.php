@@ -12,7 +12,7 @@
       $info_args = array (
         'post_type' => 'info',
         'posts_per_page' => 1,
-        'orderBy' => 'date',
+        'orderby' => 'date',
         'order' => 'DESC',
       );
 
@@ -30,7 +30,7 @@
           </p>
         </a>
       </article>
-      <?
+      <?php
         endwhile;
         wp_reset_postdata();
       endif;

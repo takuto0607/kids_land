@@ -74,3 +74,48 @@
 		}
 	}
 }
+
+@include mq(xl) {
+	.sitemap__content {
+		margin: 0 60px;
+		padding: 64px 80px;
+	}
+}
+
+@include mq(lg) {
+	.sitemap__inner {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.sitemap__content {
+		margin: 0 30px;
+		padding: 32px 40px;
+	}
+}
+
+@include mq(sm) {
+	.sitemap {
+		& > .section-title {
+			margin-bottom: 40px;
+			top: -40px;
+		}
+	}
+
+	.sitemap__content {
+		border-radius: 30px;
+		margin: 0 15px;
+		padding: 32px 0;
+	}
+
+	.sitemap__column {
+		width: 300px;
+	
+		& > a {
+			font-size: 16px;
+			height: 32px;
+		}
+	}
+}
