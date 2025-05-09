@@ -2274,11 +2274,52 @@ source {
   transform: translateY(-50%);
 }
 
-.entry-confirm__btn {
+.contact-confirm__btn {
   align-items: center;
   text-align: center;
 }
 
+@media screen and (max-width: 1279px) {
+  .contact-confirm__content {
+    margin: 0 60px;
+    padding: 64px 60px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .contact-confirm__content {
+    margin: 0 30px;
+    padding: 64px 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact-confirm__content {
+    border-radius: 30px;
+    margin: 0 15px;
+    padding: 64px 15px;
+  }
+  .contact-confirm__item {
+    align-items: start;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .contact-confirm {
+    margin-bottom: 80px;
+  }
+  .contact-confirm__page-top {
+    padding-bottom: 60px !important;
+  }
+  .contact-confirm__content {
+    padding: 48px 15px;
+  }
+  .contact-confirm__content-row {
+    align-items: start;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 8px;
+  }
+}
 .archive-introduction {
   background-image: url(../img/bg/letter_bg-pc.webp);
   background-position: center top;

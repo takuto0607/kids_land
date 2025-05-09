@@ -89,7 +89,56 @@
   }
 }
 
-.entry-confirm__btn {
+.contact-confirm__btn {
   align-items: center;
   text-align: center;
+}
+
+@include mq(xl) {
+  .contact-confirm__content {
+    margin: 0 60px;
+    padding: 64px 60px;
+  }
+}
+
+@include mq(lg) {
+  .contact-confirm__content {
+    margin: 0 30px;
+    padding: 64px 30px;
+  }
+}
+
+@include mq(md) {
+  .contact-confirm__content {
+    border-radius: 30px;
+    margin: 0 15px;
+    padding: 64px 15px;
+  }
+
+  .contact-confirm__item {
+    align-items: start;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+@include mq(sm) {
+  .contact-confirm {
+    margin-bottom: 80px;
+  }
+
+  .contact-confirm__page-top {
+    padding-bottom: 60px !important;
+  }
+
+  .contact-confirm__content {
+    padding: 48px 15px;
+  }
+
+  .contact-confirm__content-row {
+    align-items: start;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 8px;
+  }
 }
