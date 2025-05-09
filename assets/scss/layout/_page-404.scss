@@ -1,3 +1,4 @@
+@use "../global/" as *;
 
 .page-404 {
   margin-bottom: 174px;
@@ -14,6 +15,40 @@
 
     &:not(:last-child) {
       margin-bottom: 24px;
+    }
+  }
+}
+
+@include mq(xl) {
+	.page-404__container {
+    max-width: 904px;
+  }
+}
+
+@include mq(lg) {
+	.page-404__container {
+    max-width: 708px;
+  }
+}
+
+@include mq(md) {
+	.page-404__container {
+    margin: 0 15px;
+  }
+}
+
+@include mq(sm) {
+  .page-404__page-top {
+    padding-bottom: 83px;
+  }
+
+  .page-404 {
+    margin-bottom: 120px;
+  }
+
+	.page-404__container {
+    & > p {
+      font-size: 17px;
     }
   }
 }

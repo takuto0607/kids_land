@@ -5,11 +5,11 @@
 ?>
 <?php get_header(); ?>
 <main>
-  <div class="page-top">
+  <div class="page-top page-404__page-top">
     <div class="page-top-inner open-fade-up">
       <div class="page-heading">
         <div class="page-title">
-          <h1>お探しのページが見あたりません。</h1>
+          <h1>お探しのページが<br class="break-sm">見あたりません。</h1>
           <p class="capitalize">page not found</p>
         </div>
       </div>

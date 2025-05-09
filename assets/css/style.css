@@ -3492,6 +3492,32 @@ source {
   margin-bottom: 24px;
 }
 
+@media screen and (max-width: 1279px) {
+  .page-404__container {
+    max-width: 904px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .page-404__container {
+    max-width: 708px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .page-404__container {
+    margin: 0 15px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .page-404__page-top {
+    padding-bottom: 83px;
+  }
+  .page-404 {
+    margin-bottom: 120px;
+  }
+  .page-404__container > p {
+    font-size: 17px;
+  }
+}
 .img-wrapper > img, .img-wrapper > source {
   height: auto;
   object-fit: cover;
