@@ -15,8 +15,9 @@
   }
 
   & > a {
-    border-bottom: 1px solid $text-color2;
     display: inline-block;
+    line-height: 1.5;
+    text-decoration: underline solid $text-color2;
 
     &:hover {
       opacity: 0.7;
@@ -147,4 +148,73 @@
 .contact-form__btn {
   align-items: center;
   text-align: center;
+}
+
+@include mq(xl) {
+  .contact-form__announce {
+    margin: 0 60px 48px;
+  }
+
+  .contact-form__content {
+    margin: 0 60px;
+    padding: 64px 60px;
+  }
+}
+
+@include mq(lg) {
+  .contact-form__announce {
+    margin: 0 30px 48px;
+  }
+
+  .contact-form__content {
+    margin: 0 30px;
+    padding: 64px 30px;
+  }
+}
+
+@include mq(md) {
+  .contact-form__announce {
+    margin: 0 15px 48px;
+  }
+
+  .contact-form__content {
+    border-radius: 30px;
+    margin: 0 15px;
+    padding: 48px 15px;
+  }
+
+  .contact-form__item {
+    align-items: start;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+@include mq(sm) {
+  .contact-form {
+    margin-bottom: 80px;
+  }
+
+  .contact-form__input-row {
+    align-items: start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .contact-form__agree {
+    align-items: start;
+    flex-direction: column-reverse;
+    line-height: 1.5;
+    margin: 0 auto 48px;
+    width: 242px;
+
+    & > .required {
+      margin-left: 32px;
+      margin-bottom: 12px;
+    }
+
+    & > br {
+      display: none;
+    }
+  }
 }
