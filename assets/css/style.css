@@ -3369,6 +3369,31 @@ source {
   margin-bottom: 120px;
 }
 
+@media screen and (max-width: 1023px) {
+  .complete {
+    margin-inline: 30px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .complete__page-top {
+    padding-bottom: 60px !important;
+  }
+  .complete {
+    margin-inline: 15px;
+  }
+  .complete > p {
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    margin-bottom: 80px;
+    text-align: start;
+  }
+}
+@media screen and (max-width: 374px) {
+  .complete > p {
+    font-size: 15px;
+  }
+}
 .sitemap {
   background-image: url(../img/bg/letter_bg-pc.webp);
   background-position: center top;
