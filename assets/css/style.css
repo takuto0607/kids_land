@@ -1752,6 +1752,9 @@ source {
 .entry-form__radio > .wpcf7-list-item {
   padding-right: 10px;
 }
+.entry-form__radio > .wpcf7-list-item > label {
+  display: inline;
+}
 
 .entry-form__radio--column {
   display: flex;

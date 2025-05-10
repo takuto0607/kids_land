@@ -54,6 +54,10 @@
 
   & > .wpcf7-list-item {
     padding-right: 10px;
+
+    & > label {
+      display: inline;
+    }
   }
 }
 
