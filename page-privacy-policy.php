@@ -132,7 +132,7 @@
       <div class="privacy-policy__block">
         <h2 class="fade-up">お問い合わせについて</h2>
         <address class="privacy-policy__text-wrapper fade-up">
-          <p class="privacy-policy__text-address">株式会社桜のこもれび<br>個人情報相談窓口　　<br class="break-md">TEL：<a href="tel:0120-107-929">0120-107-929</a><br class="break-sm">（平日　月～金　<time datetime="T09:00">9：00</time>～<time datetime="T17:00">17：00</time>）</p>
+          <p class="privacy-policy__text-address">株式会社桜のこもれび<br>個人情報相談窓口　　<br class="break-md">TEL：<a href="tel:0120-107-929">0120-107-929</a><br class="break-sm">（平日　月～金　<time datetime="09:00">9：00</time>～<time datetime="17:00">17：00</time>）</p>
         </address>
       </div>
     </div>

@@ -64,13 +64,11 @@
     gap: 10px;
     letter-spacing: 0.2em;
 
-    & > span {
-      & > .img-wrapper {
-        width: 24px;
+    & > .img-wrapper {
+      width: 24px;
 
-        & > img {
-          aspect-ratio: 1 / 1;
-        }
+      & > img {
+        aspect-ratio: 1 / 1;
       }
     }
   }

@@ -82,11 +82,14 @@
 }
 
 .about-nursery__care-hours__table-row {
-  display: flex;
-
   &:not(:last-child) {
     border-bottom: 1px solid $text-color;
   }
+}
+
+.about-nursery__care-hours__table-row-inner {
+  display: flex;
+
 
   & > dt {
     align-self: center;
@@ -232,7 +235,7 @@
     justify-content: space-between;
   }
 
-  .about-nursery__care-hours__table-row {
+  .about-nursery__care-hours__table-row-inner {
     & > dt {
       padding: 18px 0;
       width: 140px;

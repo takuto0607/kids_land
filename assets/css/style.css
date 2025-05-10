@@ -1401,10 +1401,10 @@ source {
   gap: 10px;
   letter-spacing: 0.2em;
 }
-.motto__text-title > h3 > span > .img-wrapper {
+.motto__text-title > h3 > .img-wrapper {
   width: 24px;
 }
-.motto__text-title > h3 > span > .img-wrapper > img {
+.motto__text-title > h3 > .img-wrapper > img {
   aspect-ratio: 1/1;
 }
 .motto__text-title::after {
@@ -2848,13 +2848,14 @@ source {
   width: 600px;
 }
 
-.about-nursery__care-hours__table-row {
-  display: flex;
-}
 .about-nursery__care-hours__table-row:not(:last-child) {
   border-bottom: 1px solid rgb(85, 0, 12);
 }
-.about-nursery__care-hours__table-row > dt {
+
+.about-nursery__care-hours__table-row-inner {
+  display: flex;
+}
+.about-nursery__care-hours__table-row-inner > dt {
   align-self: center;
   display: flex;
   font-weight: 400;
@@ -2862,7 +2863,7 @@ source {
   padding: 16px 0;
   width: 150px;
 }
-.about-nursery__care-hours__table-row > dd {
+.about-nursery__care-hours__table-row-inner > dd {
   border-left: 1px solid rgb(85, 0, 12);
   line-height: 1.2;
   padding: 16px 20px;
@@ -2975,11 +2976,11 @@ source {
     gap: 0;
     justify-content: space-between;
   }
-  .about-nursery__care-hours__table-row > dt {
+  .about-nursery__care-hours__table-row-inner > dt {
     padding: 18px 0;
     width: 140px;
   }
-  .about-nursery__care-hours__table-row > dd {
+  .about-nursery__care-hours__table-row-inner > dd {
     padding: 18px 20px;
   }
   .about-nursery__number-table {

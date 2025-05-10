@@ -210,12 +210,16 @@
             <h4>保育標準時間認定の方</h4>
             <div class="about-nursery__care-hours__table">
               <div class="about-nursery__care-hours__table-row">
-                <dt>保育標準時間</dt>
-                <dd><time datetime="T07:30">7:30</time>～<time datetime="T18:30">18:30</time></dd>
+                <dl class="about-nursery__care-hours__table-row-inner">
+                  <dt>保育標準時間</dt>
+                  <dd><time datetime="T07:30">7:30</time>～<time datetime="T18:30">18:30</time></dd>
+                </dl>
               </div>
               <div class="about-nursery__care-hours__table-row">
-                <dt>延長保育</dt>
-                <dd><time datetime="T18:31">18:31</time>～<time datetime="T19:30">19:30</time></dd>
+                <dl class="about-nursery__care-hours__table-row-inner">
+                  <dt>延長保育</dt>
+                  <dd><time datetime="T18:31">18:31</time>～<time datetime="T19:30">19:30</time></dd>
+                </dl>
               </div>
             </div>
           </div>
@@ -223,12 +227,16 @@
             <h4>保育短時間認定の方</h4>
             <div class="about-nursery__care-hours__table">
               <div class="about-nursery__care-hours__table-row">
-                <dt>保育標準時間</dt>
-                <dd><time datetime="T09:00">9:00</time>～<time datetime="T17:00">17:00</time></dd>
+                <dl class="about-nursery__care-hours__table-row-inner">
+                  <dt>保育標準時間</dt>
+                  <dd><time datetime="T09:00">9:00</time>～<time datetime="T17:00">17:00</time></dd>
+                </dl>
               </div>
               <div class="about-nursery__care-hours__table-row">
-                <dt>延長保育</dt>
-                <dd><time datetime="T07:30">7:30</time>～<time datetime="T08:59">8:59</time><br><time datetime="T17:01">17:01</time>～<time datetime="T19:30">19:30</time></dd>
+                <dl class="about-nursery__care-hours__table-row-inner">
+                  <dt>延長保育</dt>
+                  <dd><time datetime="T07:30">7:30</time>～<time datetime="T08:59">8:59</time><br><time datetime="T17:01">17:01</time>～<time datetime="T19:30">19:30</time></dd>
+                </dl>
               </div>
             </div>
           </div>

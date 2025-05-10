@@ -59,6 +59,7 @@ function breadcrumb ($nursery = '') {
   
     <!-- 記事ページ -->
     <?php elseif (is_single()) : ?>
+      <li class="breadcrumb__item">
         <span><i class="fa-solid fa-chevron-right"></i></span>
         <a class="breadcrumb__padding" href="<?php echo get_post_type_archive_link(get_post_type()); ?>">
           <?php echo esc_html(get_post_type_object(get_post_type())->label); ?>

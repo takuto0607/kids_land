@@ -42,10 +42,8 @@
         <div class="motto__text">
           <div class="motto__text-title">
             <h3>
-              <span>
-                <div class="img-wrapper">
-                  <img src="<?php echo echo_img("icon/title-icon.webp"); ?>" width="24" height="24" alt="桜の花びら" loading="lazy">
-                </div>
+              <span class="img-wrapper">
+                <img src="<?php echo echo_img("icon/title-icon.webp"); ?>" width="24" height="24" alt="桜の花びら" loading="lazy">
               </span>
               子ども主体の保育
             </h3>
@@ -62,10 +60,8 @@
         <div class="motto__text">
           <div class="motto__text-title">
             <h3>
-              <span>
-                <div class="img-wrapper">
-                  <img src="<?php echo echo_img("icon/title-icon.webp"); ?>" width="24" height="24" alt="桜の花びら" loading="lazy">
-                </div>
+              <span class="img-wrapper">
+                <img src="<?php echo echo_img("icon/title-icon.webp"); ?>" width="24" height="24" alt="桜の花びら" loading="lazy">
               </span>
               自由な風土
             </h3>
@@ -87,10 +83,8 @@
         <div class="motto__text">
           <div class="motto__text-title">
             <h3>
-              <span>
-                <div class="img-wrapper">
-                  <img src="<?php echo echo_img("icon/title-icon.webp"); ?>" width="24" height="24" alt="桜の花びら" loading="lazy">
-                </div>
+              <span class="img-wrapper">
+                <img src="<?php echo echo_img("icon/title-icon.webp"); ?>" width="24" height="24" alt="桜の花びら" loading="lazy">
               </span>
               ワークライフバランス
             </h3>
