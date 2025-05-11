@@ -189,6 +189,7 @@
               </a>
             </div>
             <?php endwhile; ?>
+            <?php wp_reset_postdata(); ?>
           <?php else: ?>
             <p>該当するこもれびだよりはありません。</p>
           <?php endif; ?>

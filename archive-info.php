@@ -118,6 +118,7 @@
               </div>
             </a>
             <?php endwhile; ?>
+            <?php wp_reset_postdata(); ?>
           <?php else: ?>
             <p>該当するお知らせ記事はありません。</p>
           <?php endif; ?>
