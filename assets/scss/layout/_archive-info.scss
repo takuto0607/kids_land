@@ -53,15 +53,22 @@
 }
 
 .archive-info__link {
-  align-items: center;
   border-bottom: 1px solid $text-color;
-  display: flex;
-  gap: 24px;
   padding-bottom: 24px;
 
   &:not(:first-child) {
     padding-top: 24px;
   }
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.archive-info__link-inner {
+  align-items: center;
+  display: flex;
+  gap: 24px;
 
   &:hover {
     opacity: 0.5;

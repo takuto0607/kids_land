@@ -66,7 +66,7 @@
         <div class="archive-info__link-group">
           <?php if ($query->have_posts()) : ?>
             <?php while ($query->have_posts()) : $query->the_post(); ?>
-            <a class="archive-info__link fade-up" href="<?php echo esc_url(get_permalink()); ?>">
+            <a class="archive-info__link" href="<?php echo esc_url(get_permalink()); ?>">
               <?php
               $info_cateory = get_the_terms(get_the_ID(), 'info-category');
               $term = $info_cateory[0];
@@ -85,36 +85,38 @@
                   break;
               }
               ?>
-              <div class="archive-info__link-icon archive-info__link-icon--pc archive-info__link-icon--<?php echo esc_attr($category_slug); ?>">
-                <div class="archive-info__link-img">
-                  <div class="img-wrapper">
-                    <img src="<?php echo echo_img($icon_url); ?>" width="48" height="48" alt="<?php echo $category_name; ?>アイコン" loading="lazy">
-                  </div>
-                </div>
-                <p><?php echo $category_name; ?></p>
-              </div>
-              <div class="archive-info__link-content">
-                <div class="archive-info__link-icon--sp">
-                  <div class="archive-info__link-icon archive-info__link-icon--<?php echo esc_attr($category_slug); ?>">
-                    <div class="archive-info__link-img">
-                      <div class="img-wrapper">
-                        <img src="<?php echo echo_img($icon_url); ?>" width="48" height="48" alt="<?php echo $category_name; ?>アイコン" loading="lazy">
-                      </div>
+              <div class="archive-info__link-inner fade-up">
+                <div class="archive-info__link-icon archive-info__link-icon--pc archive-info__link-icon--<?php echo esc_attr($category_slug); ?>">
+                  <div class="archive-info__link-img">
+                    <div class="img-wrapper">
+                      <img src="<?php echo echo_img($icon_url); ?>" width="48" height="48" alt="<?php echo $category_name; ?>アイコン" loading="lazy">
                     </div>
-                    <p><?php echo $category_name; ?></p>
                   </div>
-                  <p class="archive-info__link-date"><time datetime="<?php echo esc_attr(get_the_modified_time('c')); ?>"><?php echo esc_html( get_the_modified_date('Y.m.d') ); ?></time></p>
+                  <p><?php echo $category_name; ?></p>
                 </div>
-                <p class="archive-info__link-date archive-info__link-date--pc"><time datetime="<?php echo esc_attr(get_the_modified_time('c')); ?>"><?php echo esc_html( get_the_modified_date('Y.m.d') ); ?></time></p>
-                <h2><?php the_title(); ?></h2>
-                <?php
-                $excerpt = get_the_excerpt();
-                if (!empty($excerpt)):
-                ?>
-                  <p class="archive-info__link-excerpt"><?php echo get_the_excerpt(); ?></p>
-                <?php else: ?>
-                  <p>この記事に本文はありません。</p>
-                <?php endif; ?>
+                <div class="archive-info__link-content">
+                  <div class="archive-info__link-icon--sp">
+                    <div class="archive-info__link-icon archive-info__link-icon--<?php echo esc_attr($category_slug); ?>">
+                      <div class="archive-info__link-img">
+                        <div class="img-wrapper">
+                          <img src="<?php echo echo_img($icon_url); ?>" width="48" height="48" alt="<?php echo $category_name; ?>アイコン" loading="lazy">
+                        </div>
+                      </div>
+                      <p><?php echo $category_name; ?></p>
+                    </div>
+                    <p class="archive-info__link-date"><time datetime="<?php echo esc_attr(get_the_modified_time('c')); ?>"><?php echo esc_html( get_the_modified_date('Y.m.d') ); ?></time></p>
+                  </div>
+                  <p class="archive-info__link-date archive-info__link-date--pc"><time datetime="<?php echo esc_attr(get_the_modified_time('c')); ?>"><?php echo esc_html( get_the_modified_date('Y.m.d') ); ?></time></p>
+                  <h2><?php the_title(); ?></h2>
+                  <?php
+                  $excerpt = get_the_excerpt();
+                  if (!empty($excerpt)):
+                  ?>
+                    <p class="archive-info__link-excerpt"><?php echo get_the_excerpt(); ?></p>
+                  <?php else: ?>
+                    <p>この記事に本文はありません。</p>
+                  <?php endif; ?>
+                </div>
               </div>
             </a>
             <?php endwhile; ?>

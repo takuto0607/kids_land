@@ -155,7 +155,9 @@
   height: 280px;
   overflow: hidden;
   width: 300px;
+}
 
+.archive-letter__card-link {
   &:hover {
     opacity: 0.7;
   }

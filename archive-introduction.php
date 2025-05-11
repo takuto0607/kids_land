@@ -107,28 +107,30 @@
                   $image_alt = "アイキャッチ画像未登録";
                 }
               ?>
-              <div class="archive-introduction__card-img">
-                <div class="img-wrapper">
-                  <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>" width="296" height="180" loading="lazy">
+              <div class="archive-introduction__card-inner">
+                <div class="archive-introduction__card-img">
+                  <div class="img-wrapper">
+                    <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>" width="296" height="180" loading="lazy">
+                  </div>
                 </div>
-              </div>
-              <div class="archive-introduction__card-content">
-                <div class="archive-introduction__card-info">
-                  <?php
-                  $term_nursery_type = get_the_terms(get_the_ID(), 'nursery-type');
-                  if (!is_wp_error($term_nursery_type) && !empty($term_nursery_type)):
-                  ?>
-                    <p><?php echo $term_nursery_type[0]->name; ?></p>
-                  <?php
-                  endif;
-
-                  $term_prefecture = get_the_terms(get_the_ID(), 'prefecture');
-                  if (!is_wp_error($term_prefecture) && !empty($term_prefecture)):
-                  ?>
-                    <p><?php echo $term_prefecture[0]->name; ?></p>
-                  <?php endif; ?>
+                <div class="archive-introduction__card-content">
+                  <div class="archive-introduction__card-info">
+                    <?php
+                    $term_nursery_type = get_the_terms(get_the_ID(), 'nursery-type');
+                    if (!is_wp_error($term_nursery_type) && !empty($term_nursery_type)):
+                    ?>
+                      <p><?php echo $term_nursery_type[0]->name; ?></p>
+                    <?php
+                    endif;
+  
+                    $term_prefecture = get_the_terms(get_the_ID(), 'prefecture');
+                    if (!is_wp_error($term_prefecture) && !empty($term_prefecture)):
+                    ?>
+                      <p><?php echo $term_prefecture[0]->name; ?></p>
+                    <?php endif; ?>
+                  </div>
+                  <h3><?php the_title(); ?></h3>
                 </div>
-                <h3><?php the_title(); ?></h3>
               </div>
             </a>
             <?php endwhile; ?>
