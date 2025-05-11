@@ -3352,7 +3352,7 @@ source {
 }
 
 .archive-letter__content {
-  flex-shrink: 0;
+  flex-basis: 100%;
   max-width: 960px;
 }
 
