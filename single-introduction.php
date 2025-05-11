@@ -212,13 +212,13 @@
               <div class="about-nursery__care-hours__table-row">
                 <dl class="about-nursery__care-hours__table-row-inner">
                   <dt>保育標準時間</dt>
-                  <dd><time datetime="T07:30">7:30</time>～<time datetime="T18:30">18:30</time></dd>
+                  <dd><time datetime="07:30">7:30</time>～<time datetime="18:30">18:30</time></dd>
                 </dl>
               </div>
               <div class="about-nursery__care-hours__table-row">
                 <dl class="about-nursery__care-hours__table-row-inner">
                   <dt>延長保育</dt>
-                  <dd><time datetime="T18:31">18:31</time>～<time datetime="T19:30">19:30</time></dd>
+                  <dd><time datetime="18:31">18:31</time>～<time datetime="19:30">19:30</time></dd>
                 </dl>
               </div>
             </div>
@@ -229,13 +229,13 @@
               <div class="about-nursery__care-hours__table-row">
                 <dl class="about-nursery__care-hours__table-row-inner">
                   <dt>保育標準時間</dt>
-                  <dd><time datetime="T09:00">9:00</time>～<time datetime="T17:00">17:00</time></dd>
+                  <dd><time datetime="09:00">9:00</time>～<time datetime="17:00">17:00</time></dd>
                 </dl>
               </div>
               <div class="about-nursery__care-hours__table-row">
                 <dl class="about-nursery__care-hours__table-row-inner">
                   <dt>延長保育</dt>
-                  <dd><time datetime="T07:30">7:30</time>～<time datetime="T08:59">8:59</time><br><time datetime="T17:01">17:01</time>～<time datetime="T19:30">19:30</time></dd>
+                  <dd><time datetime="07:30">7:30</time>～<time datetime="08:59">8:59</time><br><time datetime="17:01">17:01</time>～<time datetime="19:30">19:30</time></dd>
                 </dl>
               </div>
             </div>
