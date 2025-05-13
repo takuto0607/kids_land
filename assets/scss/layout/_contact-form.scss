@@ -18,6 +18,9 @@
     display: inline-block;
     line-height: 1.5;
     text-decoration: underline solid $text-color2;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: $text-color2;
 
     &:hover {
       opacity: 0.7;

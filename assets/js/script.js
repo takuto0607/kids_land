@@ -128,6 +128,7 @@ jQuery(document).ready(function ($) {
       const params = new URLSearchParams(window.location.search);
       const setTaxonomy = params.get("taxonomy");
       const setSlug = params.get("slug");
+      const setPage = params.get("page");
 
       if (setTaxonomy) {
         $(`.archive-introduction__tab[data-tab="${setTaxonomy}"]`).addClass(
@@ -154,6 +155,7 @@ jQuery(document).ready(function ($) {
       const taxonomy = $(this).data("tab");
 
       const params = new URLSearchParams();
+      params.set("page", "1");
       params.set("taxonomy", taxonomy);
 
       window.location.href = `${window.location.pathname}?${params.toString()}`;
@@ -168,6 +170,7 @@ jQuery(document).ready(function ($) {
       const activeTab = $(".archive-introduction__tab.active").data("tab");
 
       const params = new URLSearchParams();
+      params.set("page", "1");
       params.set("taxonomy", activeTab);
       params.set("slug", slug);
 
