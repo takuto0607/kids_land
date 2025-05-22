@@ -4,7 +4,7 @@
 .fade-up {
   opacity: 0;
   transform: translateY(150px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
+  transition: all 1s ease-out;
 
   &.show {
     opacity: 1;

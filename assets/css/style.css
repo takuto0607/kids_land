@@ -4479,7 +4479,7 @@ source {
 .fade-up {
   opacity: 0;
   transform: translateY(150px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
+  transition: all 1s ease-out;
 }
 .open-fade-up.show,
 .fade-up.show {
