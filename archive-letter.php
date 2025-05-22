@@ -183,7 +183,7 @@
                   <h4><?php echo esc_html($nursery_name); ?>からのおたより</h4>
                   <h3><?php the_title(); ?></h3>
                   <div class="archive-letter__card-date">
-                    <time datetime="<?php echo esc_attr(get_the_modified_time('c')); ?>"><?php echo esc_html( get_the_modified_date('Yねんnがつjにち') ); ?></time>
+                    <time datetime="<?php echo esc_attr(get_the_time('c')); ?>"><?php echo esc_html(get_the_date('Yねんnがつjにち')); ?></time>
                   </div>
                 </div>
               </a>

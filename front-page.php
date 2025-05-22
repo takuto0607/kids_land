@@ -26,7 +26,7 @@
           <h3>お知らせ</h3>
           <h4><?php the_title(); ?></h4>
           <p>
-            <time datetime="<?php echo esc_attr(get_the_modified_time('c')); ?>"><?php echo esc_html( get_the_modified_date('Yねんnがつjにち') ); ?></time>
+            <time datetime="<?php echo esc_attr(get_the_time('c'));  ?>"><?php echo esc_html(get_the_date('Yねんnがつjにち')); ?></time>
           </p>
         </a>
       </article>

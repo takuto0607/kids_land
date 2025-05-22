@@ -104,9 +104,9 @@
                       </div>
                       <p><?php echo $category_name; ?></p>
                     </div>
-                    <p class="archive-info__link-date"><time datetime="<?php echo esc_attr(get_the_modified_time('c')); ?>"><?php echo esc_html( get_the_modified_date('Y.m.d') ); ?></time></p>
+                    <p class="archive-info__link-date"><time datetime="<?php echo esc_attr(get_the_time('c')); ?>"><?php echo esc_html( get_the_date('Y.m.d') ); ?></time></p>
                   </div>
-                  <p class="archive-info__link-date archive-info__link-date--pc"><time datetime="<?php echo esc_attr(get_the_modified_time('c')); ?>"><?php echo esc_html( get_the_modified_date('Y.m.d') ); ?></time></p>
+                  <p class="archive-info__link-date archive-info__link-date--pc"><time datetime="<?php echo esc_attr(get_the_time('c')); ?>"><?php echo esc_html( get_the_date('Y.m.d') ); ?></time></p>
                   <h2><?php the_title(); ?></h2>
                   <?php
                   $excerpt = get_the_excerpt();

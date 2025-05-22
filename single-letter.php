@@ -40,7 +40,7 @@
             <?php if ($nursery) : ?>
               <p class="single-letter__title-nursery"><span></span><?php echo esc_html($nursery); ?>からのおたより</p>
             <?php endif; ?>
-            <p><time datetime="<?php echo esc_attr(get_the_modified_time('c')); ?>"><?php echo esc_html(get_the_modified_date('Yねんnがつjにち')); ?></time></p>
+            <p><time datetime="<?php echo esc_attr(get_the_time('c')); ?>"><?php echo esc_html(get_the_date('Yねんnがつjにち')); ?></time></p>
           </div>
           <h2><?php echo esc_html( get_the_title() ); ?></h2>
         </div>

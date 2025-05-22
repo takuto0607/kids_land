@@ -22,7 +22,7 @@
   <section class="single-info">
     <div class="single-info__content">
       <div class="single-info__content-title fade-up">
-        <p><time datetime="<?php echo esc_attr(get_the_modified_time('c')); ?>"><?php echo esc_html( get_the_modified_date('Y.m.d') ); ?></time></p>
+        <p><time datetime="<?php echo esc_attr(get_the_time('c')); ?>"><?php echo esc_html( get_the_date('Y.m.d') ); ?></time></p>
         <h2><?php echo esc_html( get_the_title() ); ?></h2>
       </div>
       <?php

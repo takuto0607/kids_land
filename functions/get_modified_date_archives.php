@@ -2,15 +2,15 @@
 function get_modified_date_archives () {
   global $wpdb;
 
-  // 更新日ベースで年月を抽出（重複なし）
+  // 投稿日ベースで年月を抽出（重複なし）
   $results = $wpdb->get_results("
     SELECT DISTINCT 
-      YEAR(post_modified) AS year,
-      MONTH(post_modified) AS month
+      YEAR(post_date) AS year,
+      MONTH(post_date) AS month
     FROM {$wpdb->posts}
     WHERE post_type = 'letter' 
       AND post_status = 'publish'
-    ORDER BY post_modified DESC
+    ORDER BY post_date DESC
   ");
 
   // グループ化用
