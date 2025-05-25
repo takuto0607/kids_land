@@ -368,8 +368,11 @@ source {
   border-radius: 8px;
   bottom: 32px;
   height: 120px;
+  opacity: 1;
   position: absolute;
   right: 32px;
+  transform: translateX(0);
+  transition: all 0.5s ease;
   width: 240px;
   z-index: 1;
 }
@@ -399,6 +402,10 @@ source {
 }
 .fv > article:hover {
   background-color: rgb(231, 223, 162);
+}
+.fv > article.hide {
+  transform: translateX(100%);
+  opacity: 0;
 }
 
 .fv__bg {

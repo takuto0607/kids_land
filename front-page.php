@@ -21,7 +21,7 @@
       if ($info_query->have_posts()) :
         while ($info_query->have_posts()) : $info_query->the_post() ;
       ?>
-      <article class="open-fade-up">
+      <article class="fv__article">
         <a href="<?php echo esc_url(get_permalink()); ?>">
           <h3>お知らせ</h3>
           <h4><?php the_title(); ?></h4>

@@ -15,6 +15,24 @@ jQuery(document).ready(function ($) {
     switchViewport();
   });
 
+  // スクロール時のお知らせ表示処理
+  $(function () {
+    // 記事の初期位置を取得
+    let article = $(".fv .fv__article");
+    let initialTop = article.offset().top;
+
+    $(window).scroll(function () {
+      // 現在のスクロール位置
+      let scrollTop = $(window).scrollTop();
+
+      if (initialTop - scrollTop < 30) {
+        article.addClass("hide");
+      } else {
+        article.removeClass("hide");
+      }
+    });
+  });
+
   // ページトップボタンの表示・非表示処理
   function togglePageTopBtm() {
     var fvHeight = $("#fv").outerHeight();
