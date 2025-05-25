@@ -13,6 +13,12 @@
 
 .footer__logo {
   margin: 48px 0;
+
+  & > a {
+    & > .img-wrapper {
+      width: 240px !important;
+    }
+  }
 }
 
 .footer__list {

@@ -265,6 +265,9 @@ source {
 .footer__logo {
   margin: 48px 0;
 }
+.footer__logo > a > .img-wrapper {
+  width: 240px !important;
+}
 
 .footer__list {
   display: flex;
@@ -438,9 +441,8 @@ source {
 }
 .fv__title > h1 {
   font-family: "Yusei Magic", sans-serif;
-  font-size: 36px;
+  font-size: 40px;
   line-height: 2;
-  letter-spacing: 0.1em;
 }
 
 @media screen and (max-width: 1279px) {
@@ -592,14 +594,15 @@ source {
   background-color: rgb(255, 255, 255);
   border: 2px solid rgb(255, 237, 240);
   border-radius: 20px;
-  color: rgb(51, 51, 51);
   flex-shrink: 1;
   height: 60px;
   width: 320px;
 }
 .introduction__prefecture > a {
   align-items: center;
+  color: rgb(51, 51, 51);
   display: flex;
+  font-size: 24px;
   justify-content: center;
   height: 100%;
   width: 100%;
@@ -775,7 +778,7 @@ source {
 .letter__card-group {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 0 15px;
   justify-content: space-between;
   margin-bottom: 14px;
   max-width: 1080px;
@@ -4072,6 +4075,7 @@ source {
   font-size: 24px;
   line-height: 1.5;
   letter-spacing: 0.1em;
+  margin-bottom: 8px;
   text-align: center;
 }
 .section-title__inner > p {
