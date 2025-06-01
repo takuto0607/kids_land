@@ -2,7 +2,7 @@
 
 .page-top {
   margin-inline: 180px;
-  padding: 300px 0 120px;
+  padding: 20.83% 0 120px;
   width: auto;
 }
 
@@ -39,6 +39,7 @@
   & > h1 {
     font-size: 32px;
     margin-bottom: 16px;
+    letter-spacing: 0.1em;
   }
 
   & > p {
@@ -61,14 +62,12 @@
 @include mq(xl) {
   .page-top {
     margin-inline: 128px;
-    padding: 250px 0 100px;
   }
 }
 
 @include mq(lg) {
   .page-top {
     margin-inline: 96px;
-    padding: 220px 0 100px;
   }
 
   .page-heading {
@@ -87,14 +86,13 @@
 @include mq(md) {
   .page-top {
     margin-inline: 60px;
-    padding: 186px 0 80px;
   }
 }
 
 @include mq(sm) {
   .page-top {
     margin-inline: 30px;
-    padding: 240px 0 80px;
+    padding: 49.6% 0 80px;
   }
 
   .page-title {
@@ -108,7 +106,6 @@
 @include mq(tablet) {
   .page-top {
     margin-inline: 15px;
-    padding: 186px 0 80px;
   }
 
   .page-title {

@@ -38,7 +38,7 @@
         </div>
         <p class="footer__copyright">©桜のこもれびキッズランド All Rights Reserved.</p>
       </div>
-      <div id="back-to-top" class="page-top-btn">
+      <div id="back-to-top" class="page-top-btn <?php echo is_front_page() ? '' : 'show'; ?>">
         <p><i class="fa-solid fa-chevron-up"></i></p>
       </div>
     </footer>

@@ -4267,7 +4267,7 @@ source {
 }
 .page-top {
   margin-inline: 180px;
-  padding: 300px 0 120px;
+  padding: 20.83% 0 120px;
   width: auto;
 }
 
@@ -4304,6 +4304,7 @@ source {
 .page-title > h1 {
   font-size: 32px;
   margin-bottom: 16px;
+  letter-spacing: 0.1em;
 }
 .page-title > p {
   font-family: "Jost", sans-serif;
@@ -4323,13 +4324,11 @@ source {
 @media screen and (max-width: 1279px) {
   .page-top {
     margin-inline: 128px;
-    padding: 250px 0 100px;
   }
 }
 @media screen and (max-width: 1023px) {
   .page-top {
     margin-inline: 96px;
-    padding: 220px 0 100px;
   }
   .page-heading {
     aspect-ratio: 23/8;
@@ -4343,13 +4342,12 @@ source {
 @media screen and (max-width: 767px) {
   .page-top {
     margin-inline: 60px;
-    padding: 186px 0 80px;
   }
 }
 @media screen and (max-width: 639px) {
   .page-top {
     margin-inline: 30px;
-    padding: 240px 0 80px;
+    padding: 49.6% 0 80px;
   }
   .page-title > h1 {
     font-size: 24px;
@@ -4359,7 +4357,6 @@ source {
 @media screen and (max-width: 524px) {
   .page-top {
     margin-inline: 15px;
-    padding: 186px 0 80px;
   }
   .page-title > h1 {
     font-size: 20px;

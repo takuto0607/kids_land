@@ -19,39 +19,56 @@ jQuery(document).ready(function ($) {
   $(function () {
     // 記事の初期位置を取得
     let article = $(".fv .fv__article");
-    let initialTop = article.offset().top;
 
-    $(window).scroll(function () {
-      // 現在のスクロール位置
-      let scrollTop = $(window).scrollTop();
+    if (article.length) {
+      let initialTop = article.offset().top;
 
-      if (initialTop - scrollTop < 30) {
-        article.addClass("hide");
-      } else {
-        article.removeClass("hide");
-      }
-    });
+      $(window).scroll(function () {
+        // 現在のスクロール位置
+        let scrollTop = $(window).scrollTop();
+
+        if (initialTop - scrollTop < 30) {
+          article.addClass("hide");
+        } else {
+          article.removeClass("hide");
+        }
+      });
+    }
   });
 
   // ページトップボタンの表示・非表示処理
-  function togglePageTopBtm() {
-    var fvHeight = $("#fv").outerHeight();
-    var scrollPos = $(window).scrollTop();
+  function togglePageTopBtn() {
+    const fv = $("#fv");
+    const pageTopBtn = $("#back-to-top");
 
-    if (scrollPos > fvHeight) {
-      $("#back-to-top").addClass("show");
+    if (fv.length === 0) return;
+
+    const fvHeight = $("#fv").outerHeight();
+    const scrollTop = $(window).scrollTop();
+
+    if (scrollTop > fvHeight) {
+      pageTopBtn.addClass("show");
     } else {
-      $("#back-to-top").removeClass("show");
+      pageTopBtn.removeClass("show");
     }
   }
 
   // ページ読み込み時・スクロール時に実行
-  $(window).on("load scroll", function () {
-    togglePageTopBtm();
-  });
+  $(window).on("load scroll", togglePageTopBtn);
 
   // ページトップボタンをクリック時の動作
   $("#back-to-top").on("click", function () {
+    $("html, body").animate(
+      {
+        scrollTop: 0,
+      },
+      1500
+    );
+    return false;
+  });
+
+  // ページトップボタンをクリック時の動作
+  $("#back-to-top-not-front-page").on("click", function () {
     $("html, body").animate(
       {
         scrollTop: 0,
