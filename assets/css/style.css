@@ -350,6 +350,9 @@ source {
     margin-inline: 15px;
     width: auto;
   }
+  .footer__logo > a > .img-wrapper {
+    width: 200px !important;
+  }
   .footer__item {
     width: 150px;
   }
@@ -363,13 +366,14 @@ source {
 .fv {
   margin-bottom: 120px;
   overflow: hidden;
-  padding-top: 200px;
+  padding-top: 13.89%;
   position: relative;
 }
 .fv > article {
   background-color: rgb(255, 247, 184);
-  border-radius: 8px;
+  border-radius: 20px;
   bottom: 32px;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
   height: 120px;
   opacity: 1;
   position: absolute;
@@ -433,7 +437,7 @@ source {
   background-size: cover;
   bottom: 16.4px;
   display: flex;
-  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0 0 50px rgb(255, 255, 255));
   justify-content: center;
   left: 37px;
   position: absolute;
@@ -448,7 +452,6 @@ source {
 @media screen and (max-width: 1279px) {
   .fv {
     margin-bottom: 80px;
-    padding-top: 180px;
   }
   .fv__bg {
     margin-inline: 60px;
@@ -461,9 +464,6 @@ source {
   }
 }
 @media screen and (max-width: 1023px) {
-  .fv {
-    padding-top: 126px;
-  }
   .fv__bg {
     align-items: center;
     aspect-ratio: 5/9;
@@ -485,6 +485,9 @@ source {
   }
 }
 @media screen and (max-width: 639px) {
+  .fv {
+    padding-top: 33.6%;
+  }
   .fv > article {
     bottom: 25px;
     height: 110px;
@@ -500,6 +503,10 @@ source {
   }
   .fv > article > a > p {
     font-size: 10px;
+  }
+  .fv > article.hide {
+    transform: translateX(-100%);
+    opacity: 0;
   }
   .fv__bg {
     margin-inline: 37px;
@@ -636,6 +643,9 @@ source {
     height: 40px;
     width: 240px;
   }
+  .introduction__prefecture > a {
+    font-size: 18px;
+  }
 }
 .recruit {
   align-items: center;
@@ -765,7 +775,7 @@ source {
 }
 
 .letter__container {
-  margin-inline: 180px;
+  margin-inline: 20px;
   width: auto;
 }
 
@@ -778,7 +788,7 @@ source {
 .letter__card-group {
   display: flex;
   flex-wrap: wrap;
-  gap: 0 15px;
+  gap: 0 10px;
   justify-content: space-between;
   margin-bottom: 14px;
   max-width: 1080px;
@@ -880,11 +890,12 @@ source {
     padding-bottom: 80px;
   }
   .letter__card-group {
+    gap: 24px 0;
     justify-content: center;
-    margin: 0 15px 18px;
+    margin: 0 15px 42px;
   }
   .letter__card {
-    margin-bottom: 24px;
+    margin-bottom: 0;
     width: 300px;
   }
   .letter__card-img > .img-wrapper {
@@ -2703,7 +2714,7 @@ source {
   border-radius: 20px;
   padding: 0 6px;
   overflow: hidden;
-  width: 240px;
+  width: 252px;
 }
 .inside__content .img-wrapper > img {
   aspect-ratio: 3/2;
@@ -2720,7 +2731,7 @@ source {
 @media screen and (max-width: 524px) {
   .inside__content .img-wrapper {
     border-radius: 12px;
-    width: 120px;
+    width: 132px;
   }
 }
 .message {
@@ -2846,12 +2857,16 @@ source {
   margin-bottom: 8px;
 }
 
+.about-nursery__week {
+  width: 16px;
+}
 .about-nursery__week > p:first-child {
   margin-bottom: 8px;
 }
 
 .about-nursery__open-date-note {
   font-size: 14px;
+  letter-spacing: 0.2em;
 }
 
 .about-nursery__care-hours:first-child {
@@ -4196,12 +4211,18 @@ source {
     width: 200px;
   }
   .btn > a::after {
-    right: 20px;
+    right: 12px;
   }
   .btn-large {
     font-size: 18px;
     height: 60px;
     width: 300px;
+  }
+  .recruit__btn {
+    font-size: 18px;
+  }
+  .recruit__btn > a::after {
+    right: 24px;
   }
 }
 .page-top-btn {
@@ -4218,7 +4239,7 @@ source {
   transition: opacity 0.5s, visibility 0.5s;
   visibility: hidden;
   width: 72px;
-  z-index: 1;
+  z-index: 5;
 }
 .page-top-btn > p {
   align-items: center;

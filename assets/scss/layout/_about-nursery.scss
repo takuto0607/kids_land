@@ -56,6 +56,8 @@
 }
 
 .about-nursery__week {
+  width: 16px;
+
   & > p:first-child {
     margin-bottom: 8px;
   }
@@ -63,6 +65,7 @@
 
 .about-nursery__open-date-note {
   font-size: 14px;
+  letter-spacing: 0.2em;
 }
 
 .about-nursery__care-hours {
@@ -89,7 +92,6 @@
 
 .about-nursery__care-hours__table-row-inner {
   display: flex;
-
 
   & > dt {
     align-self: center;

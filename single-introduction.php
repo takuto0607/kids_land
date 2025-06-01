@@ -161,7 +161,7 @@
       </div>
       <div class="about-nursery__row fade-up">
         <h3>対象</h3>
-        <p class="about-nursery__data about-nursery__data--target">1歳児から小学校就学前までの乳幼児<br class="break-lg">（1歳児～5歳児）</p>
+        <p class="about-nursery__data about-nursery__data--target">１歳児から小学校就学前までの乳幼児<br class="break-lg">（１歳児～5歳児）</p>
       </div>
       <div class="about-nursery__row fade-up">
         <h3>入園日</h3>

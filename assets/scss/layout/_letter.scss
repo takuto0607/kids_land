@@ -32,7 +32,7 @@
 }
 
 .letter__container {
-  margin-inline: 180px;
+  margin-inline: 20px;
   width: auto;
 }
 
@@ -45,7 +45,7 @@
 .letter__card-group {
   display: flex;
   flex-wrap: wrap;
-  gap: 0 15px;
+  gap: 0 10px;
   justify-content: space-between;
   margin-bottom: 14px;
   max-width: 1080px;
@@ -163,12 +163,13 @@
   }
 
   .letter__card-group {
+    gap: 24px 0;
     justify-content: center;
-    margin: 0 15px 18px;
+    margin: 0 15px 42px;
   }
 
   .letter__card {
-    margin-bottom: 24px;
+    margin-bottom: 0;
     width: 300px;
   }
 

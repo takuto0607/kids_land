@@ -3,13 +3,14 @@
 .fv {
   margin-bottom: 120px;
   overflow: hidden;
-  padding-top: 200px;
+  padding-top: 13.89%;
   position: relative;
 
   & > article {
     background-color: $accent-color2;
-    border-radius: 8px;
+    border-radius: 20px;
     bottom: 32px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
     height: 120px;
     opacity: 1;
     position: absolute;
@@ -80,7 +81,7 @@
   background-size: cover;
   bottom: 16.4px;
   display: flex;
-  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0 0 50px rgba(255, 255, 255, 1));
   justify-content: center;
   left: 37px;
   position: absolute;
@@ -96,7 +97,6 @@
 @include mq(xl) {
   .fv {
     margin-bottom: 80px;
-    padding-top: 180px;
   }
 
   .fv__bg {
@@ -113,10 +113,6 @@
 }
 
 @include mq(lg) {
-  .fv {
-    padding-top: 126px;
-  }
-
   .fv__bg {
     align-items: center;
     aspect-ratio: 5 / 9;
@@ -142,6 +138,8 @@
 
 @include mq(sm) {
   .fv {
+    padding-top: 33.6%;
+
     & > article {
       bottom: 25px;
       height: 110px;
@@ -161,6 +159,11 @@
         & > p {
           font-size: 10px;
         }
+      }
+
+      &.hide {
+        transform: translateX(-100%);
+        opacity: 0;
       }
     }
   }

@@ -18,12 +18,12 @@
     <p class="fade-up">桜のこもれびキッズランドで<br class="break-lg">働いてみませんか？</p>
     <div class="recruit__btn-group">
       <div class="recruit__btn-wrapper fade-up">
-        <div class="btn btn-pink">
+        <div class="recruit__btn btn btn-pink">
           <a href="<?php echo esc_url(home_url('/recruit')); ?>">採用情報</a>
         </div>
       </div>
       <div class="recruit__btn-wrapper fade-up">
-        <div class="btn btn-yellow">
+        <div class="recruit__btn btn btn-yellow">
           <a href="<?php echo esc_url(home_url('/recruit#entry-form')); ?>">エントリー</a>
         </div>
       </div>

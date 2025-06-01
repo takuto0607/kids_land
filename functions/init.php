@@ -41,7 +41,7 @@ function add_custom_meta_tags ()
     }
 
     // こもれびだよりページ
-    elseif ((is_archive('letter') && is_post_type_archive('letter')) || is_singular('letter')) {
+    elseif ((is_archive('letter') && is_post_type_archive('letter'))) {
         echo '<title>' . TITLE_LETTER . '</title>';
         echo '<meta name="description" content="' . esc_attr(DESCRIPTION_LETTER) . '">';
         echo '<meta property="og:title" content="' . TITLE_LETTER . '">';
@@ -54,6 +54,13 @@ function add_custom_meta_tags ()
         echo '<meta name="description" content="' . esc_attr(DESCRIPTION_INFO) . '">';
         echo '<meta property="og:title" content="' . TITLE_INFO . '">';
         echo '<meta property="og:description" content="' . esc_attr(DESCRIPTION_INFO) . '">';
+    }
+
+    elseif (is_singular('letter')) {
+        echo '<title>' . TITLE_INFO . '</title>';
+        echo '<meta name="description" content="' . esc_attr(get_the_excerpt()) . '">';
+        echo '<meta property="og:title" content="' . TITLE_INFO . '">';
+        echo '<meta property="og:description" content="' . esc_attr(get_the_excerpt()) . '">';
     }
     
     // その他

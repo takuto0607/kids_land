@@ -114,6 +114,14 @@
     width: auto;
   }
 
+  .footer__logo {
+    & > a {
+      & > .img-wrapper {
+        width: 200px !important;
+      }
+    }
+  }
+
   .footer__item {
     width: 150px;
   }
