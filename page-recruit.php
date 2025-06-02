@@ -27,7 +27,7 @@
               <img src="<?php echo echo_img("icon/welcome-icon.svg"); ?>" width="72" height="72" alt="モットーアイコン" loading="lazy">
             </div>
           </div>
-          <h2>たいせつにしていること</h2>
+          <h2 class="motto__title-text">たいせつにしていること</h2>
           <p class="capitalize">motto</p>
         </div>
       </div>
@@ -36,7 +36,7 @@
       <div class="motto__block">
         <div class="motto__img">
           <div class="img-wrapper">
-            <img src="<?php echo echo_img("card-march.webp"); ?>" width="480" height="320" alt="花束を渡す女の子" loading="lazy">
+            <img src="<?php echo echo_img("motto-img-1.webp"); ?>" width="480" height="320" alt="花束を渡す女の子" loading="lazy">
           </div>
         </div>
         <div class="motto__text">
@@ -105,7 +105,7 @@
               <img src="<?php echo echo_img("icon/requirements-icon.svg"); ?>" width="72" height="72" alt="募集要項アイコン" loading="lazy">
             </div>
           </div>
-          <h2>募集要項</h2>
+          <h2 class="requirements__title-text">募集要項</h2>
           <p class="capitalize">requirements</p>
         </div>
       </div>
@@ -145,7 +145,7 @@
       </div>
       <div class="requirements__row">
         <h3>昇給</h3>
-        <p>年一回（業績評価による）</p>
+        <p class="requirements__text--raise">年一回（業績評価による）</p>
       </div>
       <div class="requirements__row">
         <h3>休暇</h3>
@@ -153,7 +153,7 @@
       </div>
       <div class="requirements__row">
         <h3>その他</h3>
-        <p class="requirements__text--large">交通費全額支給。<br class="break-sm">予防接種補助など福利厚生充実。</p>
+        <p class="requirements__text--others requirements__text--large">交通費全額支給。<br class="break-sm">予防接種補助など福利厚生充実。</p>
       </div>
     </div>
   </section>
@@ -181,7 +181,7 @@
         </div>
         <div class="faq__answer">
           <span class="faq__char-answer uppercase">a</span>
-          <p>当園のスタッフは、保育士や幼稚園教諭など、保育に関する専門的な資格を持つ人材です。また、多彩な経験を持ち、子どもたちとの信頼関係を築きながら、安心して成長できる環境を提供しています。定期的な研修やワークショップを通じて、スキルや知識の向上に努めています。</p>
+          <p>当園のスタッフは、保育士や幼稚園教諭など、保育に関する専門的な資格を持つ人材です。<br class="break-sm">また、多彩な経験を持ち、子どもたちとの信頼関係を築きながら、安心して成長できる環境を提供しています。<br class="break-sm">定期的な研修やワークショップを通じて、スキルや知識の向上に努めています。</p>
         </div>
       </div>
       <div class="faq__box">

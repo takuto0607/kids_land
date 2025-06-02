@@ -9,6 +9,10 @@
   text-align: center;
 }
 
+.requirements__title-text {
+  margin-bottom: 10px;
+}
+
 .requirements__content {
   background-color: $white-color;
   border-radius: 40px;
@@ -21,7 +25,7 @@
   align-items: center;
   display: flex;
   gap: 25px;
-  padding: 32px 0;
+  padding: 31.5px 0;
 
   & > h3 {
     align-items: center;
@@ -44,7 +48,9 @@
     padding-right: 24px;
 
     & > span {
+      display: block;
       font-size: 14px;
+      letter-spacing: 0.2em;
     }
   }
 
@@ -111,6 +117,7 @@
 
   .requirements__text-span {
     font-size: 14px !important;
+    line-height: 1.5 !important;
   }
 
   .requirements__text--large {
@@ -128,5 +135,13 @@
 
   .requirements__text--vacations {
     padding: 23px 15px !important;
+  }
+
+  .requirements__text--raise {
+    line-height: 1 !important;
+  }
+
+  .requirements__text--others {
+    padding: 11px 15px !important;
   }
 }

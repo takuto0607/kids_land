@@ -47,6 +47,17 @@ source {
   display: block;
 }
 
+input[type=radio] {
+  width: 16px;
+  height: 16px;
+}
+
+input[type=checkbox] {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}
+
 @media screen and (max-width: 1023px) {
   body {
     background-image: url(../img/bg/background-sp.webp);
@@ -1372,6 +1383,10 @@ source {
   text-align: center;
 }
 
+.motto__title-text {
+  margin-bottom: 12px !important;
+}
+
 .motto__container {
   margin-inline: 60px;
   width: auto;
@@ -1413,7 +1428,7 @@ source {
 
 .motto__text-title {
   display: inline-block;
-  margin-bottom: 24px;
+  margin-bottom: 38px;
   position: relative;
 }
 .motto__text-title > h3 {
@@ -1483,7 +1498,7 @@ source {
     width: 240px;
   }
   .motto__text-title {
-    margin-bottom: 27px;
+    margin-bottom: 26px;
   }
   .motto__text-title > h3 {
     font-size: 18px;
@@ -1505,6 +1520,10 @@ source {
   text-align: center;
 }
 
+.requirements__title-text {
+  margin-bottom: 10px;
+}
+
 .requirements__content {
   background-color: rgb(255, 255, 255);
   border-radius: 40px;
@@ -1517,7 +1536,7 @@ source {
   align-items: center;
   display: flex;
   gap: 25px;
-  padding: 32px 0;
+  padding: 31.5px 0;
 }
 .requirements__row > h3 {
   align-items: center;
@@ -1539,7 +1558,9 @@ source {
   padding-right: 24px;
 }
 .requirements__row > p > span {
+  display: block;
   font-size: 14px;
+  letter-spacing: 0.2em;
 }
 .requirements__row:not(:last-child) {
   border-bottom: 1px dashed rgb(85, 0, 12);
@@ -1589,6 +1610,7 @@ source {
   }
   .requirements__text-span {
     font-size: 14px !important;
+    line-height: 1.5 !important;
   }
   .requirements__text--large {
     font-size: 16px !important;
@@ -1602,6 +1624,12 @@ source {
   }
   .requirements__text--vacations {
     padding: 23px 15px !important;
+  }
+  .requirements__text--raise {
+    line-height: 1 !important;
+  }
+  .requirements__text--others {
+    padding: 11px 15px !important;
   }
 }
 .faq {
@@ -1767,6 +1795,9 @@ source {
   color: rgb(51, 51, 51);
   width: 100%;
 }
+.entry-form__input > p > br {
+  display: none;
+}
 
 .entry-form__radio {
   line-height: 1.5;
@@ -1782,6 +1813,10 @@ source {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.entry-form__radio--content {
+  margin-bottom: 10px;
 }
 
 .entry-form__textarea {
@@ -1829,6 +1864,12 @@ source {
 .entry-form__input-row-name {
   flex-shrink: 0;
   width: 150px;
+}
+
+.entry-form__radio--employment-type {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .entry-form__agree {
@@ -1898,29 +1939,31 @@ source {
   }
 }
 @media screen and (max-width: 639px) {
+  .entry-form {
+    margin-bottom: 80px;
+  }
   .entry-form__item {
     font-size: 16px;
   }
-  .entry-form__radio--employment-type {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
   .entry-form__agree {
     display: block;
+    font-size: 16px;
     line-height: 1.5;
   }
   .entry-form__agree > .required {
     margin-left: 32px;
     margin-top: 12px;
   }
-  input[type=checkbox] {
-    height: 20px;
-    width: 20px;
+  .entry-form__agree > br {
+    display: none;
   }
 }
 .entry-confirm {
-  margin-bottom: 120px;
+  margin-bottom: 118px;
+}
+
+.entry-confirm__page-top {
+  padding-top: 21.045% !important;
 }
 
 .entry-confirm__content {
@@ -2043,6 +2086,7 @@ source {
     margin-bottom: 80px;
   }
   .entry-confirm__page-top {
+    padding-top: 49.6% !important;
     padding-bottom: 60px !important;
   }
   .entry-confirm__item {
@@ -3803,7 +3847,16 @@ source {
 .complete > p {
   color: rgb(0, 0, 0);
   font-size: 20px;
+  letter-spacing: 0.1em;
   margin-bottom: 120px;
+}
+
+.complete__page-top .page-heading {
+  margin-bottom: 0;
+}
+
+.complete__title > p {
+  letter-spacing: 0.1em;
 }
 
 @media screen and (max-width: 1023px) {
@@ -3815,15 +3868,25 @@ source {
   .complete__page-top {
     padding-bottom: 60px !important;
   }
+  .complete__title > h1 {
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+  }
   .complete {
     margin-inline: 15px;
   }
   .complete > p {
     display: flex;
-    justify-content: center;
     font-size: 16px;
+    letter-spacing: 0.1em;
+    line-height: 1.5;
     margin-bottom: 80px;
+    margin-inline: auto;
+    max-width: 375px;
     text-align: start;
+  }
+  .complete .btn > a::after {
+    right: 22px;
   }
 }
 @media screen and (max-width: 374px) {
@@ -4348,6 +4411,9 @@ source {
   .page-top {
     margin-inline: 30px;
     padding: 49.6% 0 80px;
+  }
+  .page-heading {
+    margin-bottom: 9px;
   }
   .page-title > h1 {
     font-size: 24px;

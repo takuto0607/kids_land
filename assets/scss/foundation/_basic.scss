@@ -49,6 +49,17 @@ source {
   display: block;
 }
 
+input[type="radio"] {
+  width: 16px;
+  height: 16px;
+}
+
+input[type="checkbox"] {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}
+
 @include mq(lg) {
   body {
     background-image: url(../img/bg/background-sp.webp);

@@ -9,6 +9,10 @@
   text-align: center;
 }
 
+.motto__title-text {
+  margin-bottom: 12px !important;
+}
+
 .motto__container {
   margin-inline: 60px;
   width: auto;
@@ -54,7 +58,7 @@
 
 .motto__text-title {
   display: inline-block;
-  margin-bottom: 24px;
+  margin-bottom: 38px;
   position: relative;
 
   & > h3 {
@@ -139,7 +143,7 @@
   }
 
   .motto__text-title {
-    margin-bottom: 27px;
+    margin-bottom: 26px;
 
     & > h3 {
       font-size: 18px;

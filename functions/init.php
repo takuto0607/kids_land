@@ -33,11 +33,18 @@ function add_custom_meta_tags ()
     }
     
     // 各園のご紹介ページ
-    elseif ((is_archive('introduction') && is_post_type_archive('introduction')) || is_singular('introduction')) {
+    elseif ((is_archive('introduction') && is_post_type_archive('introduction'))) {
         echo '<title>' . TITLE_INTRODUCTION . '</title>';
         echo '<meta name="description" content="' . esc_attr(DESCRIPTION_INTRODUCTION) . '">';
         echo '<meta property="og:title" content="' . TITLE_INTRODUCTION . '">';
         echo '<meta property="og:description" content="' . esc_attr(DESCRIPTION_INTRODUCTION) . '">';
+    }
+
+    elseif (is_singular('introduction')) {
+        echo '<title>' . TITLE_INTRODUCTION . '</title>';
+        echo '<meta name="description" content="' . esc_attr(get_the_excerpt()) . '">';
+        echo '<meta property="og:title" content="' . TITLE_INTRODUCTION . '">';
+        echo '<meta property="og:description" content="' . esc_attr(get_the_excerpt()) . '">';
     }
 
     // こもれびだよりページ
@@ -48,15 +55,22 @@ function add_custom_meta_tags ()
         echo '<meta property="og:description" content="' . esc_attr(DESCRIPTION_LETTER) . '">';
     }
     
+    elseif (is_singular('letter')) {
+        echo '<title>' . TITLE_LETTER . '</title>';
+        echo '<meta name="description" content="' . esc_attr(get_the_excerpt()) . '">';
+        echo '<meta property="og:title" content="' . TITLE_LETTER . '">';
+        echo '<meta property="og:description" content="' . esc_attr(get_the_excerpt()) . '">';
+    }
+
     // お知らせページ
-    elseif ((is_archive('info') && is_post_type_archive('info')) || is_singular('info')) {
+    elseif ((is_archive('info') && is_post_type_archive('info'))) {
         echo '<title>' . TITLE_INFO . '</title>';
         echo '<meta name="description" content="' . esc_attr(DESCRIPTION_INFO) . '">';
         echo '<meta property="og:title" content="' . TITLE_INFO . '">';
         echo '<meta property="og:description" content="' . esc_attr(DESCRIPTION_INFO) . '">';
     }
 
-    elseif (is_singular('letter')) {
+    elseif (is_singular('info')) {
         echo '<title>' . TITLE_INFO . '</title>';
         echo '<meta name="description" content="' . esc_attr(get_the_excerpt()) . '">';
         echo '<meta property="og:title" content="' . TITLE_INFO . '">';

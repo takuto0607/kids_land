@@ -47,6 +47,12 @@
 .entry-form__input {
   color: $text-color2;
   width: 100%;
+
+  & > p {
+    & > br {
+      display: none;
+    }
+  }
 }
 
 .entry-form__radio {
@@ -65,6 +71,10 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.entry-form__radio--content {
+  margin-bottom: 10px;
 }
 
 .entry-form__textarea {
@@ -113,6 +123,12 @@
 .entry-form__input-row-name {
   flex-shrink: 0;
   width: 150px;
+}
+
+.entry-form__radio--employment-type {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .entry-form__agree {
@@ -190,28 +206,26 @@
 }
 
 @include mq(sm) {
+  .entry-form {
+    margin-bottom: 80px;
+  }
+
   .entry-form__item {
     font-size: 16px;
   }
 
-  .entry-form__radio--employment-type {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
   .entry-form__agree {
     display: block;
+    font-size: 16px;
     line-height: 1.5;
 
     & > .required {
       margin-left: 32px;
       margin-top: 12px;
     }
-  }
 
-  input[type="checkbox"] {
-    height: 20px;
-    width: 20px;
+    & > br {
+      display: none;
+    }
   }
 }

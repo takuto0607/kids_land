@@ -8,7 +8,7 @@
   <div class="page-top page-top-short complete__page-top">
     <div class="page-top-inner">
       <div class="page-heading">
-        <div class="page-title">
+        <div class="page-title complete__title">
           <h1>お問い合わせ<br class="break-sm">ありがとうございます。</h1>
           <p class="capitalize">thank you for contacting us</p>
         </div>

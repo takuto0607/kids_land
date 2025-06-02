@@ -1,7 +1,11 @@
 @use "../global/" as *;
 
 .entry-confirm {
-  margin-bottom: 120px;
+  margin-bottom: 118px;
+}
+
+.entry-confirm__page-top {
+  padding-top: 21.045% !important;
 }
 
 .entry-confirm__content {
@@ -133,6 +137,7 @@
   }
 
   .entry-confirm__page-top {
+    padding-top: 49.6% !important;
     padding-bottom: 60px !important;
   }
 
