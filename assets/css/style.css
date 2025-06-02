@@ -801,9 +801,16 @@ input[type=checkbox] {
   flex-wrap: wrap;
   gap: 0 10px;
   justify-content: space-between;
-  margin-bottom: 14px;
   max-width: 1080px;
   width: 100%;
+}
+
+.letter__card-group--front-page {
+  margin-bottom: 14px;
+}
+
+.letter__card-group--introduction-page {
+  margin-bottom: 11px;
 }
 
 .letter__card {
@@ -900,6 +907,9 @@ input[type=checkbox] {
   .letter__inner--front-page {
     padding-bottom: 80px;
   }
+  .letter__inner--introduction-page {
+    padding-top: 186px;
+  }
   .letter__card-group {
     gap: 24px 0;
     justify-content: center;
@@ -909,15 +919,35 @@ input[type=checkbox] {
     margin-bottom: 0;
     width: 300px;
   }
-  .letter__card-img > .img-wrapper {
+  .letter__card--front-page {
     width: 300px;
   }
-  .letter__card-img > .img-wrapper > img {
+  .letter__card--front-page .letter__card-img > .img-wrapper {
+    width: 300px;
+  }
+  .letter__card--front-page .letter__card-img > .img-wrapper > img {
     aspect-ratio: 20/9;
+  }
+  .letter__card--introduction-page {
+    width: 320px;
+  }
+  .letter__card--introduction-page .letter__card-img > .img-wrapper {
+    width: 320px;
+  }
+  .letter__card--introduction-page .letter__card-img > .img-wrapper > img {
+    aspect-ratio: 64/27;
   }
   .letter__card-content > p {
     font-size: 16px;
     margin-bottom: 12px;
+  }
+  .letter__btn--introduction-page {
+    font-size: 18px !important;
+    height: 60px !important;
+    width: 240px !important;
+  }
+  .letter__btn--introduction-page > a::after {
+    right: 22px !important;
   }
 }
 .open-menu {
@@ -2705,18 +2735,20 @@ input[type=checkbox] {
 }
 @media screen and (max-width: 639px) {
   .single-introduction__page-top {
-    padding-bottom: 60px !important;
+    padding-bottom: 57px !important;
   }
   .single-introduction__sub-section:not(:last-child) {
     margin-bottom: 24px;
   }
   .single-introduction__sub-section > h3 {
     font-size: 18px;
+    line-height: 1.5;
     margin-bottom: 12px;
   }
   .single-introduction__sub-section > p {
     font-size: 16px;
     text-align: start;
+    letter-spacing: 0.195em;
   }
 }
 @media screen and (max-width: 524px) {
@@ -2755,13 +2787,13 @@ input[type=checkbox] {
 }
 
 .inside__content .img-wrapper {
-  border-radius: 20px;
   padding: 0 6px;
   overflow: hidden;
   width: 252px;
 }
 .inside__content .img-wrapper > img {
   aspect-ratio: 3/2;
+  border-radius: 20px;
 }
 
 @media screen and (max-width: 639px) {
@@ -2774,8 +2806,10 @@ input[type=checkbox] {
 }
 @media screen and (max-width: 524px) {
   .inside__content .img-wrapper {
-    border-radius: 12px;
     width: 132px;
+  }
+  .inside__content .img-wrapper > img {
+    border-radius: 12px;
   }
 }
 .message {
@@ -3012,8 +3046,7 @@ input[type=checkbox] {
     height: 50px;
     width: 100%;
   }
-  .about-nursery__data--address,
-  .about-nursery {
+  .about-nursery__data--address {
     padding: 18px 12px;
   }
   .about-nursery__data--target,
@@ -3034,6 +3067,22 @@ input[type=checkbox] {
 @media screen and (max-width: 639px) {
   .about-nursery__capacity-note,
   .about-nursery__staff-note {
+    line-height: 1.5;
+  }
+  .about-nursery__data--tel {
+    font-size: 16px;
+    padding: 17px 12px;
+  }
+  .about-nursery__data--target {
+    line-height: 1.5;
+    padding: 24px 12px;
+  }
+  .about-nursery__week {
+    font-size: 16px;
+  }
+  .about-nursery__open-date-note {
+    font-size: 12px;
+    letter-spacing: 0.2em;
     line-height: 1.5;
   }
 }
@@ -3431,8 +3480,8 @@ input[type=checkbox] {
 .archive-letter__inner {
   display: flex;
   gap: 32px;
-  justify-content: center;
   width: 100%;
+  max-width: 1320px;
 }
 
 .archive-letter__content {
@@ -4153,7 +4202,7 @@ input[type=checkbox] {
   font-size: 24px;
   line-height: 1.5;
   letter-spacing: 0.1em;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   text-align: center;
 }
 .section-title__inner > p {

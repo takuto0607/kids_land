@@ -54,7 +54,7 @@
 
 @include mq(sm) {
   .single-introduction__page-top {
-    padding-bottom: 60px !important;
+    padding-bottom: 57px !important;
   }
 
   .single-introduction__sub-section {
@@ -64,12 +64,14 @@
 
     & > h3 {
       font-size: 18px;
+      line-height: 1.5;
       margin-bottom: 12px;
     }
 
     & > p {
       font-size: 16px;
       text-align: start;
+      letter-spacing: 0.195em;
     }
   }
 }

@@ -4,7 +4,7 @@
 
 <section id="letter" class="letter">
   <div class="letter__inner letter__inner--<?php echo esc_attr($page_type); ?>">
-    <div class="section-title">
+    <div class="letter__section-title section-title">
       <div class="section-title__inner fade-up">
         <div class="section-title__img">
           <div class="img-wrapper">
@@ -17,7 +17,7 @@
     </div>
     <div class="letter__container">
       <div class="letter__card-group-wrapper">
-        <div class="letter__card-group">
+        <div class="letter__card-group letter__card-group--<?php echo esc_attr($page_type); ?>">
           <?php
           // 最新の投稿6件を取得
           $letter_args = array (
@@ -32,7 +32,7 @@
           if ($letter_query->have_posts()) :
             while ($letter_query->have_posts()) : $letter_query->the_post() ;
           ?>
-          <div class="letter__card fade-up">
+          <div class="letter__card letter__card--<?php echo esc_attr($page_type); ?> fade-up">
             <a class="letter__card-link" href="<?php echo esc_url(get_permalink()); ?>">
               <?php
                 if (has_post_thumbnail()) {
@@ -84,7 +84,7 @@
         </div>
       </div>
       <div class="letter__btn-wrapper">
-        <div class="btn fade-up">
+        <div class="btn letter__btn--<?php echo esc_attr($page_type); ?> fade-up">
           <a href="<?php echo esc_url(home_url('/letter')); ?>">もっと見る</a>
         </div>
       </div>

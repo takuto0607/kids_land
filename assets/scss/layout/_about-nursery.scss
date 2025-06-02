@@ -183,8 +183,7 @@
     }
   }
 
-  .about-nursery__data--address,
-  .about-nursery {
+  .about-nursery__data--address {
     padding: 18px 12px;
   }
 
@@ -209,6 +208,26 @@
 @include mq(sm) {
   .about-nursery__capacity-note,
   .about-nursery__staff-note {
+    line-height: 1.5;
+  }
+
+  .about-nursery__data--tel {
+    font-size: 16px;
+    padding: 17px 12px;
+  }
+
+  .about-nursery__data--target {
+    line-height: 1.5;
+    padding: 24px 12px;
+  }
+
+  .about-nursery__week {
+    font-size: 16px;
+  }
+
+  .about-nursery__open-date-note {
+    font-size: 12px;
+    letter-spacing: 0.2em;
     line-height: 1.5;
   }
 }
