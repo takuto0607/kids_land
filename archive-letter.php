@@ -196,19 +196,19 @@
         </div>
         <div class="pagination fade-up">
           <?php
-          // echo paginate_links([
-          //     'total' => $query->max_num_pages,
-          //     'current' => $paged,
-          //     'format' => '?paged=%#%',
-          //     'add_args' => [
-          //         'prefecture' => $target_prefecture ?: null,
-          //         'nursery' => $target_nursery ?: null,
-          //         'archive-year' => $year ?: null,
-          //         'archive-month' => $month ?: null,
-          //     ],
-          //     'prev_text' => '<i class="fa-solid fa-chevron-left"></i>',
-          //     'next_text' => '<i class="fa-solid fa-chevron-right"></i>',
-          // ]);
+          echo paginate_links([
+              'total' => $query->max_num_pages,
+              'current' => $paged,
+              'format' => '?paged=%#%',
+              'add_args' => [
+                  'prefecture' => $target_prefecture ?: null,
+                  'nursery' => $target_nursery ?: null,
+                  'archive-year' => $year ?: null,
+                  'archive-month' => $month ?: null,
+              ],
+              'prev_text' => '<i class="fa-solid fa-chevron-left"></i>',
+              'next_text' => '<i class="fa-solid fa-chevron-right"></i>',
+          ]);
           ?>
         </div>
       </div>
