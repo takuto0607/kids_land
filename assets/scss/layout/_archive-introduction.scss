@@ -121,10 +121,21 @@
 }
 
 .archive-introduction__card {
-  background-color: $accent-color1;
   border-radius: 20px;
   flex-shrink: 0;
   width: 320px;
+}
+
+.archive-introduction__card--certified-nursery {
+  background-color: $accent-color1;
+}
+
+.archive-introduction__card--small-scale-nursery {
+  background-color: rgb(255, 249, 203);
+}
+
+.archive-introduction__card--small-scale-nursery-a {
+  background-color: rgb(237, 244, 255);
 }
 
 .archive-introduction__card-inner {

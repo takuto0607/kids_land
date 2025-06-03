@@ -92,7 +92,15 @@
           <div class="archive-introduction__card-group">
           <?php if ($query->have_posts()) : ?>
             <?php while ($query->have_posts()) : $query->the_post(); ?>
-            <a class="archive-introduction__card fade-up" href="<?php echo esc_url(get_permalink()); ?>">
+            <?php
+              $term_nursery_type = get_the_terms(get_the_ID(), 'nursery-type');
+              if (is_wp_error($term_nursery_type) || empty($term_nursery_type)) {
+                $term_nursery_type = [
+                  'slug' => 'certified-nursery',
+                ];
+              }
+            ?>
+            <a class="archive-introduction__card archive-introduction__card--<?php echo esc_attr($term_nursery_type[0]->slug); ?> fade-up" href="<?php echo esc_url(get_permalink()); ?>">
               <?php
                 if (has_post_thumbnail()) {
                   $thumbnail_id = get_post_thumbnail_id();

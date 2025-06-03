@@ -2604,10 +2604,21 @@ input[type=checkbox] {
 }
 
 .archive-introduction__card {
-  background-color: rgb(255, 237, 240);
   border-radius: 20px;
   flex-shrink: 0;
   width: 320px;
+}
+
+.archive-introduction__card--certified-nursery {
+  background-color: rgb(255, 237, 240);
+}
+
+.archive-introduction__card--small-scale-nursery {
+  background-color: rgb(255, 249, 203);
+}
+
+.archive-introduction__card--small-scale-nursery-a {
+  background-color: rgb(237, 244, 255);
 }
 
 .archive-introduction__card-inner {
@@ -4543,6 +4554,7 @@ input[type=checkbox] {
   padding-left: 24px;
   padding-top: 12px;
   width: 100%;
+  max-width: 328px;
 }
 .sidebar > h2 {
   font-size: 24px;
