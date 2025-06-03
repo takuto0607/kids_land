@@ -104,6 +104,7 @@
 
 .contact-form__input-row-name {
   flex-shrink: 0;
+  line-height: 1.5;
   width: 150px;
 }
 
@@ -127,6 +128,10 @@
     height: 20px;
     justify-content: center;
     width: 42px;
+  }
+
+  .wpcf7-list-item-label {
+    color: $text-color2;
   }
 }
 
@@ -189,11 +194,19 @@
   .contact-form__item {
     align-items: start;
     flex-direction: column;
-    gap: 8px;
+    gap: 12px;
+
+    &:first-child {
+      gap: 8px;
+    }
   }
 }
 
 @include mq(sm) {
+  .contact-form__page-top {
+    padding-bottom: 76px !important;
+  }
+
   .contact-form {
     margin-bottom: 80px;
   }
@@ -208,20 +221,38 @@
     gap: 8px;
   }
 
+  .contact-form__agree-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
   .contact-form__agree {
     align-items: start;
     flex-direction: column-reverse;
     line-height: 1.5;
     margin: 0 auto 48px;
-    width: 242px;
 
     & > .required {
       margin-left: 32px;
-      margin-bottom: 12px;
+      margin-bottom: 9px;
     }
 
     & > br {
       display: none;
+    }
+
+    .wpcf7-form-control-wrap {
+      padding: 0;
+    }
+
+    .wpcf7-list-item-label {
+      font-size: 16px;
+      letter-spacing: 0.1em;
+      line-height: 1.5;
+    }
+
+    .wpcf7-list-item > label {
+      align-items: start;
     }
   }
 }
