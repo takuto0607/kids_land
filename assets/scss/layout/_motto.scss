@@ -135,6 +135,10 @@
 }
 
 @include mq(sm) {
+  .motto__title-text {
+    margin-bottom: 17px !important;
+  }
+
   .motto__img {
     & > .img-wrapper {
       border-radius: 20px;
@@ -143,7 +147,7 @@
   }
 
   .motto__text-title {
-    margin-bottom: 26px;
+    margin-bottom: 25px;
 
     & > h3 {
       font-size: 18px;
