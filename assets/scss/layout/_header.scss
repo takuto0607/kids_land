@@ -34,6 +34,7 @@
   border-left: 1px dashed $text-color;
   padding: 12.5px 6.5px;
   position: relative;
+  transition: all 1s ease;
 
   &::before {
     content: "";

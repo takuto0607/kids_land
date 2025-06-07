@@ -15,8 +15,9 @@
   color: $main-color;
   display: flex;
   justify-content: center;
-  line-height: 1.2;
   height: 36px;
+  line-height: 1.2;
+  transition: all 0.5s ease;
   width: 36px;
 
   &.prev,

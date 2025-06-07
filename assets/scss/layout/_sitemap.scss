@@ -39,6 +39,7 @@
 
 .sitemap__item {
   border-bottom: 1px dashed $text-color;
+  transition: all 0.5s ease;
 
   &:hover {
     opacity: 0.5;

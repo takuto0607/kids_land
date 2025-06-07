@@ -141,3 +141,33 @@ function select_to_radio_prefecture() {
     <?php
 }
 add_action('admin_print_footer_scripts', 'select_to_radio_prefecture');
+
+add_action('pre_get_posts', function( $query ) {
+    if (is_admin() || !$query->is_main_query()) {
+        return;
+    }
+
+    // CPT:letter のアーカイブページだったら
+    if ($query->is_post_type_archive('letter')) {
+        // たとえば 9 件ずつ出したいなら
+        $query->set( 'posts_per_page', 9 );
+
+        // GET パラメータで絞り込みがあればここで追加しても OK
+        if (isset($_GET['archive-year']) && is_numeric($_GET['archive-year'])) {
+            $query->set('year', (int)$_GET['archive-year'] );
+        }
+        if (isset($_GET['archive-month']) && is_numeric($_GET['archive-month'])) {
+            $query->set('monthnum', (int) $_GET['archive-month'] );
+        }
+        if (isset($_GET['prefecture']) && $_GET['prefecture'] !== '') {
+            $tax = [
+                [
+                    'taxonomy'         => 'prefecture',
+                    'field'            => 'slug',
+                    'terms'            => sanitize_text_field($_GET['prefecture']),
+                ],
+            ];
+            $query->set( 'tax_query', $tax );
+        }
+    }
+} );

@@ -43,6 +43,7 @@
   height: 50px;
   justify-content: center;
   line-height: 1.2;
+  transition: all 0.5s ease;
   width: 150px;
 
   &:hover {
@@ -141,6 +142,7 @@
 .archive-introduction__card-inner {
   height: 100%;
   padding: 12px;
+  transition: all 0.5s ease;
   width: 100%;
 
   &:hover {
